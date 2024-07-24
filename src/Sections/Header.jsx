@@ -59,9 +59,9 @@ const Header = () => {
                 to='/services'
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
               > 
-                <div className='relative group'>
-                  <span className='flex gap-1 items-center' onClick={()=>setDropdown(!dropdown)}>Services<IoIosArrowDown /></span>
-                  <ul className={`hidden group-hover:block text-light-900 absolute w-[115%] top-[calc(100%+0.5rem)] z-50 bg-primary-default text-[10px] py-2 pl-1.5 space-y-2 lg:space-y-4 font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-primary-default before:-top-[.35rem] before:left-0 before:rounded-full`}>
+                <div className='relative group'onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
+                  <span className='flex gap-1 items-center'>Services<IoIosArrowDown /></span>
+                  <ul className={`hidden group-hover:block text-light-900 absolute w-[115%] top-[calc(100%+0.1rem)] z-50 bg-primary-default text-[10px] py-2 pl-1.5 space-y-2 lg:space-y-4 font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-primary-default before:-top-[0.3rem] before:left-0 before:rounded-full`}>
                     <li className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-14 after:-bottom-[1px] after:left-0' >Wordpress</li>
                     <li className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-14 after:-bottom-[1px] after:left-0'>WHMCS</li>
                     <li className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-14 after:-bottom-[1px] after:left-0'>Magento</li>
