@@ -20,7 +20,7 @@ const Services = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1400 },
-      items: 3
+      items: 2
     },
     tablet: {
       breakpoint: { max: 1400, min: 1000 },
@@ -33,13 +33,13 @@ const Services = () => {
   }
 
   return (
-    <section className='skill py-8 px-3 bg-dark-900' id='skills'>
-      <div className='container'>
+    <section className='w-screen skill py-8 xl:py-16 px-3 bg-dark-900 sm:flex sm:justify-center' id='skills'>
+      <div className='container sm:w-[85%]'>
         <div className='row'>
           <div className='col-12'>
-            <div className='skill-bx bg-dark-700'>
+            <div className='skill-bx bg-dark-700 lg:pt-24 lg:pb-40'>
               <h2 className={`${styles.headingText}text-light-900 font-light`}>Our Services</h2>
-              <p className={`${styles.descriptionText} textx-3xl`}>
+              <p className={`${styles.descriptionText} lg:pt-8`}>
                 We provide a wide range of services to help you achieve your
                 business goals.
               </p>
@@ -47,13 +47,13 @@ const Services = () => {
                 responsive={responsive}
                 infinite={true}
                 className='skill-slider'
-                autoPlay={true}
+                autoPlay={false}
                 autoPlaySpeed={3000}
                 renderButtonGroupOutside={true}
                 customButtonGroup={<CustomButtonGroup />}
                 arrows={false}
               >
-                <Tilt className='w-3/4 m-auto skill-slider-item'>
+                <Tilt className='w-3/4 xl:w-[1/2] m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -64,16 +64,16 @@ const Services = () => {
                   >
                     <div
                       options={{ max: 45, scale: 1, speed: 450 }}
-                      className='bg-blue-950 rounded-[20px] border-primary-default border-2 py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                      className='bg-blue-950 rounded-[20px] border-primary-default border-2 py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
-                      <img src={web} className='w-16 h-16 object-contain' />
-                      <h5 className='text-white text-[18px] font-bold'>
+                      <img src={web} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
+                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
                         Web App Development
                       </h5>
                     </div>
                   </motion.div>
                 </Tilt>
-                <Tilt className='w-3/4 m-auto skill-slider-item'>
+                <Tilt className='w-3/4 xl:w-[1/2] m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -84,10 +84,10 @@ const Services = () => {
                   >
                     <div
                       options={{ max: 45, scale: 1, speed: 450 }}
-                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
-                      <img src={mobile} className='w-16 h-16 object-contain' />
-                      <h5 className='text-white text-[18px] font-bold'>
+                      <img src={mobile} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
+                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[25px] xl:text-[35px] font-medium'>
                         Data Science
                         <br />
                         <h6>Machine Learning & Computer Vision</h6>
@@ -95,7 +95,7 @@ const Services = () => {
                     </div>
                   </motion.div>
                 </Tilt>
-                <Tilt className='w-3/4 m-auto skill-slider-item'>
+                <Tilt className='w-3/4 xl:w-[1/2]  m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -106,16 +106,16 @@ const Services = () => {
                   >
                     <div
                       options={{ max: 45, scale: 1, speed: 450 }}
-                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-6 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
-                      <img src={backend} className='w-16 h-16 object-contain' />
-                      <h5 className='text-white text-[18px] font-bold'>
+                      <img src={backend} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
+                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
                         Custom Software Development
                       </h5>
                     </div>
                   </motion.div>
                 </Tilt>
-                <Tilt className='w-3/4 m-auto skill-slider-item'>
+                <Tilt className='w-3/4 xl:w-[1/2] m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -126,17 +126,17 @@ const Services = () => {
                   >
                     <div
                       options={{ max: 45, scale: 1, speed: 450 }}
-                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
-                      <img src={creator} className='w-16 h-16 object-contain' />
-                      <h5 className='text-white text-[18px] font-bold'>
+                      <img src={creator} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
+                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
                         Cloud Solutions
                       </h5>
                     </div>
                   </motion.div>
                 </Tilt>
                         
-                <Tilt className='w-3/4 m-auto skill-slider-item'>
+                <Tilt className='w-3/4 xl:w-[1/2] m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -147,10 +147,10 @@ const Services = () => {
                   >
                     <div
                       options={{ max: 45, scale: 1, speed: 450 }}
-                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
-                      <img src={mobile} className='w-16 h-16 object-contain' />
-                      <h5 className='text-white text-[18px] font-bold'>
+                      <img src={mobile} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
+                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
                         Wordpress & Shopify Store Development
                       </h5>
                     </div>
@@ -169,8 +169,8 @@ const Services = () => {
 
 const CustomButtonGroup = ({ next, previous }) => {
   return (
-    <div className='custom-button-group'>
-      <button className='prev text-black' onClick={previous}>
+    <div className='custom-button-group xl:-mt-24'>
+      <button className='prev text-black ' onClick={previous}>
         &lt;
       </button>
       <button className='next' onClick={next}>
