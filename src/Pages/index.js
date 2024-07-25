@@ -1,3 +1,5 @@
 import Home from "./Home";
+import Services from "./Services";
+import Contact from "./Contact";
 
-export { Home };
+export { Home,Services,Contact };

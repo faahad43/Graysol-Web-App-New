@@ -32,11 +32,40 @@ const Header = () => {
                 </div>
                 <div className=' pt-6'>
                   <div className=' flex flex-col space-y-3 font-medium text-[42px] tracking-wide'>
-                    <NavLink>Home</NavLink>
-                    <NavLink>Services</NavLink>
-                    <NavLink>About us</NavLink>
-                    <NavLink>Blog</NavLink>
-                    <NavLink>Contact Us</NavLink>
+                    <NavLink 
+                      to='' 
+                      onClick={()=>setIsOpen(!isOpen)}
+                    >
+                      Home
+                    </NavLink>
+
+                    <NavLink 
+                      to='services' 
+                      onClick={()=>setIsOpen(!isOpen)}
+                    >
+                      Services
+                    </NavLink>
+
+                    <NavLink 
+                      to='' 
+                      onClick={()=>setIsOpen(!isOpen)}
+                    >
+                      About us
+                    </NavLink>
+
+                    <NavLink 
+                      to='' 
+                      onClick={()=>setIsOpen(!isOpen)}
+                    >
+                      Blog
+                    </NavLink>
+
+                    <NavLink 
+                      to='contact' 
+                      onClick={()=>setIsOpen(!isOpen)}
+                    >
+                      Contact Us
+                    </NavLink>
                   </div>
                 </div>
                 <div className={`${styles.subHeadingText} pt-10 flex gap-14`}>

@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
   Route
 } from "react-router-dom";
-import {Home} from "./Pages/index.js";
+import {Home,Services,Contact} from "./Pages/index.js";
 import './index.css'
 import ServicesDescription from './Sections/Services/ServicesDescription.jsx'
 
@@ -15,10 +15,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App/>}>
         <Route path="" element={<Home/>}/>
+        <Route path='/services' element={<Services/>}/>
         <Route
           path='/servicesDescription/:id'
           element={<ServicesDescription />}
         />
+        <Route path='/contact' element={<Contact/>}/>
     </Route>
   )
 )
