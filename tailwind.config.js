@@ -14,6 +14,7 @@ export default {
           },
           primary:{
             default:"#722594",
+            100:"#DC8DFF7c",
             600:"#280F37",
             700:"#290837",
             900:"#12101A"

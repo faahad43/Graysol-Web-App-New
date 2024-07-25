@@ -6,7 +6,7 @@ const styles ={
 
     headingText: 'text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] font-medium text-light-900  xl:font-medium ',
 
-    subHeadingText: 'text-[20px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-light text-light-900  xl:font-normal',
+    subHeadingText: 'text-[22px] sm:text-[25px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-light text-light-900  xl:font-normal',
 
     descriptionText:'text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] font-light text-light-900  lg:font-normal md:leading-sung xl:leading-[32.5px]',
 

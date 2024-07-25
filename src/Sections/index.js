@@ -11,5 +11,7 @@ import Help from "./Help.jsx";
 import Question from "./Question.jsx";
 import Faq from "./Faq.jsx";
 import Banner2 from "./Banner2.jsx";
+import DevelopmentFeatures from "./DevelopmentFeatures.jsx";
+import Wordpress from "./Wordpress.jsx";
 
-export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2}
+export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress}
