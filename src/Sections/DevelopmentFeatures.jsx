@@ -14,7 +14,7 @@ const cardStyles = {
     cardStyling :'text-light-900 bg-dark-900 h-52 p-8',
     headingStyle :'text-[18px] lg:text-[19px] xl:text-[20px] font-normal lg:font-medium leading-snug',
     descriptionStyle :'text-[16px] lg:text-[17px] xl:text-[18px] font-light lg:font-normal leading-snug',
-    footerStyle :'text-[14px] xl:text-[17px] font-light lg:font-normal underline decoration-dashed underline-offset-2 leading-snug',
+    footerStyle :'text-[14px] xl:text-[17px] font-light lg:font-normal underline decoration-dashed underline-offset-4 leading-snug',
 
 } 
 
