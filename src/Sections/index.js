@@ -13,5 +13,8 @@ import Faq from "./Faq.jsx";
 import Banner2 from "./Banner2.jsx";
 import DevelopmentFeatures from "./DevelopmentFeatures.jsx";
 import Wordpress from "./Wordpress.jsx";
+import Specialization from "./Specialization.jsx";
+import CustomWordpress from "./CustomWordpress.jsx";
+import WordpressWorking from "./WordpressWorking.jsx";
 
-export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress}
+export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress,Specialization,CustomWordpress,WordpressWorking}

@@ -39,7 +39,7 @@ const Wordpress = () => {
                     <div key={index} className='flex items-start gap-x-6 relative'>
                         <img className='w-[60px] h-[60px] mt-2' src={item.img} alt="" />
                         <div className='space-y-3 before:absolute before:top-3 before:left-[calc(60px+14px)] before:border-r-2 before:border-primary-default before:h-[80px]'>
-                            <h3 className={`${styles.subHeadingText} font-medium`} style={{color:"#000"}}>
+                            <h3 className={`${styles.subHeadingText} font-medium text-[#000]`} style={{color:'#000'}} >
                                 {item.headingText}
                             </h3>
                             <p className='text-justify'>
