@@ -1,9 +1,12 @@
 import React from 'react'
-import { Banner2 } from '../Sections'
+import { Banner2,ContactForm } from '../Sections'
 
 const Contact = () => {
   return (
-    <div><Banner2 page='contact'/></div>
+    <div>
+      <Banner2 page='contact'/>
+      <ContactForm/>
+    </div>
   )
 }
 

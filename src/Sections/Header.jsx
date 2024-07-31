@@ -47,7 +47,7 @@ const Header = () => {
                     </NavLink>
 
                     <NavLink 
-                      to='' 
+                      to='about' 
                       onClick={()=>setIsOpen(!isOpen)}
                     >
                       About us

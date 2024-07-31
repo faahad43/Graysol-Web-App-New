@@ -1,5 +1,5 @@
 import React from 'react'
-import {Banner2,DevelopmentFeatures, Wordpress,Specialization,CustomWordpress,WordpressWorking} from '../Sections/index.js'
+import {Banner2,DevelopmentFeatures, Wordpress,Specialization,CustomWordpress,WordpressWorking,Help, Benefits,Faq,Question} from '../Sections/index.js'
 
 const Services = () => {
   return (
@@ -10,6 +10,10 @@ const Services = () => {
     <Specialization/>
     <CustomWordpress/>
     <WordpressWorking/>
+    <Help page="Service"/>
+    <Benefits/>
+    <Faq/>
+    <Question/>
     </>
   )
 }

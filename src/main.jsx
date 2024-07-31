@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
   Route
 } from "react-router-dom";
-import {Home,Services,Contact} from "./Pages/index.js";
+import {Home,Services,Contact,AboutUs} from "./Pages/index.js";
 import './index.css'
 import ServicesDescription from './Sections/Services/ServicesDescription.jsx'
 
@@ -21,6 +21,7 @@ const router = createBrowserRouter(
           element={<ServicesDescription />}
         />
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/about' element={<AboutUs/>}/>
     </Route>
   )
 )

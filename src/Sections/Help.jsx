@@ -32,28 +32,28 @@ const Help = ({page}) => {
   ]
   const serviceHelpCard = [
     {
-        title: "",
-        description: ""
+        title: "Custom Website Development",
+        description: "We provide custom WordPress website development support designed for businesses by our web designers and developers."
     },
     {
-        title: "",
-        description: ""
+        title: "Emergency WordPress assistance",
+        description: "We have trained experts ready to offer emergency services round the clock."
     },
     {
-        title: "",
-        description: ""
+        title: "Wordpress Monitoring",
+        description: "We offer you quality work by 24/7 WordPress monitoring to ensure your website works fine"
     },
     {
-        title: "",
-        description: ""
+        title: "Content Management System",
+        description: "We specialize in streamlining and quickening the content generation process so that your website is constantly updated."
     },
     {
-        title: "",
-        description: ""
+        title: "Wordpress Services",
+        description: "We have skilled web developers who will update and manage your website efficiently."
     },
     {
-        title: "",
-        description: ""
+        title: "Wordpress Security & Performance",
+        description: "Your website will be updated, automated offsite backups will be set up and external security checks will be performed."
     },
   ]
   return (

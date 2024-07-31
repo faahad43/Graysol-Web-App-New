@@ -11,6 +11,7 @@ export default {
             900:'#ffffff',
             500:"#D9D9D9",
             400:"#D8D8D8",
+            300:'#E5E5EAE0',
           },
           primary:{
             default:"#722594",
@@ -31,15 +32,18 @@ export default {
           },
           dark:{
             900:"#000000",
+            800:"#131313",
             700:"#0F0E0E",
             600:"#0D0C0C",
             500:"#100D0D",
             400:"#100F0F",
+            300:"#100E0E",
             200:"#1B1A1A",
             100:"#878787"
           },
           neutral:{
-            default:"#604E40"
+            default:"#604E40",
+            light:'#604E40B0'
           }
 
           },
