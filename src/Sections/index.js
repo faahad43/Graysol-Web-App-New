@@ -23,5 +23,6 @@ import TeamLead from "./TeamLead.jsx";
 import CompanyStats from "./CompanyStats.jsx";
 import CompanyVision from "./CompanyVision.jsx";
 import ContactForm2 from "./ContactForm2.jsx";
+import BlogBanner from "./BlogBanner.jsx";
 
-export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress,Specialization,CustomWordpress,WordpressWorking,Benefits,ContactForm, AboutBanner, TeamLead,CompanyStats,CompanyVision,ContactForm2}
+export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress,Specialization,CustomWordpress,WordpressWorking,Benefits,ContactForm, AboutBanner, TeamLead,CompanyStats,CompanyVision,ContactForm2,BlogBanner}

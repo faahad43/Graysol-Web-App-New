@@ -40,28 +40,28 @@ const Header = () => {
                     </NavLink>
 
                     <NavLink 
-                      to='services' 
+                      to='/services' 
                       onClick={()=>setIsOpen(!isOpen)}
                     >
                       Services
                     </NavLink>
 
                     <NavLink 
-                      to='about' 
+                      to='/about' 
                       onClick={()=>setIsOpen(!isOpen)}
                     >
                       About us
                     </NavLink>
 
                     <NavLink 
-                      to='' 
+                      to='/blog' 
                       onClick={()=>setIsOpen(!isOpen)}
                     >
                       Blog
                     </NavLink>
 
                     <NavLink 
-                      to='contact' 
+                      to='/contact' 
                       onClick={()=>setIsOpen(!isOpen)}
                     >
                       Contact Us
