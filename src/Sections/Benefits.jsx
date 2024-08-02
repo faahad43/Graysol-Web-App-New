@@ -14,7 +14,7 @@ import DevelopmentCard from '../Components/DevelopmentCard';
 function Benefits() {
 
   const cardStyles = {
-    cardStyling :'cardShadow text-dark-900 bg-light-900 h-60 px-4  pt-3',
+    cardStyling :'cardShadow text-dark-900 bg-light-900 h-68 px-4  pt-3',
     headingStyle :'text-[18px] md:text-[20px] lg:text-[22px] font-medium leading-snug',
     descriptionStyle :'text-[12px] md:text-[14px] lg:text-[16px] font-normal leading-snug',
    
