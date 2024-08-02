@@ -21,7 +21,9 @@
     "react-multi-carousel": "^2.8.5",
     "react-on-screen": "^2.1.1",
     "react-router-hash-link": "^2.4.3",
-    "react-tilt": "^1.0.2"
+    "react-slick": "^0.30.2",
+    "react-tilt": "^1.0.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

@@ -5,7 +5,7 @@ import styles from '../styles'
 
 const ContactForm2 = () => {
   return (
-    <div className='bg-primary-700 text-light-900 py-8'>
+    <div className='bg-primary-700 text-light-900 pt-8'>
         <div className={`text-center space-y-4`}>
             <h2 className={`${styles.aboutUsHeading} capitalize`}>
                 Think we can’t?<br/>Think again.
@@ -37,6 +37,7 @@ const ContactForm2 = () => {
             <Button name='Submit' className='px-10 rounded-lg mt-5 text-sm'/>
             
         </form>
+        <div className='bg-dark-900 h-4'></div>
     </div>
   )
 }

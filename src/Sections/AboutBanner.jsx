@@ -5,7 +5,7 @@ import styles from '../styles'
 const AboutBanner = () => {
   return (
     <div className={`bg-dark-900 text-light-900 py-8 space-y-8 text-center`}>
-        <div className='w-[90%] h-64 mx-auto relative flex flex-col items-center justify-center gap-5 px-[4%] after:absolute after:bg-primary-700 after:inset-0  after:opacity-80 after:z-20'>
+        <div className='w-[95%] h-64 mx-auto relative flex flex-col items-center justify-center gap-5 px-[2%] after:absolute after:bg-primary-700 after:inset-0  after:opacity-80 after:z-20'>
             <img
             className='absolute inset-0 h-full w-full object-cover object-center z-10' 
             src={AboutUsBanner}
