@@ -1,10 +1,12 @@
 import React from 'react'
-import { BlogBanner } from '../Sections'
+import { BlogBanner, BlogSection, ContactForm2 } from '../Sections'
 
 const Blog = () => {
   return (
     <>
         <BlogBanner/>
+        <BlogSection/>
+        <ContactForm2/>
     </>
   )
 }
