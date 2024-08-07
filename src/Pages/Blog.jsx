@@ -1,6 +1,7 @@
 import React from 'react'
 import { BlogBanner, BlogSection, ContactForm2 } from '../Sections'
 
+
 const Blog = () => {
   return (
     <>

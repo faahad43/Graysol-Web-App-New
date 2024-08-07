@@ -9,9 +9,9 @@ const Banner2 = ({page="service"}) => {
     paragraph:"Every business is different. We provide 100% white label WordPress development to extend your website’s functionality to meet your specific requirements.",
     paragraph2:'',
     button:'see portfolio',
-    sectionStyling:'pt-10 pb-12',
-    headingStyling:'mb-7',
-    paragraphStyling:'mb-10'
+    sectionStyling:'pt-10 pb-12 sm:px-[15%] 2xl:px-[18%] sm:py-12 lg:py-16 xl:py-28',
+    headingStyling:'mb-7 mb-9',
+    paragraphStyling:'mb-10 mb-20'
   };
 
   const contactData = {
@@ -19,9 +19,9 @@ const Banner2 = ({page="service"}) => {
     paragraph:"Graysol specialists are available to chat 24/7",
     paragraph2:'We\'re ready to tackle whatever you need to move your business forward.',
     button: 'call me ',
-    sectionStyling:'pt-8 pb-16',
-    headingStyling:'mb-3',
-    paragraphStyling:'mb-8'
+    sectionStyling:'pt-8 pb-16 md:pt-10 md:pb-20 xl:pb-28',
+    headingStyling:'mb-3 lg:mb-5',
+    paragraphStyling:'mb-8 lg:mb-12 xl:mb-20'
   }
 
   const data = page === 'service' ? serviceData : contactData;

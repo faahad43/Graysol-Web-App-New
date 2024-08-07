@@ -58,9 +58,9 @@ const Help = ({page}) => {
   ]
   return (
     <div className='w-screen bg-dark-900 py-4 lg:py-10 xl:py-16'>
-        <div className='w-[90%] sm:w-[80%] lg:w-[90%] bg-dark-700 mx-auto rounded-xl flex flex-col items-center py-8 md:py-16 lg:py-20 gap-6 md:gap-8 lg:gap-12'>
+        <div className='w-[90%] sm:w-[80%] md:w-[90%]  bg-dark-700 max-w-[1400px] mx-auto rounded-xl flex flex-col items-center py-8 md:py-16 lg:py-20 gap-6 md:gap-8 lg:gap-12'>
             <h2 className={`${styles.headingText}`}>How We Help</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-32 xl:gap-x-52 gap-y-4 md:gap-y-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-32 xl:gap-x-52 gap-y-4 md:gap-y-8 '>
                 {page === 'Home' ? homeHelpCard.map((card,index)=>(
                     <HelpCard key={index} page={page} title={card.title} index={index+1} description={card.description} />
                 )):serviceHelpCard.map((card,index)=>(

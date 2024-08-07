@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styles from '../styles'
 import Button from '../Components/Button'
 import "slick-carousel/slick/slick.css";
@@ -8,12 +8,15 @@ import Bg1 from '../assets/img/BlurBgPic.png'
 
 const BlogBanner = () => {
 
+    const [currentSlide,setCurrentSlide] = useState(0);
+
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        beforeChange: (current, next) => {setCurrentSlide(next)},
         arrows:false,
         appendDots: dots => (
         <div
@@ -31,7 +34,7 @@ const BlogBanner = () => {
         ),
         customPaging: i => (
         <div
-            className='w-12 h-[8px] bg-[#464646] rounded active:bg-primary-default'>    
+            className={`w-12 h-[8px] rounded active:bg-primary-default ${currentSlide === i ? 'bg-primary-default': 'bg-[#464646]'}`}>    
         </div>
         )
     };

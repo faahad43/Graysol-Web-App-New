@@ -5,9 +5,9 @@ import Button from '../Components/Button'
 
 const ContactForm = () => {
   return (
-    <div className='bg-dark-900 pt-10 pb-16 space-y-8 text-light-900'>
+    <div className='bg-dark-900 pt-10 md:pt-16 pb-16 lg:pb-20 space-y-8 text-light-900'>
         <h1 className={`${styles.headingText} text-center`}>Reach us</h1>
-        <form className={`bg-dark-300 w-[90%] flex flex-col items-center mx-auto rounded-2xl py-10 gap-4`}>
+        <form className={`bg-dark-300 w-[90%] sm:w-[80%] max-w-[1200px] flex flex-col items-center mx-auto rounded-2xl py-10 md:py-14 gap-4`}>
             <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-4 md:gap-0 '>
                     <Input className='w-11/12 md:w-5/12 py-[9px]' placeholder='First Name'/>
                     <Input className='w-11/12 md:w-5/12' placeholder='Last Name'/>
