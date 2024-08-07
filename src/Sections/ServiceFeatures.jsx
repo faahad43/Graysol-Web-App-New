@@ -5,7 +5,7 @@ import Icon2 from '../assets/icons/wordpressIcon2.svg'
 import Icon3 from '../assets/icons/wordpressIcon3.svg'
 import Icon4 from '../assets/icons/wordpressIcon4.svg'
 
-const Wordpress = () => {
+const ServiceFeatures = () => {
   
   const data = [
     {
@@ -57,4 +57,4 @@ const Wordpress = () => {
   )
 }
 
-export default Wordpress
+export default ServiceFeatures

@@ -12,10 +12,10 @@ import Question from "./Question.jsx";
 import Faq from "./Faq.jsx";
 import Banner2 from "./Banner2.jsx";
 import DevelopmentFeatures from "./DevelopmentFeatures.jsx";
-import Wordpress from "./Wordpress.jsx";
+import ServiceFeatures from "./ServiceFeatures.jsx";
 import Specialization from "./Specialization.jsx";
-import CustomWordpress from "./CustomWordpress.jsx";
-import WordpressWorking from "./WordpressWorking.jsx";
+import ServiceDetails from "./ServiceDetails.jsx";
+import ServiceWorking from "./ServiceWorking.jsx";
 import Benefits from "./Benefits.jsx";
 import ContactForm from "./ContactForm.jsx";
 import AboutBanner from "./AboutBanner.jsx";
@@ -26,4 +26,4 @@ import ContactForm2 from "./ContactForm2.jsx";
 import BlogBanner from "./BlogBanner.jsx";
 import BlogSection from "./BlogSection.jsx";
 
-export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,Wordpress,Specialization,CustomWordpress,WordpressWorking,Benefits,ContactForm, AboutBanner, TeamLead,CompanyStats,CompanyVision,ContactForm2,BlogBanner,BlogSection}
+export {Header,Footer,Banner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner2,DevelopmentFeatures,ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,Benefits,ContactForm, AboutBanner, TeamLead,CompanyStats,CompanyVision,ContactForm2,BlogBanner,BlogSection}

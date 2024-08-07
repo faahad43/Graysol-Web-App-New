@@ -4,7 +4,7 @@ import Button from '../Components/Button'
 import Triangle from "../assets/icons/triangle.svg"
 
 
-const WordpressWorking = () => {
+const ServiceWorking = () => {
 
   const steps = ['Discovery','Iron out the kinks','Feasibility analysis','Develop the system','Deployment','Ongoing support'];
 
@@ -55,4 +55,4 @@ const WordpressWorking = () => {
   )
 }
 
-export default WordpressWorking
+export default ServiceWorking

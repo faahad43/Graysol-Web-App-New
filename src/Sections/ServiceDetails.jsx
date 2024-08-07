@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles'
 
-const CustomWordpress = () => {
+const ServiceDetails = () => {
   return (
     <div className='w-screen bg-light-900 max-w-[1042px] mx-auto text-center py-12 lg:py-20  px-[10%] lg:px-0  space-y-5 sm:space-y-7 xl:space-y-9'>
         <h2 className={`${styles.subHeadingTextDark} font-medium mb-7`} >
@@ -17,4 +17,4 @@ const CustomWordpress = () => {
   )
 }
 
-export default CustomWordpress
+export default ServiceDetails

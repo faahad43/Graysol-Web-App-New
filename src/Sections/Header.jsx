@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useWindowSize();
   return (
-    <div className='w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 xl:h-32 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]'>
+    <div className={`w-screen relative bg-secondary-500  md:bg-dark-900 h-16 sm:h-20 lg:h-28 xl:h-32 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
         <div className='sm:flex-1 xl:flex-[3_3_0%]'>
           <img className='w-[72px] h-[13px] sm:w-[88px] sm:h-[16px] md:w-[120px] md:h-[22px] lg:w-[157px] lg:h-[28px] xl:w-[197px] xl:h-[35px]' src={windowSize <768 ? Logo : BigLogo} alt="Graysol Logo" />
         </div>
