@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import styles from '../styles'
-import Button from '../Components/Button'
+import {Button} from '../Components/Button'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -52,11 +52,11 @@ const BlogBanner = () => {
                     />   
                     <div className="z-10 relative mx-auto w-[95%] pt-10 pb-[calc(22%)] space-y-16">
                         <div className='space-y-4'>
-                            <h6 
+                            <p 
                                 className={`${styles.descriptionText} font-medium tracking-widest uppercase`}
                                 style={{ color: '#722594' }}>
                                 Featured
-                            </h6>
+                            </p>
                             <h1 className={`${styles.headingText} capitalize`}>
                                 Gray solutions named top 20 system integrator
                             </h1>
@@ -82,4 +82,4 @@ const BlogBanner = () => {
   )
 }
 
-export default BlogBanner
+export { BlogBanner}

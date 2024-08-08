@@ -1,21 +1,21 @@
 import React from 'react'
-import {Banner2,DevelopmentFeatures, ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,Help, Benefits,Faq,Question} from '../Sections/index.js'
+import {Banner,DevelopmentFeatures, ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,Help, ServiceBenefits,Faq,Question} from '../Sections/index.js'
 
 const Services = () => {
   return (
     <>
-    <Banner2 page='service'/>
+    <Banner page='service'/>
     <DevelopmentFeatures/>
     <ServiceFeatures/>
     <Specialization/>
     <ServiceDetails/>
     <ServiceWorking/>
     <Help page="Service"/>
-    <Benefits/>
+    <ServiceBenefits/>
     <Faq/>
     <Question/>
     </>
   )
 }
 
-export default Services
+export  {Services}

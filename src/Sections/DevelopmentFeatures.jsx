@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles'
-import DevelopmentCard from '../Components/DevelopmentCard'
+import {DevelopmentCard} from '../Components/DevelopmentCard'
 import Feature1 from '../assets/icons/feature1.svg'
 import Feature2 from '../assets/icons/feature2.svg'
 import Feature3 from '../assets/icons/feature3.svg'
@@ -72,4 +72,4 @@ const data = [
   )
 }
 
-export default DevelopmentFeatures
+export  {DevelopmentFeatures}

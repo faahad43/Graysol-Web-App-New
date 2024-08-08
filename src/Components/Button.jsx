@@ -7,4 +7,4 @@ const Button = ({name="Button", className=''}) => {
   )
 }
 
-export default Button
+export  {Button}

@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useWindowSize();
   return (
-    <div className={`w-screen relative bg-secondary-500  md:bg-dark-900 h-16 sm:h-20 lg:h-28 xl:h-32 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
+    <div className={`w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
         <div className='sm:flex-1 xl:flex-[3_3_0%]'>
           <img className='w-[72px] h-[13px] sm:w-[88px] sm:h-[16px] md:w-[120px] md:h-[22px] lg:w-[157px] lg:h-[28px] xl:w-[197px] xl:h-[35px]' src={windowSize <768 ? Logo : BigLogo} alt="Graysol Logo" />
         </div>
@@ -77,7 +77,7 @@ const Header = () => {
           )
             }  
         </div>
-        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900 font-light text-[14px] lg:text-[19px] flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around`}>
+        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900  ${styles.descriptionText}  flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around `}>
               <NavLink
                 to=''
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
@@ -124,4 +124,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export {Header}

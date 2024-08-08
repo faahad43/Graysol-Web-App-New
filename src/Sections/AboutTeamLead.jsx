@@ -3,7 +3,7 @@ import styles from '../styles'
 import TeamLead1 from '../assets/img/aboutPerson1.png'
 import TeamLead2 from '../assets/img/aboutPerson2.png'
 
-const TeamLead = () => {
+const AboutTeamLead = () => {
 
   const teamLeadData = [
     {
@@ -62,4 +62,4 @@ const TeamLead = () => {
   )
 }
 
-export default TeamLead
+export {AboutTeamLead}

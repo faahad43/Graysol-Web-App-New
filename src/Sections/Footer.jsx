@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
         <div className='space-y-8 lg:w-[25%]  '>
           <div>
-            <h4 className={`${styles.descriptionText} text-secondary-default`}>INFORMATION</h4>
+            <p className={`${styles.descriptionText} text-secondary-default`}>INFORMATION</p>
             <ul className='text-[16px] space-y-3 list-disc list-inside mt-5 font-abhaya'>
               <li>Contact Us</li>
               <li>About Us</li>
@@ -40,13 +40,13 @@ const Footer = () => {
             </ul>
           </div>
           <div  className='text-[14px] space-y-6'>
-            <h4 className={`${styles.descriptionText} text-secondary-default`}>WE ARE AT</h4>
+            <p className={`${styles.descriptionText} text-secondary-default`}>WE ARE AT</p>
             <p className='pl-2'>Location</p>
             <p className='pl-2'>Location</p>
           </div>
         </div>
         <div className='lg:w-[25%]  '>
-          <h4 className={`${styles.descriptionText} text-secondary-default`}>LATEST BLOG POST</h4>
+          <p className={`${styles.descriptionText} text-secondary-default`}>LATEST BLOG POST</p>
           <ul className='text-[16px] list-disc ml-4 mt-3 font-abhaya'>
               <li className='leading-7'>Configure DNS over HTTPS TLS blocking pfSense 2024-01- 03</li>
               <li className='leading-7'>Optimizing Kubernetes Rolling Updates: maxSurge 2024- 01-03</li>
@@ -68,4 +68,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export {Footer}

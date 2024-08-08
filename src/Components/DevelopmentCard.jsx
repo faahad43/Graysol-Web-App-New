@@ -5,9 +5,9 @@ const DevelopmentCard = ({styles='',img,imgStyle,heading,description,footerText=
     <div className={`${styles.cardStyling} rounded-3xl flex items-center justify-center gap-4`}>
         <img className={`${imgStyle}`} src={img} alt="" />
         <div className='flex flex-col gap-4'>
-            <h1 className={`${styles.headingStyle}`}>
+            <p className={`${styles.headingStyle}`}>
                 {heading}
-            </h1>
+            </p>
             <p className={`${styles.descriptionStyle}`}>
                 {description}
             </p>
@@ -20,4 +20,4 @@ const DevelopmentCard = ({styles='',img,imgStyle,heading,description,footerText=
   )
 }
 
-export default DevelopmentCard
+export  {DevelopmentCard}

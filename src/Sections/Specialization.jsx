@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../styles'
 import { IoIosArrowDown } from "react-icons/io";
-import Button from '../Components/Button';
+import {Button} from '../Components/Button';
 
 const Specialization = () => {
 
@@ -14,7 +14,7 @@ const Specialization = () => {
             <div className=' grid place-items-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3 md:gap-y-10 lg:gap-y-16'>
                 {technologies.map((item,index)=>(
                     <div key={index} className='relative flex items-center justify-center py-5 border-b-2 border-primary-default w-44 h-24'>
-                        <p className={`${styles.subHeadingText} text-center `}>{item}</p>
+                        <h4 className={`${styles.subHeadingText} text-center `}>{item}</h4>
                         <div className='absolute bottom-2 right-2'>
                             <IoIosArrowDown size={22} color='#686767' />
                         </div>
@@ -28,4 +28,4 @@ const Specialization = () => {
   )
 }
 
-export default Specialization
+export {Specialization}

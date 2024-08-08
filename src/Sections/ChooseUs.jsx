@@ -39,9 +39,9 @@ const ChooseUs = () => {
     >
       <div className="w-[90%] lg:w-[85%]  max-w-[1124px] flex md:flex-row-reverse items-center justify-center md:justify-between">
         <div className="flex flex-col gap-6 xl:gap-16 md:w-[50%] lg:w-[50%] xl:w-[45%]">
-          <h2 className={`text-[40px] md:text-[45px] lg:text-[60px] xl:text-[70px] font-medium text-light-900  xl:font-medium text-center md:text-start`}>Why Graysol.</h2>
+          <h1 className={`${styles.h1Large} text-center md:text-start`}>Why Graysol.</h1>
           <ul
-            className={`text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px] font-light text-light-900  lg:font-normal md:leading-sung xl:leading-[32.5px] text-[20px] flex flex-col gap-3`}
+            className={`${styles.h5} md:leading-sung xl:leading-[32.5px] text-[20px] flex flex-col gap-3`}
           >
             <li className="">
               <img
@@ -114,11 +114,11 @@ const ChooseUs = () => {
             className="flex md:flex-col text-center md:gap-4 xl:gap-8 items-center pl-[15%] md:pl-0 z-10"
           >
             <img className="w-12 sm:w-14  md:w-16 lg:w-20 xl:w-24" src={stat.img} alt="" />
-            <p className="leading-snug mx-auto md:text-[18px] lg:text-[20px] xl:text-[30px] font-normal">
+            <h5 className={`leading-snug mx-auto font-normal ${styles.h5}`}>
               {stat.title}
               <br />
-              <span className="font-medium md:text-[25px] lg:text-[30px] xl:text-[40px]">{stat.number}</span>
-            </p>
+              <h3 className={`${styles.h3}`}>{stat.number}</h3>
+            </h5>
           </div>
         ))}
       </div>
@@ -126,4 +126,4 @@ const ChooseUs = () => {
   );
 };
 
-export default ChooseUs;
+export {ChooseUs};

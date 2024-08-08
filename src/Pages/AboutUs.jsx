@@ -1,16 +1,16 @@
 import React from 'react'
-import { AboutBanner, CompanyStats, CompanyVision, ContactForm2, TeamLead } from '../Sections'
+import { AboutPageBanner, AboutCompanyStats, AboutCompanyVision, ContactForm2, AboutTeamLead } from '../Sections'
 
 const AboutUs = () => {
   return (
     <div>
-        <AboutBanner/>
-        <TeamLead/>
-        <CompanyStats/>
-        <CompanyVision/>
+        <AboutPageBanner/>
+        <AboutTeamLead/>
+        <AboutCompanyStats/>
+        <AboutCompanyVision/>
         <ContactForm2/>
     </div>
   )
 }
 
-export default AboutUs
+export  {AboutUs}

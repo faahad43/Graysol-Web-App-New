@@ -1,11 +1,11 @@
 import React from 'react'
-import { Banner, ChooseUs, Sponsers,Services, Certifications,Promise, Testimonials,Help,Question, Faq } from '../Sections'
+import { HomeBanner, ChooseUs, Sponsers,Services, Certifications,Promise, Testimonials,Help,Question, Faq } from '../Sections'
 
 
 const Home = () => {
   return (
     <>
-      <Banner/>
+      <HomeBanner/>
       <Sponsers/>
       <ChooseUs/>
       <Services/>
@@ -19,4 +19,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export {Home}

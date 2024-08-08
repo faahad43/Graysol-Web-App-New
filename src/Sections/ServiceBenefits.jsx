@@ -9,9 +9,9 @@ import Settings from '../assets/icons/settings.svg';
 import SheildIcon from '../assets/icons/shield.svg';
 import Like from '../assets/icons/like.svg';
 import Notebook from '../assets/icons/notebook.svg';
-import DevelopmentCard from '../Components/DevelopmentCard';
+import {DevelopmentCard} from '../Components/DevelopmentCard';
 
-function Benefits() {
+function ServiceBenefits() {
 
   const cardStyles = {
     cardStyling :'cardShadow text-dark-900 bg-light-900 h-68 px-4 pt-3 sm:py-8 lg:py-6 xl:py-8 sm:px-[8%] lg:px-4 xl:px-6  sm:gap-8 lg:gap-4 lg:flex-col lg:flex-1 ',
@@ -53,7 +53,7 @@ const data = [
                   <div className='relative col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6 after:hidden lg:after:block after:absolute after:w-screen after:border-t-2 after:border-primary-default after:-bottom-[2px] after:-left-[40%] xl:after:-left-[50%] '>
                     {/* The absolute in the above div is for the line that shows on larger screen extending the borders */}
                     <img className='w-[40px] md:w-[55px] ' src={Settings} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Focus on Core Business</h4>
+                    <p className='text-[16px] md:text-[20px]'>Focus on Core Business</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                       You can focus on your core business by outsourcing a software development team.
                     </p>
@@ -64,7 +64,7 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0  border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[30px] md:w-[35px]' src={Arrow} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Can Utilize a Broader Range of Experts</h4>
+                    <p className='text-[16px] md:text-[20px]'>Can Utilize a Broader Range of Experts</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                       You can get your work done by the best software engineers without compromising the quality of the work.
                     </p>
@@ -75,7 +75,7 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 lg:border-l-2 border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Warning} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Save Your Money</h4>
+                    <p className='text-[16px] md:text-[20px]'>Save Your Money</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                       You can reduce your upfront cost by outsourcing your work to a software development company.
                     </p>
@@ -86,7 +86,7 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0 lg:border-l-0 border-b-2  lg:border-b-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Clock} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Faster time to Market</h4>
+                    <p className='text-[16px] md:text-[20px]'>Faster time to Market</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                     Outsourcing software development ensures a faster turnaround time to market the product.
                     </p>
@@ -97,7 +97,7 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 lg:border-l-2 border-b-2 md:border-b-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Sheild} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Save Your Time</h4>
+                    <p className='text-[16px] md:text-[20px]'>Save Your Time</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                       Software development takes less time when you outsource some of the tasks to another company.
                     </p>
@@ -108,7 +108,7 @@ const data = [
                   <div className='md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[50px]' src={Atom} alt="" />
-                    <h4 className='text-[16px] md:text-[20px]'>Lower Risk</h4>
+                    <p className='text-[16px] md:text-[20px]'>Lower Risk</p>
                     <p className={`text-[12px] md:text-[15px] font-light lg:font-normal`}>
                       By outsourcing to an external development company, you can deliver a high-quality project on time by reducing the level of risk.
                     </p>
@@ -129,4 +129,4 @@ const data = [
   );
 }
 
-export default Benefits;
+export { ServiceBenefits};

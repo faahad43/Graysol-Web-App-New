@@ -16,7 +16,7 @@ const Certifications = () => {
 
   return (
     <div className='w-screen bg-dark-900 py-8 flex flex-col items-center gap-10'>
-        <h2 className={`${styles.headingText}`}>Our Certifications</h2>
+        <h1 className={`${styles.h1}`}>Our Certifications</h1>
         <div className='w-[calc(100%-3rem)] sm:w-[calc(100%-8rem)] md:w-[80%] xl:w-[97%]  border-2 border-primary-default rounded bg-dark-700 justify-center gap-8 xl:gap-10 flex flex-wrap py-8 md:px-8'>
             {images.map((image,index)=>(
                 <img className='w-[80px] xl:w-[115px] object-contain' key={index} src={image} alt="Cetification image" />
@@ -26,4 +26,4 @@ const Certifications = () => {
   )
 }
 
-export default Certifications
+export  {Certifications}

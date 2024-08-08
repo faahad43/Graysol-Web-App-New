@@ -38,11 +38,11 @@ const Services = () => {
         <div className='row'>
           <div className='col-12'>
             <div className='skill-bx bg-dark-700 lg:pt-24 lg:pb-40'>
-              <h2 className={`${styles.headingText}text-light-900 font-light`}>Our Services</h2>
-              <p className={`${styles.descriptionText} lg:pt-8`}>
+              <h1 className={`${styles.h1}text-light-900 font-light`}>Our Services</h1>
+              <h6 className={`${styles.h6} lg:pt-8`}>
                 We provide a wide range of services to help you achieve your
                 business goals.
-              </p>
+              </h6>
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -67,9 +67,9 @@ const Services = () => {
                       className='bg-blue-950 rounded-[20px] border-primary-default border-2 py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
                       <img src={web} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
-                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
+                      <h4 className={`${styles.h4Heavy}`}>
                         Web App Development
-                      </h5>
+                      </h4>
                     </div>
                   </motion.div>
                 </Tilt>
@@ -87,11 +87,11 @@ const Services = () => {
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
                       <img src={mobile} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
-                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[25px] xl:text-[35px] font-medium'>
+                      <h4 className={`${styles.h4Heavy} `}>
                         Data Science
                         <br />
-                        <h6>Machine Learning & Computer Vision</h6>
-                      </h5>
+                        Machine Learning & Computer Vision
+                      </h4>
                     </div>
                   </motion.div>
                 </Tilt>
@@ -109,9 +109,9 @@ const Services = () => {
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-6 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
                       <img src={backend} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
-                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
+                      <h4 className={`${styles.h4Heavy}`}>
                         Custom Software Development
-                      </h5>
+                      </h4>
                     </div>
                   </motion.div>
                 </Tilt>
@@ -129,9 +129,9 @@ const Services = () => {
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
                       <img src={creator} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
-                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
+                      <h4 className={`${styles.h4Heavy}`}>
                         Cloud Solutions
-                      </h5>
+                      </h4>
                     </div>
                   </motion.div>
                 </Tilt>
@@ -150,9 +150,9 @@ const Services = () => {
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px] xl:min-h-[430px] xl:min-w-[383px] flex justify-evenly items-center flex-col'
                     >
                       <img src={mobile} className='w-16 h-16 xl:w-20 xl:h-20 object-contain' />
-                      <h5 className='text-white text-[18px] md:text-[22px] lg:text-[27px] xl:text-[35px] font-medium'>
+                      <h4 className={`${styles.h4Heavy}`}>
                         Wordpress & Shopify Store Development
-                      </h5>
+                      </h4>
                     </div>
                   </motion.div>
                 </Tilt>
@@ -181,4 +181,4 @@ const CustomButtonGroup = ({ next, previous }) => {
 }
 
 
-export default Services
+export {Services}

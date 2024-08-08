@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import BlogCard from '../Components/BlogCard';
+import {BlogCard} from '../Components/BlogCard';
 import useWindowSize from '../hooks/windowSize';
 
 
@@ -162,11 +162,11 @@ const BlogSection = () => {
         </div>
       ),
       customPaging: i => (
-        <div
+        <h5
         className={`${currentSlide===i ? 'text-opacity-100' : 'text-opacity-40'} text-light-900  hover:text-opacity-100 text-[20px] md:text-[25px] lg:text-[30px]`}
         >
           {i + 1}
-        </div>
+        </h5>
       )
     };
 
@@ -252,4 +252,4 @@ const BlogSection = () => {
   )
 }
 
-export default BlogSection
+export { BlogSection}

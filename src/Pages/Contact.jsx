@@ -1,13 +1,13 @@
 import React from 'react'
-import { Banner2,ContactForm } from '../Sections'
+import { Banner,ContactForm } from '../Sections'
 
 const Contact = () => {
   return (
     <div>
-      <Banner2 page='contact'/>
+      <Banner page='contact'/>
       <ContactForm/>
     </div>
   )
 }
 
-export default Contact
+export  {Contact}

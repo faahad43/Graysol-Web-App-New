@@ -5,7 +5,7 @@ import lior from '../assets/img/lior_image.jpg'
 import ionut from '../assets/img/ionut_panait_image.jpg'
 import { StarFill } from 'react-bootstrap-icons'
 import styles from '../styles'
-const Testimonial = () => {
+const Testimonials = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -30,12 +30,12 @@ const Testimonial = () => {
         <div className='row lg:w-screen'>
           <div className='col-12 lg:w-[calc(100%-3rem)] lg:mx-auto'>
             <div className='testimonial-bx lg:rounded-none  lg:py-24 '>
-              <h2 className={`${styles.headingText}`}>
+              <h1 className={`${styles.h1}`}>
                 Testimonials.
-              </h2>
-              <p className={`${styles.subHeadingText} my-8 xl:mb-12`}>
+              </h1>
+              <h4 className={`${styles.h4} my-8 xl:mb-12`}>
                 Some of our proud customers
-              </p>
+              </h4>
               <Carousel
                 responsive={responsive}
                 infinite={true}
@@ -54,18 +54,18 @@ const Testimonial = () => {
                         className='w-16 h-16 xl:w-20 xl:h-20 m-auto rounded-full'
                         alt=''
                       />
-                      <h3 class='mb-0 mt-2 xl:text-[25px] xl:font-medium'>Lior</h3>
+                      <h6 className={`mb-1 mt-2 ${styles.h6DarkHeavy}`}>Lior</h6>
 
-                      <span className='text-gray-500 text-[14px] xl:text-[16px]'>
+                      <p className={`${styles.p4Dark} opacity-60`}>
                         CEO Testamind Ecommerce
-                      </span>
+                      </p>
                       <div className='flex flex-wrap justify-center mt-2'>
                         <StarFill />
                         <StarFill />
                         <StarFill />
                         <StarFill />
                       </div>
-                      <p className='mt-2 xl:mt-8 xl:text-[18px]' align="justify">
+                      <p className={`mt-2 xl:mt-8 ${styles.p3Dark}`} align="justify">
                         I am a very old client of Hamza, long before this
                         company even exists, he showcased his technical
                         expertise and strong communication skills, which were
@@ -84,10 +84,10 @@ const Testimonial = () => {
                         alt=''
                       />
 
-                      <h3 class='mb-0 mt-2 xl:text-[25px] xl:font-medium'>Leonardo Turchi</h3>
-                      <span className='text-gray-500 text-[14px] xl:text-[16px]'>
+                      <h6 className={`mb-1 mt-2 ${styles.h6DarkHeavy}`}>Leonardo Turchi</h6>
+                      <p className={`${styles.p4Dark} opacity-60`}>
                         Software Developer , Italy
-                      </span>
+                      </p>
 
                       <div className='flex flex-wrap justify-center mt-2'>
                         <StarFill />
@@ -95,7 +95,7 @@ const Testimonial = () => {
                         <StarFill />
                         <StarFill />
                       </div>
-                      <p className='mt-2 xl:mt-8 xl:text-[18px]' align="justify">
+                      <p className={`mt-2 xl:mt-8 ${styles.p3Dark}`} align="justify">
                         I am impressed by the results, very responsive
                         communication, delivered a challenging project within a
                         short span of time, with feasibility and technical
@@ -114,17 +114,17 @@ const Testimonial = () => {
                         alt=''
                       />
 
-                      <h3 class='mb-0 mt-2 xl:text-[25px] xl:font-medium'>Ionut John Panait</h3>
-                      <span className='text-gray-500 text-[14px] xl:text-[16px]'>
+                      <h6 className={`mb-1 mt-2 ${styles.h6DarkHeavy}`}>Ionut John Panait</h6>
+                      <p className={`${styles.p4Dark} opacity-60`}>
                         Businessman, Romania
-                      </span>
+                      </p>
                       <div className='flex flex-wrap justify-center mt-2'>
                         <StarFill />
                         <StarFill />
                         <StarFill />
                         <StarFill />
                       </div>
-                      <p className='mt-2 xl:mt-8 xl:text-[18px]' align="justify">
+                      <p className={`mt-2 xl:mt-8 ${styles.p3Dark}`} align="justify">
                         I am glad I hired them, they were able to showcase their
                         technical expertise and strong communication skills,
                         which were essential to the successful delivery of our
@@ -156,4 +156,4 @@ const CustomButtonGroup = ({ next, previous }) => {
 }
 
 
-export default Testimonial
+export {Testimonials}

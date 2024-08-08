@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles'
-import Button from '../Components/Button'
+import {Button} from '../Components/Button'
 import Triangle from "../assets/icons/triangle.svg"
 
 
@@ -12,9 +12,9 @@ const ServiceWorking = () => {
     <div className='bg-dark-900 py-8'>
         <div className='w-[85%] max-w-[1134px] flex flex-col items-center mx-auto bg-dark-700 rounded-2xl text-center py-8 lg:py-14 gap-8'>
             <h1 className={`${styles.headingText}`}>How it works</h1>
-            <p className={`${styles.descriptionText} w-[80%]`}>
+            <h6 className={`${styles.descriptionText} w-[80%]`}>
                 From concept and design to coding and long-term-support, we work with you closely to make your project a success.
-            </p>
+            </h6>
             <div className='relative text-light-900 flex flex-col md:flex-row mt-6 md:mt-24 mb-5 md:mb-16 w-[80%]  '>
                 <div className='absolute bg-primary-default w-1 h-full md:w-full md:h-1 left-[calc(50%-2px)] md:left-0 md:top-[calc(50%-2px)] '></div>
                 {steps.map((step,index)=>(
@@ -55,4 +55,4 @@ const ServiceWorking = () => {
   )
 }
 
-export default ServiceWorking
+export {ServiceWorking}

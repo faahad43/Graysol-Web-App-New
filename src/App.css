@@ -35,6 +35,9 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 75px;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
   }
   
   body {
@@ -42,12 +45,10 @@
     overflow-x: hidden;
     position: relative;
     font-family: "Teklea";
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
+    
   }
 
-  body::-webkit-scrollbar {
+  html::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
   }
   
@@ -108,11 +109,11 @@
     padding: 60px 50px;
     
   }
-  .skill h2 {
+  .skill h1 {
       /* font-size: 45px; */
       /* font-weight: 400; */
   }
-  .skill p {
+  .skill h6 {
       color: #B8B8B8;
       /* font-size: 18px; */
       letter-spacing: 0.8px;

@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from '../styles'
-import PromiseCard from '../Components/PromiseCard'
+import {PromiseCard} from '../Components/PromiseCard'
 import Like from "../assets/icons/like.svg";
 import Shield from "../assets/icons/shield.svg"; 
 import Heart from "../assets/icons/heart.svg";
 import Office from '../assets/img/office.png';
-import Button from '../Components/Button';
+import {Button} from '../Components/Button';
 import useWindowSize from '../hooks/windowSize';
 
 const Promise = () => {
@@ -18,7 +18,7 @@ const Promise = () => {
 
   return (
     <div className='w-screen bg-dark-900 flex flex-col items-center justify-center gap-12 xl:gap-24 md:gap-16 py-10 xl:py-24'>
-        <h2 className={styles.headingText}>Our Promise</h2>
+        <h1 className={styles.h1}>Our Promise</h1>
         <div className='w-[80%] py-8 lg:py-16 xl:py-32 px-6 md:px-10 xl:px-16 bg-light-900 rounded-2xl lg:rounded-3xl xl:rounded-[40px] flex flex-col lg:flex-row  items-center justify-evenly gap-5 xl:gap-10'>
             <PromiseCard icon={Like} detail={promiseCard1} iconStyling='w-[45px] h-[43px]' cardStyling='h-[13rem]'/>
             <PromiseCard icon={Heart} detail={promiseCard2} iconStyling='w-[45px] h-[42px]' cardStyling='h-[13rem]'/>
@@ -27,10 +27,10 @@ const Promise = () => {
         <div className='flex w-[80%] gap-10 lg:gap-16 justify-center md:mt-10'>
             <img className={`${windowSize < 768 ? 'hidden': 'visible'} w-[50%] lg:w-[45%] h-64 lg:h-72 xl:w-[38rem] xl:h-[25rem] object-cover mt-8`} src={Office} alt="" />
             <div className='flex flex-col md:w-[40%] xl:w-[45%] gap-8 items-center md:items-start'>
-                <h2 className={`${styles.headingText} text-center md:text-start`}>Ensuring 100% Satisfaction</h2>
+                <h1 className={`${styles.h1} text-center md:text-start`}>Ensuring 100% Satisfaction</h1>
                 <div>
-                    <p className={`${styles.descriptionText} mb-4 text-center md:text-start`}>Our team of software development & support engineers ensure uninterrupted service.</p>
-                    <ul className={`${styles.descriptionText} list-disc list-outside space-y-2 ml-4`}>
+                    <p className={`${styles.p2} mb-4 text-center md:text-start`}>Our team of software development & support engineers ensure uninterrupted service.</p>
+                    <ul className={`${styles.p2} list-disc list-outside space-y-2 ml-4`}>
                         <li >Experienced team of developers and support engineers</li>
                         <li>Proven track record of delivering successful software solutions</li>
                         <li>Utilization of the latest technologies and best practices</li>
@@ -47,4 +47,4 @@ const Promise = () => {
   )
 }
 
-export default Promise
+export {Promise}
