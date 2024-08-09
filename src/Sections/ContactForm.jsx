@@ -20,13 +20,13 @@ const ContactForm = () => {
             <textarea className='w-11/12 h-32 h-32 lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal lg:font-medium tracking-wide' placeholder='What You are working on?' resize name="" id=""></textarea>
             <div className='w-11/12 flex items-start space-x-3'>
                 <input type="checkbox" id='checkbox1' className='mt-[3px]'  />
-                <label htmlFor="checkbox1" className='text-[12px] md:text-[15px] lg:text-[18px]'>
+                <label htmlFor="checkbox1" className={`${styles.p4}`}>
                     I UNDERSTAND THE INFORMATION I PROVIDE IN THIS FORM WILL BE HANDLED IN ACCORDANCE WITH GRAY SOLUTIONS PRIVACY POLICY, AND I AGREE TO ITS TERMS.
                 </label>
             </div>
             <div className='w-11/12 flex items-start space-x-3'>
                 <input type="checkbox" id='checkbox2' className='mt-[3px]'  />
-                <label htmlFor="checkbox2" className='text-[12px] md:text-[15px] lg:text-[18px]'>
+                <label htmlFor="checkbox2" className={`${styles.p4}`}>
                     I WOULD LIKE TO RECEIVE MARKETING COMMUNICATIONS FROM GRAY SOLUTIONS.
                 </label>
             </div>

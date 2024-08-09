@@ -30,10 +30,10 @@ const AboutTeamLead = () => {
 
   return (
     <div className='bg-dark-900 py-8 text-center'>
-            <h2 className={`${styles.aboutUsHeading}`}>
+            <h2 className={`${styles.h2}`}>
                 Get to Know Us
             </h2>
-            <p className={`${styles.descriptionText} mt-5 px-[8%]`}>
+            <p className={`${styles.p2} mt-5 px-[8%]`}>
                 Our head Solutioneers lead with passion and humility, and they keep it real with a healthy dose of sarcasm.
             </p>
             <div className={`w-[90%] sm:w-full mx-auto rounded-3xl sm:rounded-none bg-dark-800 grid grid-cols-1 sm:grid-cols-2 mt-3 py-8 sm:py-16 sm:px-[6%] place-items-center gap-8 sm:gap-x-6 xl:gap-x-10`}>
@@ -47,10 +47,10 @@ const AboutTeamLead = () => {
                             src={data.image} 
                             alt="Team Lead Image" />
                         </div>
-                        <h5 className={`text-light-900 mt-1 text-[20px] sm:text-[22px] md:text-[26px] lg:text-[30px] tracking-wide sm:pl-3`}>
+                        <h5 className={`${styles.h5Heavy} tracking-wide sm:pl-3`}>
                             {data.name}
                         </h5>
-                        <p className={`${styles.descriptionText} opacity-50 sm:pl-3`}>
+                        <p className={`${styles.p2} opacity-50 sm:pl-3`}>
                             {data.position}
                         </p>
                     

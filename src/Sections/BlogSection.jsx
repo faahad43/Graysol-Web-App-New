@@ -175,18 +175,18 @@ const BlogSection = () => {
         <div className='bg-dark-700 relative mx-auto w-[90%] max-w-[1200px] rounded-3xl pb-[7rem] py-8 px-6 space-y-12'>
             {/* The main heading  */}
             <div className='space-y-4'>
-                <h1 className={`${styles.headingText} flex items-center justify-center gap-2`}>
+                <h1 className={`${styles.h1} flex items-center justify-center gap-2`}>
                     Press 
                     <FaPlus className={`w-5 fill-primary-default`}/>
                     Insight
                 </h1>
-                <p className={`${styles.descriptionText} text-center`}>
+                <p className={`${styles.p2} text-center`}>
                     Breaking news, fresh perspectives, and worthwhile info. No fluff.
                 </p>
             </div>
             {/* The Filter Buttons Section */}
             <div className='space-y-4'>
-                <p className={`${styles.descriptionText} text-primary-default uppercase font-normal text-center tracking-wider`}>
+                <p className={`${styles.p2Heavy} text-primary-default uppercase  text-center tracking-wider`}>
                     filter contents
                 </p>
                 <div className='md:w-[95%] lg:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 place-items-center gap-x-8 md:gap-x-0 gap-y-3'>

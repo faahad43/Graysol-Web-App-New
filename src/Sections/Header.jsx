@@ -68,16 +68,16 @@ const Header = () => {
                     </NavLink>
                   </div>
                 </div>
-                <div className={`${styles.subHeadingText} pt-10 flex gap-14`}>
+                <div className={`${styles.h4} pt-10 flex gap-14`}>
                   <p>Careers</p>
                   <p>Linkedin</p>
                 </div>
-                <p className={`${styles.subHeadingText} pt-4`}>Contact</p>
+                <p className={`${styles.h4} pt-4`}>Contact</p>
               </div>
           )
             }  
         </div>
-        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900  ${styles.descriptionText}  flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around `}>
+        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900  ${styles.p2}  flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around `}>
               <NavLink
                 to=''
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}

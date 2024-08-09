@@ -10,8 +10,8 @@ const Banner = ({page="service"}) => {
     paragraph2:'',
     button:'see portfolio',
     sectionStyling:'pt-10 pb-12 sm:px-[15%] 2xl:px-[18%] sm:py-12 lg:py-16 xl:py-28',
-    headingStyling:'mb-7 mb-9',
-    paragraphStyling:'mb-10 mb-20'
+    headingStyling:`${styles.h2} mb-6 mb-9`,
+    paragraphStyling:'mb-10 md:mb-20'
   };
 
   const contactData = {
@@ -20,7 +20,7 @@ const Banner = ({page="service"}) => {
     paragraph2:'We\'re ready to tackle whatever you need to move your business forward.',
     button: 'call me ',
     sectionStyling:'pt-8 pb-16 md:pt-10 md:pb-20 xl:pb-28',
-    headingStyling:'mb-3 lg:mb-5',
+    headingStyling:`${styles.h3} mb-3 lg:mb-5`,
     paragraphStyling:'mb-8 lg:mb-12 xl:mb-20'
   }
 
@@ -28,10 +28,10 @@ const Banner = ({page="service"}) => {
 
   return (
     <section className={`${data.sectionStyling} w-screen bg-primary-600 flex flex-col items-center text-center px-[10%]`}>
-            <h2 className={`${styles.headingText} ${data.headingStyling}`}>{data.heading}</h2>
+            <h2 className={` ${data.headingStyling}`}>{data.heading}</h2>
             <div className={data.paragraphStyling}>
-              <p className={styles.descriptionText}>{data.paragraph}</p>
-              <p className={styles.descriptionText}>{data.paragraph2}</p>
+              <p className={styles.p2}>{data.paragraph}</p>
+              <p className={styles.p2}>{data.paragraph2}</p>
             </div>
             <div className='space-x-6'>
               <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit py-2 uppercase rounded-sm`}>CHAT WITH US</button>

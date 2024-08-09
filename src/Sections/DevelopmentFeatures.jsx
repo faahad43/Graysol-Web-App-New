@@ -12,9 +12,9 @@ const DevelopmentFeatures = () => {
 
 const cardStyles = {
     cardStyling :'text-light-900 bg-dark-900 h-52 md:h-80 lg:h-96 p-8 sm:gap-8 md:gap-4 lg:gap-8 sm:px-[12%] md:px-3 md:flex-col lg:p-12',
-    headingStyle :'text-[18px] lg:text-[19px] xl:text-[20px] font-normal lg:font-medium leading-snug',
-    descriptionStyle :'text-[16px] lg:text-[17px] xl:text-[18px] font-light lg:font-normal leading-snug',
-    footerStyle :'text-[14px] xl:text-[17px] font-light lg:font-normal underline decoration-dashed underline-offset-4 leading-snug',
+    headingStyle :`'${styles.p2Heavy} leading-snug'`,
+    descriptionStyle :`${styles.p3} leading-snug`,
+    footerStyle :`${styles.p4} underline decoration-dashed underline-offset-4 leading-snug`,
 
 } 
 
@@ -59,7 +59,7 @@ const data = [
 
   return (
     <div className='bg-dark-900 py-16 text-center space-y-8'>
-        <h1 className={styles.headingText}>Software Development Features</h1>
+        <h1 className={styles.h1}>Software Development Features</h1>
         <div 
             className='bg-dark-700 max-w-[1267px] w-[90%] rounded-3xl mx-auto md:place-items-center grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-x-4 lg:gap-x-12 p-7 sm:px-12 md:px-5 lg:p-12'
         >

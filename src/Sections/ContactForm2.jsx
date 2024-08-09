@@ -8,10 +8,10 @@ const ContactForm2 = () => {
     <div className='bg-primary-700  text-light-900'>
         <div className='flex flex-col lg:flex-row max-w-[1200px] lg:w-[85%] mx-auto gap-10 lg:gap-5 py-8 md:py-14 xl:py-20'>
             <div className={`text-center lg:text-start space-y-4`}>
-                <h2 className={`${styles.aboutUsHeading} capitalize`}>
+                <h2 className={`${styles.h2} capitalize`}>
                     Think we can’t?<br/>Think again.
                 </h2>
-                <p className={`${styles.descriptionText}`}>
+                <p className={`${styles.p2}`}>
                     We eat tough problems for lunch.<br/>Feed us yours.
                 </p>
             </div>
@@ -24,14 +24,14 @@ const ContactForm2 = () => {
                 <textarea className='w-11/12 h-32  lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal lg:font-medium tracking-wide' placeholder='What You are working on?' resize name="" id=""></textarea>
                 <div className='w-11/12 flex items-start space-x-3'>
                     <input type="checkbox" id='checkbox1' className='mt-[3px]'  />
-                    <label htmlFor="checkbox1" className='text-[12px] md:text-[15px] lg:text-[18px]'>
-                        I UNDERSTAND THE INFORMATION I PROVIDE IN THIS FORM WILL BE HANDLED IN ACCORDANCE WITH GRAY SOLUTIONS PRIVACY POLICY, AND I AGREE TO ITS TERMS.
+                    <label htmlFor="checkbox1" className={`${styles.p4} tracking-wider`}>
+                        I understand the information i provide in this form will be handled in accordance with gray solutions privacy policy, and I agree to its terms.
                     </label>
                 </div>
                 <div className='w-11/12 flex items-start space-x-3'>
                     <input type="checkbox" id='checkbox2' className='mt-[3px]'  />
-                    <label htmlFor="checkbox2" className='text-[12px] md:text-[15px] lg:text-[18px]'>
-                        I WOULD LIKE TO RECEIVE MARKETING COMMUNICATIONS FROM GRAY SOLUTIONS.
+                    <label htmlFor="checkbox2" className={`${styles.p4}`}>
+                        I would like to receive marketing communications from gray solutions.
                     </label>
                 </div>
 

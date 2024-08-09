@@ -53,11 +53,11 @@ const BlogBanner = () => {
                     <div className="z-10 relative mx-auto w-[95%] pt-10 pb-[calc(22%)] space-y-16">
                         <div className='space-y-4'>
                             <p 
-                                className={`${styles.descriptionText} font-medium tracking-widest uppercase`}
+                                className={`${styles.p2} font-medium tracking-widest uppercase`}
                                 style={{ color: '#722594' }}>
                                 Featured
                             </p>
-                            <h1 className={`${styles.headingText} capitalize`}>
+                            <h1 className={`${styles.h1} capitalize`}>
                                 Gray solutions named top 20 system integrator
                             </h1>
                         </div>

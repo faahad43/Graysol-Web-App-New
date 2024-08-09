@@ -11,14 +11,14 @@ const AboutPageBanner = () => {
             src={AboutUsBanner}
             alt="Banner Image of  About Page" 
             />
-            <h1 className={`${styles.headingText} relative z-30`}>
+            <h1 className={`${styles.h1} relative z-30`}>
                 REBELS WITH A CAUSE
             </h1>
-            <p className={`${styles.descriptionText} relative z-30`}>
+            <p className={`${styles.p3} relative z-30`}>
                 Gray Solutions is a collective of unconventional thinkers who thrive on pushing boundaries and embracing challenges that others run from. From assembling a team of audacious Solutioneers to handpicking partners with cutting-edge tech, we take pride in the company we keep and the work we do.
             </p>
         </div>
-        <h5 className='text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px]'>
+        <h5 className={`${styles.h5}`}>
             We’re Here To 
             <span className='text-primary-default'>
                &nbsp; Revolutionize Our Industry.
