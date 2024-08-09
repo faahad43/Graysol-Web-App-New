@@ -7,9 +7,15 @@ import clock from "../assets/icons/clock.svg";
 import client from "../assets/icons/clients.svg";
 import startup from "../assets/img/startup.png";
 import useWindowSize from "../hooks/windowSize";
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const ChooseUs = () => {
-  const windowSize = useWindowSize()
+  const windowSize = useWindowSize();
+  const [ref, inView] = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.5, // Adjust this value to trigger when 50% of the element is in view
+  });
   const stats = [
     {
       title: "Team",
@@ -105,6 +111,7 @@ const ChooseUs = () => {
       </div>
       {/* Graysol Statistics */}
       <div
+         ref={ref} // reference to the element that we want to observe
         className={` ${styles.descriptionText} relative w-64 md:w-[95%] lg:w-[85%] max-w-[1124px] h-fit md:h-56 py-8 md:py-0 md:py-32 lg:py-40 xl:py-48  border border-primary-default bg-primary-900 rounded flex flex-col md:flex-row gap-8 justify-center md:justify-around md:items-center md:px-10`}
       >
         <div className="absolute left-[calc(15%+1.5rem)] md:left-0 md:top-[calc(50%-2.5rem)] xl:top-[calc(50%-4rem)] transform -translate-x-1/2 md:-translate-x-0 h-full md:h-[1px] w-[1px] md:w-full border-dashed border-l-2 md:border-l-0 md:border-b-2 border-primary-default"></div>
@@ -117,7 +124,16 @@ const ChooseUs = () => {
             <h5 className={`leading-snug mx-auto font-normal ${styles.h5}`}>
               {stat.title}
               <br />
-              <h3 className={`${styles.h3}`}>{stat.number}</h3>
+              {inView && (
+                <CountUp
+                  start={0}
+                  end={stat.number}
+                  duration={5}
+                  separator=""
+                >
+                  <h3 className={`${styles.h3Heavy}`}>{stat.number}</h3>
+                </CountUp>
+              )}
             </h5>
           </div>
         ))}

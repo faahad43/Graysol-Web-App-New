@@ -12,10 +12,13 @@ import useWindowSize from '../hooks/windowSize'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useWindowSize();
+  const [backgroundColor , setBackgroundColor] = useState('bg-secondary-500')
   return (
-    <div className={`w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
+    <div className={`w-screen relative ${backgroundColor} md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
         <div className='sm:flex-1 xl:flex-[3_3_0%]'>
-          <img className='w-[72px] h-[13px] sm:w-[88px] sm:h-[16px] md:w-[120px] md:h-[22px] lg:w-[157px] lg:h-[28px] xl:w-[197px] xl:h-[35px]' src={windowSize <768 ? Logo : BigLogo} alt="Graysol Logo" />
+        <Link to=''>
+          <img className='w-[72px] h-[13px] sm:w-[88px] sm:h-[16px] md:w-[120px] md:h-[22px] lg:w-[157px] lg:h-[28px] xl:w-[197px] xl:h-[35px]' src={windowSize <768 ? Logo : BigLogo} alt="Graysol Logo" onClick={()=>setBackgroundColor('bg-secondary-500')} />
+        </Link>
         </div>
         <div className='md:hidden'>
           {!isOpen ? (
@@ -34,35 +37,55 @@ const Header = () => {
                   <div className=' flex flex-col space-y-3 font-medium text-[42px] tracking-wide'>
                     <NavLink 
                       to='' 
-                      onClick={()=>setIsOpen(!isOpen)}
+                      onClick={()=>{
+                        setIsOpen(!isOpen);
+                        setBackgroundColor('bg-secondary-500')
+                      }
+                      }
                     >
                       Home
                     </NavLink>
 
                     <NavLink 
                       to='/services' 
-                      onClick={()=>setIsOpen(!isOpen)}
+                      onClick={()=>{
+                        setIsOpen(!isOpen);
+                        setBackgroundColor('bg-dark-900')
+                      }
+                      }
                     >
                       Services
                     </NavLink>
 
                     <NavLink 
                       to='/about' 
-                      onClick={()=>setIsOpen(!isOpen)}
+                      onClick={()=>{
+                        setIsOpen(!isOpen);
+                        setBackgroundColor('bg-dark-900')
+                      }
+                      }
                     >
                       About us
                     </NavLink>
 
                     <NavLink 
                       to='/blog' 
-                      onClick={()=>setIsOpen(!isOpen)}
+                      onClick={()=>{
+                        setIsOpen(!isOpen);
+                        setBackgroundColor('bg-dark-900')
+                      }
+                      }
                     >
                       Blog
                     </NavLink>
 
                     <NavLink 
                       to='/contact' 
-                      onClick={()=>setIsOpen(!isOpen)}
+                      onClick={()=>{
+                        setIsOpen(!isOpen);
+                        setBackgroundColor('bg-dark-900')
+                      }
+                      }
                     >
                       Contact Us
                     </NavLink>
