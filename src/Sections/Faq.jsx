@@ -62,7 +62,7 @@ const Faq = () => {
 
   return (
     <div className={`${styles.descriptionText} bg-dark-900 py-3 flex flex-col items-center gap-8 w-screen`}>
-        <h5 className={`${styles.h5}  text-secondary-default`}>F.A.Q</h5>
+        <h5 className={`${styles.h5}  text-primary-default`}>F.A.Q</h5>
         <h1 className={`${styles.h1} text-center leading-snug lg:leading-tight`}>Frequently asked <br />questions</h1>
         <div className="w-[90%] sm:w-[80%] px-4 sm:px-8 pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-10 lg:mt-5 max-w-[1138px] border-2 border-primary-default rounded-lg bg-light-900 text-dark-900">
         
@@ -70,8 +70,8 @@ const Faq = () => {
             {faqs.map((faq,index)=>(
                     <li key={index} className='border-b-[1px] mb-4 lg:mb-6 border-primary-default'>
                     <button className="relative flex gap-2 items-end w-full pb-3 text-base font-semibold text-left border-t md:text-lg border-base-content/10" aria-expanded={false} onClick={(e)=>toggleFAQ(e,index)}>
-                        <span className={`flex-1 text-base-content ${styles.p2Dark}`}>{faq.question}</span>
-                        <svg className=" flex-shrink-0 w-[18px] h-[18px] ml-auto fill-current bg-primary-default p-[3px] rounded-full" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <span className={`flex-1 text-base-content ${styles.p2Dark} font-normal`}>{faq.question}</span>
+                        <svg className=" flex-shrink-0 w-[18px] h-[18px] ml-auto lg:mb-auto  fill-current bg-primary-default p-[3px] rounded-full" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                             <rect y="6" width="15" height="3" rx="1" 
                             className="transform origin-center transition duration-200 ease-out false text-light-900 rounded-full"></rect>
                             <rect y="6.5" width="15" height="3" rx="1" className={`${toggleIcon[index]?'visible':'hidden'} transform origin-center rotate-90 transition duration-200 ease-out false text-light-900 rounded-full`}></rect>

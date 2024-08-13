@@ -12,12 +12,14 @@ import useWindowSize from '../hooks/windowSize'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const windowSize = useWindowSize();
-  const [backgroundColor , setBackgroundColor] = useState('bg-secondary-500')
   return (
-    <div className={`w-screen relative ${backgroundColor} md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
+    <div className={`w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
         <div className='sm:flex-1 xl:flex-[3_3_0%]'>
         <Link to=''>
-          <img className='w-[72px] h-[13px] sm:w-[88px] sm:h-[16px] md:w-[120px] md:h-[22px] lg:w-[157px] lg:h-[28px] xl:w-[197px] xl:h-[35px]' src={windowSize <768 ? Logo : BigLogo} alt="Graysol Logo" onClick={()=>setBackgroundColor('bg-secondary-500')} />
+        <div className='flex gap-2 items-center group hover:cursor-pointer'>
+          <img id='logo' className='w-[30px] h-[30px] sm:w-[40px] sm:h-[40px] md:w-[45px] md:h-[45px] lg:w-[50px] lg:h-[50px] xl:w-[60px] xl:h-[60px] group-hover:cursor-pointer' src={Logo} alt="Graysol Logo" />
+          <label htmlFor="logo" className={`${styles.h4Heavy} group-hover:cursor-pointer`}>Graysol</label>
+        </div>
         </Link>
         </div>
         <div className='md:hidden'>
@@ -30,7 +32,12 @@ const Header = () => {
           ) : (
               <div className='fixed px-4 inset-0 bg-secondary-500 text-light-900 z-50'>
                 <div className='flex  py-5 justify-between'>
-                  <Link to=''><img className='w-[171px] h-[31px]' src={BigLogo} alt="Graysol Logo" onClick={()=>setIsOpen(!isOpen)} /></Link>
+                  <Link to='' onClick={()=>setIsOpen(!isOpen)}>
+                  <div className='flex gap-2 items-center group '>
+                    <img id='logo1' className='w-[45px] h-[45px] group-hover:cursor-pointer' src={Logo} alt="Graysol Logo"  />
+                    <h1 htmlFor='logo1' className={`${styles.h1} group-hover:pointer`}>Graysol</h1>
+                  </div>
+                  </Link>
                   <img className='w-[34px] h-[34px] cursor-pointer' src={cross} alt="cross icon" onClick={()=>setIsOpen(!isOpen)} />
                 </div>
                 <div className=' pt-6'>
@@ -39,7 +46,6 @@ const Header = () => {
                       to='' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
-                        setBackgroundColor('bg-secondary-500')
                       }
                       }
                     >
@@ -50,7 +56,7 @@ const Header = () => {
                       to='/services' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
-                        setBackgroundColor('bg-dark-900')
+                        
                       }
                       }
                     >
@@ -61,7 +67,7 @@ const Header = () => {
                       to='/about' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
-                        setBackgroundColor('bg-dark-900')
+                       
                       }
                       }
                     >
@@ -72,7 +78,7 @@ const Header = () => {
                       to='/blog' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
-                        setBackgroundColor('bg-dark-900')
+                        
                       }
                       }
                     >
@@ -83,7 +89,7 @@ const Header = () => {
                       to='/contact' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
-                        setBackgroundColor('bg-dark-900')
+                      
                       }
                       }
                     >
@@ -139,7 +145,7 @@ const Header = () => {
                 to='/contact'
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
               >
-                Contact Us
+                Contact us
               </NavLink>
         </nav>
         

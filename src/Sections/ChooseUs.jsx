@@ -9,6 +9,7 @@ import startup from "../assets/img/startup.png";
 import useWindowSize from "../hooks/windowSize";
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import { FaCircleArrowRight } from "react-icons/fa6";
 
 const ChooseUs = () => {
   const windowSize = useWindowSize();
@@ -50,59 +51,31 @@ const ChooseUs = () => {
             className={`${styles.h5} md:leading-sung xl:leading-[32.5px] text-[20px] flex flex-col gap-3`}
           >
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight className=" fill-primary-default inline mr-6" />
               Communication
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               Code quality
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               Milestone payments
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               Maintenance and support
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               Intellectual property rights
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               Confidentiality and NDA
             </li>
             <li className="">
-              <img
-                className="w-[20px] h-[17px] inline mr-6"
-                src={arrow}
-                alt=""
-              />
+              <FaCircleArrowRight  className=" fill-primary-default inline mr-6" />
               First time right process
             </li>
           </ul>
@@ -125,14 +98,15 @@ const ChooseUs = () => {
               {stat.title}
               <br />
               {inView && (
+                <h3 className={`font-medium lg:font-semibold text-[30px] md:text-[34px] lg:text-[38px] xl:text-[47px] tracking-wide text-light-900 `}>
                 <CountUp
                   start={0}
                   end={stat.number}
-                  duration={5}
+                  duration={3}
                   separator=""
                 >
-                  <h3 className={`${styles.h3Heavy}`}>{stat.number}</h3>
                 </CountUp>
+                </h3>
               )}
             </h5>
           </div>

@@ -18,10 +18,10 @@ const Question = () => {
                 <Input className='w-11/12 md:w-5/12 ' placeholder='Your Name' section='question'/>
                 <Input className='w-11/12 md:w-5/12' placeholder='Your Email' section='question'/>
             </div>
-            <textarea className='w-11/12 h-32 lg:h-40  text-neutral-default rounded px-2 py-[6px] lg:py-[12px] placeholder-neutral-default placeholder:opacity-80 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal lg:font-medium tracking-wide' placeholder='How can we help you?' resize name="" id=""></textarea>
+            <textarea className='w-11/12 h-32 lg:h-40  text-dark-900 rounded px-2 py-[6px] lg:py-[12px] placeholder-dark-500 placeholder:opacity-80 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal tracking-wide' placeholder='How can we help you?' resize name="" id=""></textarea>
             <Button name='Submit' className='px-10 rounded-lg mt-5 text-sm'/>
         </form>
-        <div className='w-[calc(100%-3vw)] bg-light-500 py-4 lg:py-6 xl:py-9 gap-4 md:gap-10 lg:gap-20 flex flex-col md:flex-row md:justify-center  items-center'>
+        <div className='w-[calc(100%-3vw)] bg-light-900 py-4 lg:py-6 xl:py-9 gap-4 md:gap-10 lg:gap-20 flex flex-col md:flex-row md:justify-center  items-center'>
             <div className='flex'>
                 <img className='w-[105px] lg:w-[140px] xl:w-[195px]' src={TrustPilot} alt="" />
                 <div className='flex items-end gap-[2px]'>

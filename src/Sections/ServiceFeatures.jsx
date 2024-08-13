@@ -38,7 +38,7 @@ const ServiceFeatures = () => {
         >
                 {/* This is card */}
                 {data.map((item,index)=>(
-                    <div key={index} className='flex items-start gap-x-6 relative'>
+                    <div key={index} className='flex items-start gap-x-7 lg:gap-x-9 relative'>
                         <img className='w-[60px] h-[60px] mt-2' src={item.img} alt="" />
                         <div className='space-y-3 before:absolute before:top-3 before:left-[calc(60px+14px)] before:border-r-2 lg:before:border-r-[3px] before:border-primary-default before:h-[80px] lg:before:h-[95px]'>
                             <h4 className={`${styles.h4HeavyDark} font-medium text-[#000]`} style={{color:'#000'}} >

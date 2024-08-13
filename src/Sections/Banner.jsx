@@ -15,7 +15,7 @@ const Banner = ({page="service"}) => {
   };
 
   const contactData = {
-    heading:'Contact us',
+    heading:'Contact Us',
     paragraph:"Graysol specialists are available to chat 24/7",
     paragraph2:'We\'re ready to tackle whatever you need to move your business forward.',
     button: 'call me ',
