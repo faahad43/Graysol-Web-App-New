@@ -97,6 +97,7 @@ const ChooseUs = () => {
             <h5 className={`leading-snug mx-auto font-normal ${styles.h5}`}>
               {stat.title}
               <br />
+              {/* Display the number animation only when element is in view */}
               {inView && (
                 <h3 className={`font-medium lg:font-semibold text-[30px] md:text-[34px] lg:text-[38px] xl:text-[47px] tracking-wide text-light-900 `}>
                 <CountUp

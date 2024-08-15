@@ -26,12 +26,13 @@ const BlogBanner = () => {
             height:'fit-content',
             }}
         >   
-            
+            {/* This is for changing the number of slider to lines */}
                 <ul className='flex justify-center gap-8' style={{ marginRight: "30px" }}> {dots} </ul>
             
             
         </div>
         ),
+        // Setting the custom paging for the slider
         customPaging: i => (
         <div
             className={`w-12 h-[8px] rounded active:bg-primary-default ${currentSlide === i ? 'bg-primary-default': 'bg-[#464646]'}`}>    
@@ -45,6 +46,7 @@ const BlogBanner = () => {
         {/*the slider start from here */}
         <div className="slider-container w-full mx-auto text-light-900">
             <Slider className=' '  {...settings}>
+                {/* 1st Slide */}
                 <div className='relative flex flex-col items-center text-center'>
                     <img
                         className='absolute inset-0 object-cover w-full h-full z-0'
@@ -64,13 +66,15 @@ const BlogBanner = () => {
                         <Button name='Read on' className='px-9 rounded-md tracking-wider' />
                     </div>
                 </div>
-        {/* 2nd slide */}
+                {/* 2nd slide */}
                 <div>
                 <h3>2</h3>
                 </div>
+                {/* 3rd Slide */}
                 <div>
                 <h3>3</h3>
                 </div>
+                {/* 4th Slide */}
                 <div>
                 <h3>4</h3>
                 </div>

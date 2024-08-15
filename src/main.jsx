@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
   Route
 } from "react-router-dom";
-import {Home,Services,Contact,AboutUs, Blog,WordpressService,Whmcs,Magneto,Drupal,MobileApp} from "./Pages/index.js";
+import {Home,Services,Contact,AboutUs, Blog,WordpressService,Whmcs,Magneto,Drupal,MobileApp,BlogPost} from "./Pages/index.js";
 
 import './index.css'
 
@@ -24,7 +24,9 @@ const router = createBrowserRouter(
         </Route>
         <Route path='contact' element={<Contact/>}/>
         <Route path='about' element={<AboutUs/>}/>
-        <Route path='blog' element={<Blog/>} />
+        <Route path='blog' element={<Blog/>}>
+          <Route path=':id' element={<BlogPost/>}/>
+        </Route>
     </Route>
   )
 )

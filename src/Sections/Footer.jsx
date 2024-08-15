@@ -4,6 +4,7 @@ import Logo from '../assets/img/Logo.png'
 import Phone from '../assets/icons/phone.svg'
 import Location from '../assets/icons/location.svg'
 import Email from '../assets/icons/email.svg'
+import { Element } from 'react-scroll'
 
 
 const Footer = () => {
@@ -11,15 +12,19 @@ const Footer = () => {
     <div className='bg-dark-400 w-screen'>
       <div className='w-full lg:w-[90%] sm:max-w-[1138px] lg:mx-auto text-light-900 flex flex-col lg:flex-row gap-10 py-8 px-8 sm:px-16 xl:px-0 lg:justify-between'>
         <div className={`${styles.p4} tracking-wider flex flex-col lg:w-[25%]  gap-6 lg:pt-6`}>
+        <Element name='phone-no'>
         <div className='flex gap-2 items-center group hover:cursor-pointer' onClick={()=>{window.scrollTo({top:0, behavior:'smooth'})}}>
             <img id='logo1' className='w-[50px] h-[50px] group-hover:cursor-pointer' src={Logo} alt="Graysol Logo"  />
             <h1 htmlFor='logo1' className={`text-light-900 font-medium text-[38px] group-hover:pointer`}>Graysol</h1>
           </div>
+          </Element>
           <p className={`${styles.p4}`} >Proudly Based in Pakistan</p>
+          
           <div className='flex items-end gap-2'>
             <img className='w-[19px] h-[19px]' src={Phone} alt="phone-icon" />
             <p>+923088870328</p>
           </div>
+          
           <div className='flex items-center gap-2'>
             <img className='w-[19px] h-[25px]' src={Location} alt="location-icon" />
             <p>Poornam inc.202 East Earil Drive, Suite 410,Phoenix,AZ 85012</p>

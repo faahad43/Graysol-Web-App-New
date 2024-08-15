@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../styles'
 import {Button} from '../Components/Button'
+import {Link} from 'react-scroll'
 
 const Faq = () => {
   
@@ -86,7 +87,12 @@ const Faq = () => {
             ))}
         </ul>
     </div>
-    <Button name='Ask a question' className='px-4 lg:mt-10 rounded-[3px]'/>
+    <Link to='question-form' smooth={true} duration={100} offset={-100}>
+        <Button 
+            name='Ask a question'
+            className='px-4 lg:mt-10 rounded-[3px]' 
+        />
+    </Link>
     </div>
   )
 }

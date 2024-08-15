@@ -2,6 +2,7 @@ import React from 'react'
 import {Input} from '../Components/Input'
 import {Button} from '../Components/Button'
 import styles from '../styles'
+import { Element } from 'react-scroll'
 
 const ContactForm2 = () => {
   return (
@@ -15,6 +16,7 @@ const ContactForm2 = () => {
                     We eat tough problems for lunch.<br/>Feed us yours.
                 </p>
             </div>
+            <Element name='contact-form2'>
             <form className={` w-[90%] flex flex-col items-center mx-auto rounded-2xl gap-4`}>
                 <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-4 md:gap-0 '>
                         <Input className='w-11/12 md:w-5/12 py-[9px]' placeholder='First Name'/>
@@ -38,10 +40,12 @@ const ContactForm2 = () => {
                 <Button name='Submit' className='px-10 rounded-lg mt-5 lg:mt-10 text-sm'/>
                 
             </form>
+            </Element>
         </div>
         
         <div className='bg-dark-900 h-4'></div>
     </div>
+    
   )
 }
 

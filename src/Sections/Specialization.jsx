@@ -3,6 +3,8 @@ import styles from '../styles'
 import { IoIosArrowDown } from "react-icons/io";
 import {Button} from '../Components/Button';
 import useWindowSize from '../hooks/windowSize';
+import { Link } from 'react-router-dom';
+import {scroller} from 'react-scroll';
 
 const Specialization = () => {
 
@@ -63,6 +65,21 @@ const Specialization = () => {
     setArrowFillColor(newColor);
   }
 
+  /**
+ * Scrolls immediately to a section identified by its ID on the page.
+ *
+ * @param {string} sectionId - The ID of the section to scroll to.
+ */
+  const scrollToSection = (sectionName) => {
+    setTimeout(() => {
+        scroller.scrollTo(sectionName, {
+          duration: 100,
+          smooth: 'easeInOutQuart',
+          offset:-100
+        });
+      }, 100);
+  }
+
   return (
     <div className='bg-dark-900 py-10 space-y-8'>
         <h1 className={`${styles.h1} text-center`}>We specialize in</h1>
@@ -84,7 +101,13 @@ const Specialization = () => {
                     </div>
                 ))}
             </div>
-            <Button name='chat with us' className='px-5 self-center'/>
+            
+            <div className='flex justify-center'>
+              <Link to='/contact' onClick={()=> scrollToSection('contact-form')}>
+                <Button name='Chat with Us' className='px-5 py-3' />
+              </Link>
+            </div>
+           
         </div>
         
     </div>

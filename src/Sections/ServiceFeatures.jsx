@@ -21,6 +21,7 @@ const ServiceFeatures = ({pageType=''}) => {
                         <img className='w-[60px] h-[60px] mt-2' src={item} alt="" />
                         <div className='space-y-3 before:absolute before:top-3 before:left-[calc(60px+14px)] before:border-r-2 lg:before:border-r-[3px] before:border-primary-default before:h-[80px] lg:before:h-[95px]'>
                             <h4 className={`${styles.h4HeavyDark} font-medium text-[#000]`} style={{color:'#000'}} >
+                                {/* The headings and the description below are taken from the props */}
                                 {pageType.serviceFeatures[index].title}
                             </h4>
                             <p className={`${styles.p2Dark} text-justify lg:leading-6 xl:leading-7`}>

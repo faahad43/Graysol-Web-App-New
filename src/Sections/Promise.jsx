@@ -7,9 +7,27 @@ import Heart from "../assets/icons/heart.svg";
 import Office from '../assets/img/office.png';
 import {Button} from '../Components/Button';
 import useWindowSize from '../hooks/windowSize';
+import {scroller} from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Promise = () => {
   const windowSize = useWindowSize();
+
+/**
+ * Scrolls immediately to a section identified by its ID on the page.
+ *
+ * @param {string} sectionId - The ID of the section to scroll to.
+ */
+  const scrollToSection = (sectionName) => {
+    setTimeout(() => {
+        scroller.scrollTo(sectionName, {
+          duration: 100,
+          smooth: 'easeInOutQuart',
+          offset:-100
+        });
+      }, 500);
+  }
+
 
   const promiseCard1 ="To provide professional and caring outsourced support and server management services.";
   const promiseCard2 ="To provide 24/7/365 certified server administrators working to an industry-leading SLA for you and your customers.";
@@ -40,7 +58,12 @@ const Promise = () => {
                         <li>Commitment to client satisfaction</li>
                     </ul>
                 </div>
-                <Button name='Talk To us' className='px-4 rounded-[3px]'/>
+                <Link
+                    to='contact'
+                    onClick={()=> scrollToSection('contact-form')}
+                >
+                    <Button name='Talk To us' className='px-4 rounded-[3px]'/>
+                </Link>
             </div>
         </div>
     </div>

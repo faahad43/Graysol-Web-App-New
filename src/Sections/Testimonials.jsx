@@ -25,8 +25,8 @@ const Testimonials = () => {
     }
   }
   return (
-    <section className='w-screen testimonial bg-dark-900 py-12  px-2' id='skills'>
-      <div className='container sm:w-[85%]  sm:mx-auto lg:mx-0 '>
+    <section className='w-screen testimonial bg-dark-900 py-12 ' id='skills'>
+      <div className='container w-[95%] sm:w-[85%]  mx-auto lg:mx-0 '>
         <div className='row lg:w-screen'>
           <div className='col-12 lg:w-[calc(100%-3rem)] lg:mx-auto'>
             <div className='testimonial-bx lg:rounded-none  lg:py-24 '>
@@ -142,6 +142,7 @@ const Testimonials = () => {
   )
 }
 
+// this is the custom button group for the slider that gives the next and previous button
 const CustomButtonGroup = ({ next, previous }) => {
   return (
     <div className='custom-button-group testimonial-buttons'>

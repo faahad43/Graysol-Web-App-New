@@ -5,9 +5,11 @@ import {Input} from '../Components/Input'
 import TrustPilot from '../assets/img/Trustpilot.png'
 import GoogleLogo from '../assets/img/GoogleLogo.png'
 import Star from '../assets/icons/Star.svg'
+import { Element } from 'react-scroll'
 
 const Question = () => {
   return (
+    <Element name='question-form'>
     <div className='bg-dark-900 w-screen flex flex-col items-center justify-center py-8 lg:py-20 gap-10 lg:gap-20'>
         <form className='w-[90%] sm:w-[80%] max-w-[1138px] bg-primary-700 rounded flex flex-col items-center justify-center py-5 lg:py-8 px-5 text-center text-light-900 gap-3 rounded-xl'>
            <div>
@@ -39,6 +41,7 @@ const Question = () => {
                 <img className='w-[105px] lg:w-[140px] xl:w-[136px]' src={GoogleLogo} alt="" />
                 <div className='flex items-center gap-[2px]'>
                     <div className='flex'>
+                        {/* printing the star 5 times */}
                         {Array.from({length: 5},(_,index)=>(
                             <img key={index} className='w-[18px] lg:w-[25px] xl:w-[33px]' src={Star} alt="" />
                         ))}
@@ -50,6 +53,7 @@ const Question = () => {
             </div>
         </div>
     </div>
+    </Element>
   )
 }
 

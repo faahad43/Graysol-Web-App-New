@@ -3,6 +3,8 @@ import {Button} from '../Components/Button'
 import styles from '../styles'
 import { Paragraph } from 'react-bootstrap-icons';
 import { wordpressPage } from './servicesData';
+import { Link } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 
 const Banner = ({page="service",pageType=""}) => {
@@ -28,6 +30,22 @@ const Banner = ({page="service",pageType=""}) => {
 
   const data = page === 'service' ? serviceData : contactData;
 
+  /**
+   * Scrolls immediately to a section identified by its ID on the page.
+   *
+   * @param {string} sectionId - The ID of the section to scroll to.
+   */
+
+  const scrollToSection = (sectionName) => {
+    setTimeout(() => {
+        scroller.scrollTo(sectionName, {
+          duration: 100,
+          smooth: 'easeInOutQuart',
+          offset:-50
+        });
+      }, 100);
+  }
+
   return (
     <section className={`${data.sectionStyling} w-screen bg-primary-600 flex flex-col items-center text-center px-[10%]`}>
             <h2 className={` ${data.headingStyling}`}>{data.heading}</h2>
@@ -36,8 +54,29 @@ const Banner = ({page="service",pageType=""}) => {
               <p className={styles.p2}>{data.paragraph2}</p>
             </div>
             <div className='space-x-6'>
-              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit py-2 uppercase rounded-sm`}>CHAT WITH US</button>
-              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[8rem] py-2 uppercase rounded-sm `}>{data.button}</button>
+            <Link 
+              to='/contact'
+              onClick={() => scrollToSection('contact-form')}
+            >
+              <button 
+                className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit py-3 uppercase rounded-sm`}>CHAT WITH US</button>
+            </Link>
+            {page === 'service' ?
+              <Link 
+              to='/portfolio'
+              onClick={() => scrollToSection('contact-form')}
+            >
+              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[8rem] py-3 uppercase rounded-sm `}>{data.button}</button>
+              </Link> 
+              : //else condition if the page is contact
+              <Link 
+              to='/contact'
+              onClick={() => scrollToSection('phone-no')}
+            >
+              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[8rem] py-3 uppercase rounded-sm `}>{data.button}</button>
+              </Link>
+            }
+            
             </div>
     </section>
   )

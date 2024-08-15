@@ -8,93 +8,28 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {BlogCard} from '../Components/BlogCard';
 import useWindowSize from '../hooks/windowSize';
+import {data} from './blogdata.js';
 
 
 
 const BlogSection = () => {
-    const data = [
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: false,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: true,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'aaaaaaaaa',
-        feature: true,
-        press: true,
-        insight: false,
-        graynews: true,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: true,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: false,
-        insight: true,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: true,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: false,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: true,
-        insight: false,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: false,
-        insight: true,
-        graynews: false,
-      },
-      {
-        time: '1min',
-        title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
-        feature: true,
-        press: false,
-        insight: true,
-        graynews: false,
-      },
-      
-    ];
+    /**
+     * Data is an array of objects, each representing a blog post and is imported from blogdata.js
+     * Groups and filters an array of data based on the provided group size and filter criteria.
+     * 
+     * This function filters the input data array according to the specified filter button, 
+     * then divides the filtered data into smaller groups of the specified size.
+     * 
+     * @param {Array} data - The array of blog post data to be filtered and grouped.
+     * @param {number} groupSize - The maximum number of items per group.
+     * @param {string} filterButton - The key used to filter the data. Items where this key is `true` will be included.
+     * 
+     * @returns {Array} An array of grouped data arrays, each containing up to `groupSize` items.
+     * 
+     * @example
+     * const groupedData = groupArray(data, 3, 'press');
+     * // Returns an array where each sub-array contains up to 3 items, all filtered by the 'press' criteria.
+     */
 
     const groupArray = (data, groupSize,filterButton) => {
         const groups = [];
@@ -106,7 +41,7 @@ const BlogSection = () => {
         return groups;
     };
     let groupSize;
-    const windowSize = useWindowSize();
+    const windowSize = useWindowSize(); //to change the number of blogs displayed on different screen sizes
     const [currentSlide,setCurrentSlide] = useState(0);
     const [filterButton,setFilterButton] = useState('press');
     const [groupedData, setGroupedData] = useState(groupArray(data, groupSize, filterButton));
@@ -151,6 +86,7 @@ const BlogSection = () => {
             
           }}
         >
+          {/* the conditional rendering is being done here so if we only have one page in blog catergory then the pagination and arrows doesn't appear */}
           <div className={`${groupedData.length === 1 ? 'hidden':'block'} flex justify-center items-center gap-[15px] w-fit`}>
             <IoArrowBackCircleOutline className='w-9 h-9 text-[#686767] hover:text-light-900' onClick={previous} />
               
@@ -230,11 +166,13 @@ const BlogSection = () => {
                     }}
                     {...settings}
                 >
+                  {/* this map function is for the number of pages */}
                     {groupedData.map((group, index) => (
                         <div  key={index+1} >
-                            <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 sm:gap-x-5'>
+                            <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
+                              {/* this map function is to show specific number of blog card on each page */}
                                 {group.map(item => (
-                                    <BlogCard/>
+                                    <BlogCard key={item.id} data ={item}/>
                                   
                                 ))}
                             </div>
@@ -242,7 +180,7 @@ const BlogSection = () => {
                         
                     ))}
                     
-                     
+                     {/* this is added beacause if we only have a single div in slider then react  slidck slider react it thrice to avoid this we have added an empty tag if there is onky div in data */}
                      {groupedData.length === 1 ? <></> :''}
                 </Slider>
             </div>
