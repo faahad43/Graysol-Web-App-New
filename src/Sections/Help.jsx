@@ -2,7 +2,8 @@ import React from 'react'
 import styles from '../styles'
 import {HelpCard} from '../Components/HelpCard'
 
-const Help = ({page}) => {
+const Help = ({page, pageType=''}) => {
+    
   const homeHelpCard = [
     {
         title: "High Quality Service",
@@ -30,32 +31,7 @@ const Help = ({page}) => {
         description: "Whether you need a dedicated team to work on a project or just want to hire a few developers on an as-needed basis, Graysol can providea solution that meets your needs by meeting the highest standards of quality."
     },
   ]
-  const serviceHelpCard = [
-    {
-        title: "Custom Website Development",
-        description: "We provide custom WordPress website development support designed for businesses by our web designers and developers."
-    },
-    {
-        title: "Emergency WordPress assistance",
-        description: "We have trained experts ready to offer emergency services round the clock."
-    },
-    {
-        title: "Wordpress Monitoring",
-        description: "We offer you quality work by 24/7 WordPress monitoring to ensure your website works fine"
-    },
-    {
-        title: "Content Management System",
-        description: "We specialize in streamlining and quickening the content generation process so that your website is constantly updated."
-    },
-    {
-        title: "Wordpress Services",
-        description: "We have skilled web developers who will update and manage your website efficiently."
-    },
-    {
-        title: "Wordpress Security & Performance",
-        description: "Your website will be updated, automated offsite backups will be set up and external security checks will be performed."
-    },
-  ]
+  
   return (
     <div className='w-screen bg-dark-900 py-4 lg:py-10 xl:py-16'>
         <div className='w-[90%] sm:w-[80%] md:w-[90%]  bg-dark-700 max-w-[1400px] mx-auto rounded-xl flex flex-col items-center py-8 md:py-16 lg:py-20 gap-6 md:gap-8 lg:gap-12'>
@@ -63,7 +39,8 @@ const Help = ({page}) => {
             <div className='grid grid-cols-1 md:grid-cols-2 md:gap-x-32 xl:gap-x-52 gap-y-4 md:gap-y-8 '>
                 {page === 'Home' ? homeHelpCard.map((card,index)=>(
                     <HelpCard key={index} page={page} title={card.title} index={index+1} description={card.description} />
-                )):serviceHelpCard.map((card,index)=>(
+                    // the below line of code is taking data coming from prop for different type of service pages
+                )):pageType.helpSectionService.map((card,index)=>(
                     <HelpCard key={index} page={page} title={card.title} index={index+1} description={card.description} />
                 ))}
             </div>

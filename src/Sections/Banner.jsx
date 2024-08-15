@@ -2,11 +2,13 @@ import React from 'react'
 import {Button} from '../Components/Button'
 import styles from '../styles'
 import { Paragraph } from 'react-bootstrap-icons';
+import { wordpressPage } from './servicesData';
 
-const Banner = ({page="service"}) => {
+
+const Banner = ({page="service",pageType=""}) => {
   const serviceData = {
-    heading:'Custom Wordpress Development Services',
-    paragraph:"Every business is different. We provide 100% white label WordPress development to extend your website’s functionality to meet your specific requirements.",
+    heading: pageType.bannerTitle,
+    paragraph: pageType.bannerDescription,
     paragraph2:'',
     button:'see portfolio',
     sectionStyling:'pt-10 pb-12 sm:px-[15%] 2xl:px-[18%] sm:py-12 lg:py-16 xl:py-28',

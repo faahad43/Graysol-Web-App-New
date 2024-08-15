@@ -4,9 +4,7 @@ import {Button} from '../Components/Button'
 import Triangle from "../assets/icons/triangle.svg"
 
 
-const ServiceWorking = () => {
-
-  const steps = ['Discovery','Iron out the kinks','Feasibility analysis','Develop the system','Deployment','Ongoing support'];
+const ServiceWorking = ({pageType=''}) => {
 
   return (
     <div className='bg-dark-900 py-8'>
@@ -17,7 +15,7 @@ const ServiceWorking = () => {
             </h6>
             <div className='relative text-light-900 flex flex-col md:flex-row mt-6 md:mt-24 mb-5 md:mb-16 w-[80%]  '>
                 <div className='absolute bg-primary-default w-1 h-full md:w-full md:h-1 left-[calc(50%-2px)] md:left-0 md:top-[calc(50%-2px)] '></div>
-                {steps.map((step,index)=>(
+                {pageType.developmentLifeCycle.map((step,index)=>(
                     <div 
                         className=
                         {
