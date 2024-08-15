@@ -1,6 +1,6 @@
 
 # Graysol Company Website
-![Graysol Logo](assets/img/Graysol.png)
+![Graysol Website Cover Picture](src/assets/img/Graysol.png)
 ## Purpose
 
 This project is the official website for Graysol, showcasing the services offered by the company, featuring a contact form for inquiries, and a blog page containing company-related posts. The website is designed to provide an easy-to-navigate interface for potential clients and partners to explore the company's offerings and get in touch.
