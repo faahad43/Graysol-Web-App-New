@@ -47,7 +47,7 @@ The project is built with React using Vite and Tailwind CSS for styling. The str
    npm run dev
    ```
 
-   The website should now be running locally on `http://localhost:3000`.
+   The website should now be running locally on `http://localhost:5173`.
 
 ## Technical Summary
 
