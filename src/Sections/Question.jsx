@@ -17,7 +17,8 @@ const Question = () => {
     const form = useRef();
 
     const validateForm = () => {
-        console.log("in validate")
+        console.log('api key',process.env.VITE_SERVICE_ID);
+    
         if (!name.trim()) {
             toast.error('Name is required');
             return false;
