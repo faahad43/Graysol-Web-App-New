@@ -9,5 +9,6 @@ import { Drupal } from "./Drupal";
 import { Magneto } from "./Magneto";
 import { MobileApp } from "./MobileApp";
 import { BlogPost } from "./BlogPost";
+import { NotFound } from "./NotFound";
 
-export { Home,Services,Contact,AboutUs,Blog,WordpressService, Whmcs,Drupal,Magneto,MobileApp,BlogPost };
+export { Home,Services,Contact,AboutUs,Blog,WordpressService, Whmcs,Drupal,Magneto,MobileApp,BlogPost,NotFound };

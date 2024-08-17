@@ -40,6 +40,8 @@ const styles ={
 
     p1:'text-[16px] md:text-[20px] lg:text-[21px] xl:text-[22px] text-light-900 font-normal',
 
+    p1Heavy:'text-[16px] md:text-[20px] lg:text-[21px] xl:text-[22px] text-light-900 font-medium',
+
     p1Dark:'text-[16px] md:text-[20px] lg:text-[21px] xl:text-[22px] text-dark-900 font-normal',
 
     p1HeavyDark:'text-[17px] md:text-[20px] lg:text-[21px] xl:text-[22px] font-normal md:font-medium',

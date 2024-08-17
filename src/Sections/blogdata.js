@@ -1,4 +1,5 @@
-
+import BlogImage1 from '../assets/img/BlogCoverPic1.png'
+import BlogImage2 from '../assets/img/GraysolBlog2.webp'
 
 const data = [
     {
@@ -9,6 +10,7 @@ const data = [
       press: true,
       insight: true,
       graynews: true,
+      image:BlogImage1,
     },
     {
       id: 2,
@@ -18,6 +20,7 @@ const data = [
       press: true,
       insight: false,
       graynews: false,
+      image:BlogImage2,
     },
     {
       id: 3,
@@ -27,6 +30,7 @@ const data = [
       press: true,
       insight: false,
       graynews: true,
+      image:BlogImage1,
     },
     {
       id: 4,
@@ -36,6 +40,7 @@ const data = [
       press: true,
       insight: false,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 5,
@@ -45,6 +50,7 @@ const data = [
       press: false,
       insight: true,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 6,
@@ -54,6 +60,7 @@ const data = [
       press: true,
       insight: false,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 7,
@@ -63,6 +70,7 @@ const data = [
       press: false,
       insight: false,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 8,
@@ -72,6 +80,7 @@ const data = [
       press: true,
       insight: false,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 9,
@@ -81,6 +90,7 @@ const data = [
       press: false,
       insight: true,
       graynews: false,
+      image:BlogImage1,
     },
     {
       id: 10,
@@ -90,6 +100,7 @@ const data = [
       press: false,
       insight: true,
       graynews: false,
+      image:BlogImage1,
     },
     
   ];
