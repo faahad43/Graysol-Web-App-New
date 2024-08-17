@@ -3,13 +3,13 @@ import styles from '../styles.js'
 
 export const BlogPost1 = ({title='',time='',coverPic=''}) => {
   return (
-<div className='bg-dark-900 py-12 px-[20%] space-y-8'>
+<div className='bg-dark-900 py-12 px-[7%] md:px-[10%] lg:px-[15%] xl:px-[20%] space-y-8'>
       <h1 className={styles.h3}>{title}</h1>
       <p className={styles.p2}>{time} Read</p>
       <img 
         src={coverPic}
         alt="Blog cover photo"
-        className={`h-[30rem] object-cover rounded-none`}
+        className={`md:h-[25rem] xl:h-[30rem] object-cover rounded-none`}
        />
       {/* add the dynamic content here */}
        <div className={`${styles.p2} space-y-8`}>
