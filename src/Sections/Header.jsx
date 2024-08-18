@@ -6,11 +6,13 @@ import MobileBanner from '../assets/img/MobileBanner.png'
 import styles from '../styles'
 import { NavLink,Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
+import { IoMdArrowDropdown } from "react-icons/io";
 import useWindowSize from '../hooks/windowSize'
 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileDropDown, setMobileDropDown] = useState(false);
   const windowSize = useWindowSize();
   return (
     <div className={`w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
@@ -41,7 +43,7 @@ const Header = () => {
                   <img className='w-[34px] h-[34px] cursor-pointer' src={cross} alt="cross icon" onClick={()=>setIsOpen(!isOpen)} />
                 </div>
                 <div className=' pt-6'>
-                  <div className=' flex flex-col space-y-3 font-medium text-[42px] tracking-wide'>
+                  <div className=' flex flex-col gap-y-4 font-medium text-[35px] tracking-wide'>
                     <NavLink 
                       to='' 
                       onClick={()=>{
@@ -52,16 +54,29 @@ const Header = () => {
                       Home
                     </NavLink>
 
-                    <NavLink 
+                      
+                      <div className='flex items-end gap-1'>
+                      <NavLink 
                       to='/services' 
                       onClick={()=>{
                         setIsOpen(!isOpen);
+                        }
+                        }
+                      >
+                        Services 
+                      </NavLink>
+                        <IoMdArrowDropdown className='cursor-pointer' onClick={()=>setMobileDropDown(!mobileDropDown)} size={35} />
                         
-                      }
-                      }
-                    >
-                      Services
-                    </NavLink>
+                      </div>
+                      <ul className={`${styles.h5Heavy} ${mobileDropDown?'h-fit block':'h-0 hidden '} transition-all duration-1000 pl-3 flex flex-col gap-2 mt-1 mb-2`}>
+                        <NavLink to='services/wordpress' onClick={()=>{setIsOpen(!isOpen)}}><li>Wordpress</li></NavLink>
+                        <NavLink to='services/whmcs' onClick={()=>{setIsOpen(!isOpen)}}><li>WHMCS</li></NavLink>
+                        <NavLink to='services/magneto' onClick={()=>{setIsOpen(!isOpen)}}><li>Magneto</li></NavLink>
+                        <NavLink to='services/drupal' onClick={()=>{setIsOpen(!isOpen)}}><li>Drupal</li></NavLink>
+                        <NavLink to='services/mobile-app' onClick={()=>{setIsOpen(!isOpen)}}><li>Mobile Apps</li></NavLink>
+                        <NavLink to='services/wordpress' onClick={()=>{setIsOpen(!isOpen)}}><li>Application</li></NavLink>
+                      </ul>
+                    
 
                     <NavLink 
                       to='/about' 
