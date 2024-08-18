@@ -54,10 +54,10 @@ const ContactForm2 = () => {
         }
 
         const promise = emailjs.sendForm(
-            import.meta.env.VITE_SERVICE_ID,
-            import.meta.env.VITE_TEMPLATE_ID,
+            process.env.VITE_SERVICE_ID,
+            process.env.VITE_TEMPLATE_ID,
             form.current,
-            { publicKey: import.meta.env.VITE_PUBLIC_KEY }
+            { publicKey: process.env.VITE_PUBLIC_KEY }
         );
 
         toast.promise(
