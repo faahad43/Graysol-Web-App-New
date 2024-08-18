@@ -51,8 +51,8 @@ const BlogSection = () => {
     useEffect(() => {
       groupSize = windowSize < 640 ? 3 : windowSize < 1024 ? 6 : 9;
       setGroupedData(groupArray(data, groupSize, filterButton));
-      // setCurrentSlide(0);
       sliderRef.slickGoTo(0);
+      
   }, [filterButton,windowSize]);
 
   
@@ -166,6 +166,7 @@ const BlogSection = () => {
                     }}
                     {...settings}
                 >
+                 
                   {/* this map function is for the number of pages */}
                     {groupedData.map((group, index) => (
                         <div  key={index+1} >
@@ -179,9 +180,23 @@ const BlogSection = () => {
                         </div>
                         
                     ))}
+                    {/* this is added beacause if we only have a single div in slider then react  slidck slider react it thrice to avoid this we have redenred the same data if there is onky div in data */}
+                    {groupedData.length === 1 ? 
+                    groupedData.map((group, index) => (
+                      <div  key={index+1} >
+                          <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
+                            {/* this map function is to show specific number of blog card on each page */}
+                              {group.map(item => (
+                                  <BlogCard key={item.id} data ={item}/>
+                                
+                              ))}
+                          </div>
+                      </div>
+                      
+                  ))
+                    :''}
                     
-                     {/* this is added beacause if we only have a single div in slider then react  slidck slider react it thrice to avoid this we have added an empty tag if there is onky div in data */}
-                     {groupedData.length === 1 ? <></> :''}
+                     
                 </Slider>
             </div>
         </div>

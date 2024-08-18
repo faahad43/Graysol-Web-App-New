@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const BlogCard = ({data=''}) => {
   return (
-    <div className='space-y-3 h-[26rem]  text-light-900 text-center sm:text-start'>
+    <div className='space-y-3 h-[26rem] text-light-900 text-center sm:text-start'>
       <div className='space-y-2'>
         <NavLink to={`/blog/${data.id}`} ><img className='rounded-xl cursor-pointe object-cover' src={data.image} alt="" /></NavLink>
         <p className={`pl-2 uppercase ${styles.p3Heavy}`}>{data.time}</p>
