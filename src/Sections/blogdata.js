@@ -8,7 +8,7 @@ const data = [
       title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
       feature: true,
       press: true,
-      insight: true,
+      insight: false,
       graynews: true,
       image:BlogImage1,
     },
