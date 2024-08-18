@@ -9,7 +9,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import useWindowSize from '../hooks/windowSize'
 
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropDown, setMobileDropDown] = useState(false);
