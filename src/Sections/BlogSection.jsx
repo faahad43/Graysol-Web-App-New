@@ -4,6 +4,7 @@ import { FaPlus } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Element } from 'react-scroll'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {BlogCard} from '../Components/BlogCard';
@@ -108,6 +109,7 @@ const BlogSection = () => {
 
   return (
     <div className='bg-dark-900 py-10'>
+        <Element name='blog-section'>
         <div className='bg-dark-700 relative mx-auto w-[90%] max-w-[1200px] rounded-3xl pb-[7rem] py-8 px-6 space-y-12'>
             {/* The main heading  */}
             <div className='space-y-4'>
@@ -200,7 +202,7 @@ const BlogSection = () => {
                 </Slider>
             </div>
         </div>
-        
+        </Element>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import {Button} from '../Components/Button'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from 'react-scroll';
 import Bg1 from '../assets/img/BlurBgPic.png'
 
 const BlogBanner = () => {
@@ -13,11 +14,14 @@ const BlogBanner = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 700,
         slidesToShow: 1,
         slidesToScroll: 1,
         beforeChange: (current, next) => {setCurrentSlide(next)},
         arrows:false,
+        autoplay:true,
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
         appendDots: dots => (
         <div
         className=''
@@ -63,20 +67,84 @@ const BlogBanner = () => {
                                 Gray solutions named top 20 system integrator
                             </h1>
                         </div>
-                        <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                        <div>
+                            <Link to='blog-section' smooth={true} duration={100} offset={-40}>
+                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 {/* 2nd slide */}
-                <div>
-                <h3>2</h3>
+                <div className='relative flex flex-col items-center text-center'>
+                    <img
+                        className='absolute inset-0 object-cover w-full h-full z-0'
+                        src={Bg1} alt="The background image" 
+                    />   
+                    <div className="z-10 relative mx-auto w-[95%] pt-10 pb-[calc(22%)] space-y-16">
+                        <div className='space-y-4'>
+                            <p 
+                                className={`${styles.p2} font-medium tracking-widest uppercase`}
+                                style={{ color: '#722594' }}>
+                                Featured
+                            </p>
+                            <h1 className={`${styles.h1} capitalize`}>
+                                Explore the tech that shapes tomorrow
+                            </h1>
+                        </div>
+                        <div>
+                            <Link to='blog-section' smooth={true} duration={100} offset={-40}>
+                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 {/* 3rd Slide */}
-                <div>
-                <h3>3</h3>
+                <div className='relative flex flex-col items-center text-center'>
+                    <img
+                        className='absolute inset-0 object-cover w-full h-full z-0'
+                        src={Bg1} alt="The background image" 
+                    />   
+                    <div className="z-10 relative mx-auto w-[95%] pt-10 pb-[calc(22%)] space-y-16">
+                        <div className='space-y-4'>
+                            <p 
+                                className={`${styles.p2} font-medium tracking-widest uppercase`}
+                                style={{ color: '#722594' }}>
+                                Featured
+                            </p>
+                            <h1 className={`${styles.h1} capitalize`}>
+                                Unlock the future with Graysol's stories
+                            </h1>
+                        </div>
+                        <div>
+                            <Link to='blog-section' smooth={true} duration={100} offset={-40}>
+                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 {/* 4th Slide */}
-                <div>
-                <h3>4</h3>
+                <div className='relative flex flex-col items-center text-center'>
+                    <img
+                        className='absolute inset-0 object-cover w-full h-full z-0'
+                        src={Bg1} alt="The background image" 
+                    />   
+                    <div className="z-10 relative mx-auto w-[95%] pt-10 pb-[calc(22%)] space-y-16">
+                        <div className='space-y-4'>
+                            <p 
+                                className={`${styles.p2} font-medium tracking-widest uppercase`}
+                                style={{ color: '#722594' }}>
+                                Featured
+                            </p>
+                            <h1 className={`${styles.h1} capitalize`}>
+                                Discover insights that drive innovation
+                            </h1>
+                        </div>
+                        <div>
+                            <Link to='blog-section' smooth={true} duration={100} offset={-40}>
+                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
                 
             </Slider>

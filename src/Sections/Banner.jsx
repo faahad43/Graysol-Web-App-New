@@ -63,8 +63,8 @@ const Banner = ({page="service",pageType=""}) => {
             </Link>
             {page === 'service' ?
               <Link 
-              to='/portfolio'
-              onClick={() => scrollToSection('contact-form')}
+              to='/services'
+              onClick={() => scrollToSection('question-form')}
             >
               <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[8rem] py-3 uppercase rounded-sm `}>{data.button}</button>
               </Link> 

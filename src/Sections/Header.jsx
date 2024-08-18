@@ -119,12 +119,12 @@ const Header = () => {
               > 
                 <div className='relative group'>
                   <span className='flex gap-1 items-center w-[115%] lg:w-[120%]'>Services<IoIosArrowDown /></span>
-                  <ul className={`hidden group-hover:block text-light-900 absolute w-[115%] lg:w-[120%] top-[calc(100%+0.2rem)] z-50 bg-primary-default text-[12px] lg:text-[14px] py-2 pl-1.5 space-y-3 lg:space-y-4 font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-primary-default before:-top-[0.3rem] before:left-0 before:rounded-full`}>
+                  <ul className={`hidden group-hover:block text-light-900 absolute w-[115%] lg:w-[120%] top-[calc(100%+0.2rem)] z-50 bg-primary-default text-[12px] lg:text-[14px] pb-2 pl-1.5 space-y-0  font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-primary-default before:-top-[0.3rem] before:left-0 before:rounded-full`}>
                     <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0' 
+                     className='relative  after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0 ' 
                      >
                       <NavLink to='services/wordpress'>
-                        <span className='inline-block w-full transition-transform duration-300 hover:scale-110'>
+                        <span className='inline-block flex items-end w-full h-5 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
                           Wordpress
                         </span>
                       </NavLink>
@@ -134,7 +134,7 @@ const Header = () => {
                      className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
                     >
                       <NavLink to='services/whmcs'>
-                        <span className='inline-block w-full transition-transform duration-300 hover:scale-110'>
+                        <span className='inline-block flex items-end w-full h-6 lg:h-7  transition-transform duration-300 hover:scale-110 hover:pl-1'>
                           WHMCS
                         </span>
                       </NavLink>
@@ -144,7 +144,7 @@ const Header = () => {
                      className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
                     >
                       <NavLink to='services/magneto'>
-                        <span className='inline-block w-full transition-transform duration-300 hover:scale-110'>
+                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
                           Magento
                         </span>
                       </NavLink>
@@ -154,7 +154,7 @@ const Header = () => {
                      className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
                     >
                       <NavLink to='services/drupal'>
-                        <span className='inline-block w-full transition-transform duration-300 hover:scale-110'>
+                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
                           Drupal
                         </span>
                       </NavLink>
@@ -164,7 +164,7 @@ const Header = () => {
                      className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
                     >
                       <NavLink to='services/mobile-app'>
-                        <span className='inline-block w-full transition-transform duration-300 hover:scale-110 hover:pl-1'>
+                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
                           Mobile Apps
                         </span>
                       </NavLink>
@@ -174,7 +174,7 @@ const Header = () => {
                      className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'>
                       <NavLink to='services/wordpress'>
                         <span
-                        className='inline-block w-full transition-transform duration-300 hover:scale-110'>
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
                           Application
                         </span>
                       </NavLink>
