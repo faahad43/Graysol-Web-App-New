@@ -32,7 +32,7 @@ const HomeBanner = () => {
               to='/contact'
               onClick={() => scrollToSection('contact-form')}
             >
-              <Button name='GET A QUOTE' className={`${windowSize < 768 ? 'hidden' : 'visible'} px-4`}/>
+              <Button name='GET A QUOTE' className={`${windowSize < 768 ? 'hidden' : 'visible'} px-4 rounded-lg`}/>
             </Link>
         </div>
     </div>

@@ -69,7 +69,7 @@ const BlogBanner = () => {
                         </div>
                         <div>
                             <Link to='blog-section' smooth={true} duration={100} offset={-40}>
-                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                                <Button name='Read on' className='px-9 rounded-lg tracking-wider rounded-lg' />
                             </Link>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ const BlogBanner = () => {
                         </div>
                         <div>
                             <Link to='blog-section' smooth={true} duration={100} offset={-40}>
-                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                                <Button name='Read on' className='px-9 rounded-lg tracking-wider' />
                             </Link>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ const BlogBanner = () => {
                         </div>
                         <div>
                             <Link to='blog-section' smooth={true} duration={100} offset={-40}>
-                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                                <Button name='Read on' className='px-9 rounded-lg tracking-wider' />
                             </Link>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ const BlogBanner = () => {
                         </div>
                         <div>
                             <Link to='blog-section' smooth={true} duration={100} offset={-40}>
-                                <Button name='Read on' className='px-9 rounded-md tracking-wider' />
+                                <Button name='Read on' className='px-9 rounded-lg tracking-wider' />
                             </Link>
                         </div>
                     </div>

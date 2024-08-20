@@ -62,7 +62,7 @@ const Promise = () => {
                     to='contact'
                     onClick={()=> scrollToSection('contact-form')}
                 >
-                    <Button name='Talk To us' className='px-4 rounded-[3px]'/>
+                    <Button name='Talk To us' className='px-4 rounded-lg'/>
                 </Link>
             </div>
         </div>

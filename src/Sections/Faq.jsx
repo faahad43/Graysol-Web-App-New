@@ -90,7 +90,7 @@ const Faq = () => {
     <Link to='question-form' smooth={true} duration={100} offset={-100}>
         <Button 
             name='Ask a question'
-            className='px-4 lg:mt-10 rounded-[3px]' 
+            className='px-4 lg:mt-10 rounded-lg' 
         />
     </Link>
     </div>

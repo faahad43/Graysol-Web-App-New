@@ -66,7 +66,7 @@ const ServiceWorking = ({pageType=''}) => {
                     </span>
                 </Link>
             </p>
-            <Button name='GET A QUOTE FOR YOUR PROJECT' className={` px-3 md:px-5`}/>
+            <Button name='GET A QUOTE FOR YOUR PROJECT' className={` px-3 md:px-5 rounded-lg`}/>
         </div>
     </div>
   )

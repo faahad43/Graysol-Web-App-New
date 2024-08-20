@@ -6,7 +6,7 @@ const BlogCard = ({data=''}) => {
   return (
     <div className='space-y-3 h-[26rem] text-light-900 text-center sm:text-start'>
       <div className='space-y-2'>
-        <NavLink to={`/blog/${data.id}`} ><img className='rounded-xl cursor-pointe object-cover' src={data.image} alt="" /></NavLink>
+        <NavLink to={`/blog/path/${data.id}`} ><img className='rounded-xl cursor-pointe object-cover' src={data.image} alt="" /></NavLink>
         <p className={`pl-2 uppercase ${styles.p3Heavy}`}>{data.time}</p>
       </div>
       <div className='pl-2 w-[100%] md:w-[90%] space-y-8'>

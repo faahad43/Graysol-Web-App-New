@@ -10,6 +10,8 @@ import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {BlogCard} from '../Components/BlogCard';
 import useWindowSize from '../hooks/windowSize';
 import {data} from './blogdata.js';
+import { useParams,Link } from 'react-router-dom';
+
 
 
 
@@ -34,17 +36,19 @@ const BlogSection = () => {
 
     const groupArray = (data, groupSize,filterButton) => {
         const groups = [];
-        const filterData = data.filter((item) => item[filterButton]===true);
+        const filterData = filterButton === ''?  data : data.filter((item) => item[filterButton]===true);
         for (let i = 0; i < filterData.length; i += groupSize) {
           groups.push(filterData.slice(i, i + groupSize));
         }
        
         return groups;
     };
+    const {type = ''} = useParams();
+    
     let groupSize;
     const windowSize = useWindowSize(); //to change the number of blogs displayed on different screen sizes
     const [currentSlide,setCurrentSlide] = useState(0);
-    const [filterButton,setFilterButton] = useState('press');
+    const [filterButton,setFilterButton] = useState(type);
     const [groupedData, setGroupedData] = useState(groupArray(data, groupSize, filterButton));
     let sliderRef = useRef(null);
 
@@ -56,7 +60,9 @@ const BlogSection = () => {
       
   }, [filterButton,windowSize]);
 
-  
+  useEffect(() => {
+    setFilterButton(type);
+}, [type]);
     
     const next = () => {
       sliderRef.slickNext();
@@ -128,34 +134,39 @@ const BlogSection = () => {
                     filter contents
                 </p>
                 <div className='md:w-[95%] lg:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 place-items-center gap-x-8 md:gap-x-0 gap-y-3'>
-                
+                  <Link to='/blog/category/press'>
                     <button 
                     className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
-                    onClick={()=>setFilterButton('press')}
                     >
                         Press
                     </button>
+                    </Link>
 
+                    <Link to='/blog/category/insight'>
                     <button 
                     className={`${filterButton == 'insight' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
-                    onClick={()=>setFilterButton('insight')}
                     >
                         Insights
                     </button>
+                    </Link>
 
+                    <Link to='/blog/category/graynews'>
                     <button 
                     className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
-                    onClick={()=>setFilterButton('graynews')}
+        
                     >
                         Gray news
                     </button>
+                    </Link>
 
+                    <Link to='/blog/category/feature'>
                     <button 
                     className={`${filterButton == 'feature' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
-                    onClick={()=>setFilterButton('feature')}
+                    
                     >
                         Featured
                     </button>
+                    </Link>
                 </div>
             </div>
             {/* The Blogs Grids */}

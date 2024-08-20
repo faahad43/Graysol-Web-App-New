@@ -7,7 +7,7 @@ const Blog = () => {
   const location = useLocation(); // Get the current location
 
   // Determine if the current location is a nested route
-  const isNestedRoute = location.pathname.includes('blog/') && location.pathname !== '/blog';
+  const isNestedRoute = location.pathname.includes('blog/path') && location.pathname !== '/blog';
 
   return (
     <div>

@@ -104,7 +104,7 @@ const Specialization = () => {
             
             <div className='flex justify-center'>
               <Link to='/contact' onClick={()=> scrollToSection('contact-form')}>
-                <Button name='Chat with Us' className='px-5 py-3' />
+                <Button name='Chat with Us' className='px-5 py-3 rounded-lg' />
               </Link>
             </div>
            
