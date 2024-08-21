@@ -73,6 +73,91 @@ const Services = () => {
                     </div>
                   </motion.div>
                 </Tilt>
+
+                <Tilt className='w-3/4  m-auto skill-slider-item'>
+                  <motion.div
+                    variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
+                    className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+                    onClick={() => {
+                      console.log('clicked')
+                      navigate('/servicesDescription/4')
+                    }}
+                  >
+                    <div
+                      options={{ max: 45, scale: 1, speed: 450 }}
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
+                    >
+                      <img src={mobile} className='w-16 h-16  object-contain' />
+                      <h4 className={`text-white text-[18px] font-medium`}>
+                      Mobile App Development
+                      </h4>
+                    </div>
+                  </motion.div>
+                </Tilt>
+
+                <Tilt className='w-3/4  m-auto skill-slider-item'>
+                  <motion.div
+                    variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
+                    className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+                    onClick={() => {
+                      console.log('clicked')
+                      navigate('/servicesDescription/4')
+                    }}
+                  >
+                    <div
+                      options={{ max: 45, scale: 1, speed: 450 }}
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
+                    >
+                      <img src={creator} className='w-16 h-16  object-contain' />
+                      <h4 className={`text-white text-[18px] font-medium`}>
+                      Web and App Designing
+                      </h4>
+                    </div>
+                  </motion.div>
+                </Tilt>
+
+                <Tilt className='w-3/4  m-auto skill-slider-item'>
+                  <motion.div
+                    variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
+                    className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+                    onClick={() => {
+                      console.log('clicked')
+                      navigate('/servicesDescription/4')
+                    }}
+                  >
+                    <div
+                      options={{ max: 45, scale: 1, speed: 450 }}
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
+                    >
+                      <img src={web} className='w-16 h-16  object-contain' />
+                      <h4 className={`text-white text-[18px] font-medium`}>
+                      Graphic Design
+                      </h4>
+                    </div>
+                  </motion.div>
+                </Tilt>
+
+                <Tilt className='w-3/4  m-auto skill-slider-item'>
+                  <motion.div
+                    variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
+                    className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+                    onClick={() => {
+                      console.log('clicked')
+                      navigate('/servicesDescription/4')
+                    }}
+                  >
+                    <div
+                      options={{ max: 45, scale: 1, speed: 450 }}
+                      className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
+                    >
+                      <img src={mobile} className='w-16 h-16  object-contain' />
+                      <h4 className={`text-white text-[18px] font-medium`}>
+                        Personal Branding
+                      </h4>
+                    </div>
+                  </motion.div>
+                </Tilt>
+
                 <Tilt className='w-3/4  m-auto skill-slider-item'>
                   <motion.div
                     variants={fadeIn('right', 'spring', 0.5 * 0, 0.75)}
@@ -86,7 +171,7 @@ const Services = () => {
                       options={{ max: 45, scale: 1, speed: 450 }}
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-9 min-h-[280px]  flex justify-evenly items-center flex-col'
                     >
-                      <img src={mobile} className='w-16 h-16 object-contain' />
+                      <img src={creator} className='w-16 h-16 object-contain' />
                       <h4 className={`text-white text-[18px] font-medium`}>
                         Data Science
                         <br />
@@ -128,7 +213,7 @@ const Services = () => {
                       options={{ max: 45, scale: 1, speed: 450 }}
                       className='bg-blue-950  border-primary-default border-2 rounded-[20px] py-5 px-12 min-h-[280px]  flex justify-evenly items-center flex-col'
                     >
-                      <img src={creator} className='w-16 h-16 object-contain' />
+                      <img src={web} className='w-16 h-16 object-contain' />
                       <h4 className={`text-white text-[18px] font-medium`}>
                         Cloud Solutions
                       </h4>
@@ -155,7 +240,7 @@ const Services = () => {
                       </h4>
                     </div>
                   </motion.div>
-                </Tilt>
+                </Tilt>      
                         
               </Carousel>
             </div>

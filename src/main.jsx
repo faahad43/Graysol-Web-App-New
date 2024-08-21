@@ -7,7 +7,7 @@ import {
   createRoutesFromElements,
   Route
 } from "react-router-dom";
-import {Home,Services,Contact,AboutUs, Blog,WordpressService,Whmcs,Magneto,Drupal,MobileApp,BlogPost,NotFound} from "./Pages/index.js";
+import {Home,Services,Contact,AboutUs, Blog,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound} from "./Pages/index.js";
 
 import './index.css'
 
@@ -17,10 +17,14 @@ const router = createBrowserRouter(
         <Route path="" element={<Home/>}/>
         <Route path='services' element={<Services/>}>
           <Route path='wordpress' element={<WordpressService/>}/>
-          <Route path='whmcs' element={<Whmcs/>}/>
-          <Route path='magneto' element={<Magneto/>}/>
-          <Route path='drupal' element={<Drupal/>}/>
           <Route path='mobile-app' element={<MobileApp/>}/>
+          <Route path='web-app' element={<WebApp/>}/>
+          <Route path='software-development' element={<SoftwareDevelopment/>}/>
+          <Route path='cloud-solution' element={<CloudSolution/>}/>
+          <Route path='graphic-design' element={<GraphicDesign/>}/>
+          <Route path='personal-branding' element={<PersonalBranding/>}/>
+          <Route path='data-science' element={<DataScience/>}/>
+          <Route path='web&app-design' element={<WebAndAppDesign/>}/>
         </Route>
         <Route path='contact' element={<Contact/>}/>
         <Route path='about' element={<AboutUs/>}/>

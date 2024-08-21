@@ -8,7 +8,7 @@ import Feature4 from '../assets/icons/feature4.svg'
 import Feature5 from '../assets/icons/feature5.svg'
 import Feature6 from '../assets/icons/feature6.svg'
 
-const DevelopmentFeatures = () => {
+const DevelopmentFeatures = ({pageType=''}) => {
 
 const cardStyles = {
     cardStyling :'text-light-900 bg-dark-900 h-52 md:h-80 lg:h-96 p-8 sm:gap-8 md:gap-4 lg:gap-8 sm:px-[12%] md:px-3 md:flex-col lg:p-12',
@@ -22,38 +22,38 @@ const data = [
     {
         img:Feature1,
         imgStyle:'w-[70px] h-[70px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'All Development Models',
-        description:'We enable you to get things done – fast',
+        heading: pageType.developmentFeature[0].title,
+        description: pageType.developmentFeature[0].description,
     },
     {
         img:Feature2,
         imgStyle:'w-[55px] h-[72px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'Boost Product Security',
-        description:'A history of making secure applications ',
+        heading: pageType.developmentFeature[1].title,
+        description: pageType.developmentFeature[1].description,
     },
     {
         img:Feature3,
         imgStyle:'w-[65px] h-[66px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'Quick Start',
-        description:'No wait period. Start your project right now!',
+        heading: pageType.developmentFeature[2].title,
+        description: pageType.developmentFeature[2].description,
     },
     {
         img:Feature4,
         imgStyle:'w-[65px] h-[65px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'Cost Optimization',
-        description:'20 years of enabling affordable dev solutions',
+        heading: pageType.developmentFeature[3].title,
+        description: pageType.developmentFeature[3].description,
     },
     {
         img:Feature5,
         imgStyle:'w-[65px] h-[72px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'Project Tracking',
-        description:'We realize a great partner gives great updates',
+        heading: pageType.developmentFeature[4].title,
+        description: pageType.developmentFeature[4].description,
     },
     {
         img:Feature6,
         imgStyle:'w-[76px] h-[70px] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]',
-        heading:'Trustworthy Record',
-        description:'We’re reviewed publicly and have been around a long time',
+        heading: pageType.developmentFeature[5].title,
+        description: pageType.developmentFeature[5].description,
     },
 ]
 

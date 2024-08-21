@@ -3,49 +3,9 @@ import styles from '../styles'
 import {Button} from '../Components/Button'
 import {Link} from 'react-scroll'
 
-const Faq = () => {
+const Faq = ({faqs}) => {
   
-  const faqs = [
-    {
-        question : 'What is software development outsourcing?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'Why do businesses prefer software development outsourcing?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'What are the perks of choosing Graysol for software development outsourcing?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'What are the software development & support services offered by Graysol?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'What are the different approaches for software development?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'What are the steps in the software development process?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },
-    {
-        question : 'What types of cross-platform development services does Graysol offer?',
-        answer :'We prioritize the security of your insurance information. We use advanced encryption and strict data protection measures to ensure your data is safe and confidential.'
-    },{
-        question : 'What is cross-platform development?',
-        answer :''
-    },
-    {
-        question : 'What measures are taken to guarantee product quality?',
-        answer :''
-    },
-    {
-        question : 'What industries does Graysol work with?',
-        answer :''
-    },
-  ];
+  
 
   const [toggleIcon, setToggleIcon] = useState(Array(faqs.length).fill(true));
 

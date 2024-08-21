@@ -11,7 +11,8 @@ import Like from '../assets/icons/like.svg';
 import Notebook from '../assets/icons/notebook.svg';
 import {DevelopmentCard} from '../Components/DevelopmentCard';
 
-function ServiceBenefits() {
+function ServiceBenefits({pageType=''}) {
+  
 
   const cardStyles = {
     cardStyling :'cardShadow text-dark-900 bg-light-900 h-68 px-4 pt-3 sm:py-8 lg:py-6 xl:py-8 sm:px-[8%] lg:px-4 xl:px-6  sm:gap-8 lg:gap-4 lg:flex-col lg:flex-1 ',
@@ -24,20 +25,20 @@ const data = [
     {
         img:Like,
         imgStyle:'w-[50px] h-[49px]',
-        heading:'Software development & support',
-        description:'We offer end-to-end development & support services that cater to the unique requirements of your business. Our team of experienced developers implements the latest technologies and best practices to create scalable, efficient, and secure software solutions that drive your business forward.',
+        heading: pageType.serviceBenefitCards[0].title,
+        description: pageType.serviceBenefitCards[0].description,
     },
     {
         img:Notebook,
         imgStyle:'w-[40px] h-[55px]',
-        heading:'End to end support',
-        description:'Our team of expert developers and support engineers provide top-notch services to clients across various industries. Graysol understand the importance of reliable and efficient software support in ensuringseamless business operations. That’s why we offer comprehensive software support services designed to address all your concerns and requirements. ',
+        heading: pageType.serviceBenefitCards[1].title,
+        description: pageType.serviceBenefitCards[1].description,
     },
     {
         img:SheildIcon,
         imgStyle:'w-[40px] h-[50px]',
-        heading:'Secure & agile methodologies',
-        description:'We follow an Agile development process that ensurestimely delivery, regular updates, and open communication with our clients. At Graysol, we believe that software development & support are critical components of any business, and we are committed to providing the highest quality services to our clients without compromising onsecurity. ',
+        heading:pageType.serviceBenefitCards[2].title,
+        description: pageType.serviceBenefitCards[2].description,
     },
   ]
   
@@ -53,9 +54,11 @@ const data = [
                   <div className='relative col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6 after:hidden lg:after:block after:absolute after:w-screen after:border-t-2 after:border-primary-default after:-bottom-[2px] after:-left-[40%] xl:after:-left-[50%] '>
                     {/* The absolute in the above div is for the line that shows on larger screen extending the borders */}
                     <img className='w-[40px] md:w-[55px] ' src={Settings} alt="" />
-                    <p className={`${styles.p1}`}>Focus on Core Business</p>
+                    <p className={`${styles.p1}`}>
+                      {pageType.serviceBenefitGrids[0].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                      You can focus on your core business by outsourcing a software development team.
+                      {pageType.serviceBenefitGrids[0].description}
                     </p>
                   </div>
                   <div className='border-b-2 border-primary-default md:hidden'></div>
@@ -64,9 +67,11 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0  border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[30px] md:w-[35px]' src={Arrow} alt="" />
-                    <p className={`${styles.p1}`}>Can Utilize a Broader Range of Experts</p>
+                    <p className={`${styles.p1}`}>
+                    {pageType.serviceBenefitGrids[1].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                      You can get your work done by the best software engineers without compromising the quality of the work.
+                    {pageType.serviceBenefitGrids[1].description}
                     </p>
                   </div>
                   <div className='border-b-2 border-primary-default md:hidden'></div>
@@ -75,9 +80,11 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 lg:border-l-2 border-b-2 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Warning} alt="" />
-                    <p className={`${styles.p1}`}>Save Your Money</p>
+                    <p className={`${styles.p1}`}>
+                    {pageType.serviceBenefitGrids[2].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                      You can reduce your upfront cost by outsourcing your work to a software development company.
+                    {pageType.serviceBenefitGrids[2].description}
                     </p>
                   </div>
                   <div className='border-b-2 border-primary-default md:hidden'></div>
@@ -86,9 +93,11 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0 lg:border-l-0 border-b-2  lg:border-b-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Clock} alt="" />
-                    <p className={`${styles.p1}`}>Faster time to Market</p>
+                    <p className={`${styles.p1}`}>
+                    {pageType.serviceBenefitGrids[3].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                    Outsourcing software development ensures a faster turnaround time to market the product.
+                    {pageType.serviceBenefitGrids[3].description}
                     </p>
                   </div>
                   <div className='border-b-2 border-primary-default md:hidden'></div>
@@ -97,9 +106,11 @@ const data = [
                   <div className='border-b-2 border-primary-default md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-x-0 lg:border-l-2 border-b-2 md:border-b-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[45px]' src={Sheild} alt="" />
-                    <p className={`${styles.p1}`}>Save Your Time</p>
+                    <p className={`${styles.p1}`}>
+                    {pageType.serviceBenefitGrids[4].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                      Software development takes less time when you outsource some of the tasks to another company.
+                    {pageType.serviceBenefitGrids[4].description}
                     </p>
                   </div>
                   <div className='border-b-2 border-primary-default md:hidden'></div>
@@ -108,9 +119,11 @@ const data = [
                   <div className='md:hidden'></div>
                   <div className='col-span-4 md:col-span-6 lg:col-span-4 border-x-2 md:border-r-0 border-primary-default flex flex-col items-center gap-3 lg:gap-5 pt-10 pb-5 xl:pb-8 px-4 lg:px-6'>
                     <img className='w-[40px] md:w-[50px]' src={Atom} alt="" />
-                    <p className={`${styles.p1}`}>Lower Risk</p>
+                    <p className={`${styles.p1}`}>
+                    {pageType.serviceBenefitGrids[5].title}
+                    </p>
                     <p className={`${styles.p4}`}>
-                      By outsourcing to an external development company, you can deliver a high-quality project on time by reducing the level of risk.
+                    {pageType.serviceBenefitGrids[5].description}
                     </p>
                   </div>
                   <div className='md:hidden'></div>

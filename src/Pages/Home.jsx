@@ -3,6 +3,48 @@ import { HomeBanner, ChooseUs, Sponsers,Services, Certifications,Promise, Testim
 
 
 const Home = () => {
+  const faqs = [
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },{
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+        {
+            question : '',
+            answer :''
+        },
+      ]
+      
   return (
     <>
       <HomeBanner/>
@@ -13,7 +55,7 @@ const Home = () => {
       <Promise/>
       <Testimonials/>
       <Help page="Home"/>
-      <Faq/>
+      <Faq faqs={faqs}/>
       <Question/>
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet, useLocation } from 'react-router-dom';
 import {Banner,DevelopmentFeatures, ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,Help, ServiceBenefits,Faq,Question} from '../Sections/index.js'
-import { wordpressPage } from '../Sections/servicesData.js';
+import { serviceMainPage } from '../Sections/servicesData.js';
 
 const Services = () => {
   const location = useLocation(); // Get the current location
@@ -13,15 +13,15 @@ const Services = () => {
     <div>
       {!isNestedRoute && (
         <>
-          <Banner page='service' pageType={wordpressPage}/>
+          <Banner page='service' pageType={serviceMainPage}/>
           <DevelopmentFeatures/>
-          <ServiceFeatures pageType={wordpressPage}/>
+          <ServiceFeatures pageType={serviceMainPage}/>
           <Specialization/>
-          <ServiceDetails pageType={wordpressPage}/>
-          <ServiceWorking pageType={wordpressPage}/>
-          <Help page="Service" pageType={wordpressPage}/>
+          <ServiceDetails pageType={serviceMainPage}/>
+          <ServiceWorking pageType={serviceMainPage}/>
+          <Help page="Service" pageType={serviceMainPage}/>
           <ServiceBenefits/>
-          <Faq/>
+          <Faq faqs={serviceMainPage.faqs}/>
           <Question/>
         </>
       )}

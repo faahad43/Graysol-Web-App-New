@@ -69,11 +69,14 @@ const Header = () => {
                       </div>
                       <ul className={`${styles.h5Heavy} ${mobileDropDown?'h-fit block':'h-0 hidden '} transition-all duration-1000 pl-3 flex flex-col gap-2 mt-1 mb-2`}>
                         <NavLink to='services/wordpress' onClick={()=>{setIsOpen(!isOpen)}}><li>Wordpress</li></NavLink>
-                        <NavLink to='services/whmcs' onClick={()=>{setIsOpen(!isOpen)}}><li>WHMCS</li></NavLink>
-                        <NavLink to='services/magneto' onClick={()=>{setIsOpen(!isOpen)}}><li>Magneto</li></NavLink>
-                        <NavLink to='services/drupal' onClick={()=>{setIsOpen(!isOpen)}}><li>Drupal</li></NavLink>
-                        <NavLink to='services/mobile-app' onClick={()=>{setIsOpen(!isOpen)}}><li>Mobile Apps</li></NavLink>
-                        <NavLink to='services/wordpress' onClick={()=>{setIsOpen(!isOpen)}}><li>Application</li></NavLink>
+                        <NavLink to='services/mobile-app' onClick={()=>{setIsOpen(!isOpen)}}><li>Mobile Applications</li></NavLink>
+                        <NavLink to='services/web-app' onClick={()=>{setIsOpen(!isOpen)}}><li>Web Applications</li></NavLink>
+                        <NavLink to='services/software-development' onClick={()=>{setIsOpen(!isOpen)}}><li>Software Development</li></NavLink>
+                        <NavLink to='services/data-science' onClick={()=>{setIsOpen(!isOpen)}}><li>Data Science</li></NavLink>
+                        <NavLink to='services/cloud-solution' onClick={()=>{setIsOpen(!isOpen)}}><li>Cloud Solutions</li></NavLink>
+                        <NavLink to='services/personal-branding' onClick={()=>{setIsOpen(!isOpen)}}><li>Personal Branding</li></NavLink>
+                        <NavLink to='services/web&app-design' onClick={()=>{setIsOpen(!isOpen)}}><li>Web & App Designing</li></NavLink>
+                        <NavLink to='services/graphic-design' onClick={()=>{setIsOpen(!isOpen)}}><li>Graphic Design</li></NavLink>
                       </ul>
                     
 
@@ -85,7 +88,7 @@ const Header = () => {
                       }
                       }
                     >
-                      About us
+                      About
                     </NavLink>
 
                     <NavLink 
@@ -107,7 +110,7 @@ const Header = () => {
                       }
                       }
                     >
-                      Contact Us
+                      Contact
                     </NavLink>
                   </div>
                 </div>
@@ -120,10 +123,11 @@ const Header = () => {
           )
             }  
         </div>
-        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900  ${styles.p2}  flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around `}>
+        <nav className={`${windowSize>=768 ?'visible':'hidden'} text-light-900  ${styles.p2} h-12  flex flex-[2_2_0%] xl:flex-[3_3_0%] justify-around items-center `}>
+              {/*  */}
               <NavLink
                 to=''
-                className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
               >
                 Home
               </NavLink>
@@ -133,9 +137,9 @@ const Header = () => {
               > 
                 <div className='relative group'>
                   <span className='flex gap-1 items-center w-[115%] lg:w-[120%]'>Services<IoIosArrowDown /></span>
-                  <ul className={`hidden group-hover:block text-light-900 absolute w-[115%] lg:w-[120%] top-[calc(100%+0.2rem)] z-50 bg-primary-default text-[12px] lg:text-[14px] pb-2 pl-1.5 space-y-0  font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-primary-default before:-top-[0.3rem] before:left-0 before:rounded-full`}>
+                  <ul className={`hidden group-hover:block text-light-900 absolute w-[135%] lg:w-[155%] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)] space-y-[2px] z-50 bg-dark-200 text-[11px] lg:text-[14px] pb-3 pl-2 lg:pl-3 space-y-0  font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-dark-200 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
                     <li
-                     className='relative  after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0 ' 
+                     className='relative  after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px] after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0 ' 
                      >
                       <NavLink to='services/wordpress'>
                         <span className='inline-block flex items-end w-full h-5 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
@@ -145,37 +149,7 @@ const Header = () => {
                     </li>
 
                     <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
-                    >
-                      <NavLink to='services/whmcs'>
-                        <span className='inline-block flex items-end w-full h-6 lg:h-7  transition-transform duration-300 hover:scale-110 hover:pl-1'>
-                          WHMCS
-                        </span>
-                      </NavLink>
-                    </li>
-
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
-                    >
-                      <NavLink to='services/magneto'>
-                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
-                          Magento
-                        </span>
-                      </NavLink>
-                    </li>
-
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
-                    >
-                      <NavLink to='services/drupal'>
-                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
-                          Drupal
-                        </span>
-                      </NavLink>
-                    </li>
-
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'
                     >
                       <NavLink to='services/mobile-app'>
                         <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
@@ -185,11 +159,73 @@ const Header = () => {
                     </li>
 
                     <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-20 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/wordpress'>
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/web-app'>
                         <span
                         className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
-                          Application
+                          Web Apps
+                        </span>
+                      </NavLink>
+                    </li>
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/software-development'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          Software Dev
+                        </span>
+                      </NavLink>
+                    </li>
+
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/data-science'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          Data Science
+                        </span>
+                      </NavLink>
+                    </li>
+
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/cloud-solution'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          Cloud Solutions
+                        </span>
+                      </NavLink>
+                    </li>
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/personal-branding'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          Personal Branding
+                        </span>
+                      </NavLink>
+                    </li>
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/web&app-design'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          UI Designing
+                        </span>
+                      </NavLink>
+                    </li>
+
+                    <li
+                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
+                      <NavLink to='services/graphic-design'>
+                        <span
+                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                          Graphic Design
                         </span>
                       </NavLink>
                     </li>
@@ -201,7 +237,7 @@ const Header = () => {
                 to='/about'
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
               >
-                About us
+                About
               </NavLink>
               <NavLink
                 to='/blog'
@@ -213,7 +249,7 @@ const Header = () => {
                 to='/contact'
                 className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
               >
-                Contact us
+                Contact
               </NavLink>
         </nav>
         

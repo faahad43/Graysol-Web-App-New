@@ -207,6 +207,12 @@ margin: auto auto;
 position: relative;
 }
 
+@media screen and (min-width: 1280px) {
+  .testimonial-buttons .prev,
+  .testimonial-buttons .next {
+  bottom: 16rem;
+}
+}
 
 /*
 
@@ -351,25 +357,18 @@ width: 100%;
 }
 
 /* Company Sponsorship  */
-.fade {
-  width: 100%;
-  position: absolute;
-  inset: 0;
-  pointer-event: none;
-}
-
-
 
 @keyframes scroll {
-  0% {transform: translateX(90%);}
-  100% {transform: translateX(-50%);}
+  0% {transform: translateX(-10%);}
+  100% {transform: translateX(-100%);}
 }
 
 
 
 .animate-scroll {
   display: flex;
-  animation: scroll 10s linear infinite;
+  animation: scroll 25s linear infinite;
+  white-space: nowrap;
 }
 
 

@@ -3,12 +3,16 @@ import {Services} from "./Services";
 import {Contact} from "./Contact";
 import {AboutUs} from "./AboutUs";
 import {Blog} from './Blog'
-import { WordpressService } from "./WordpressService";
-import { Whmcs } from "./Whmcs";
-import { Drupal } from "./Drupal";
-import { Magneto } from "./Magneto";
-import { MobileApp } from "./MobileApp";
+import { WordpressService } from "./Services/WordpressService";
+import { MobileApp } from "./Services/MobileApp";
+import { WebApp } from "./Services/WebApp";
+import { SoftwareDevelopment } from "./Services/SoftwareDevelopment";
+import { CloudSolution } from "./Services/CloudSolution";
+import { GraphicDesign } from "./Services/GraphicDesign";
+import { PersonalBranding } from "./Services/PersonalBranding";
+import { DataScience } from "./Services/DataScience";
+import { WebAndAppDesign } from "./Services/WebAndAppDesign";
 import { BlogPost } from "./BlogPost";
 import { NotFound } from "./NotFound";
 
-export { Home,Services,Contact,AboutUs,Blog,WordpressService, Whmcs,Drupal,Magneto,MobileApp,BlogPost,NotFound };
+export { Home,Services,Contact,AboutUs,Blog,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound };

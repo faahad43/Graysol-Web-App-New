@@ -9,7 +9,7 @@ import { Element } from 'react-scroll'
 
 const Footer = () => {
   return (
-    <div className='bg-dark-400 w-screen'>
+    <div className='bg-dark-900 w-screen'>
       <div className='w-full lg:w-[90%] sm:max-w-[1138px] lg:mx-auto text-light-900 flex flex-col lg:flex-row gap-10 py-8 px-8 sm:px-16 xl:px-0 lg:justify-between'>
         <div className={`${styles.p4} tracking-wider flex flex-col lg:w-[25%]  gap-6 lg:pt-6`}>
         <Element name='phone-no'>
@@ -66,10 +66,10 @@ const Footer = () => {
             </ul>
         </div>
       </div>
-      <div className='w-full  bg-dark-200 text-light-900  pl-[8vw] sm:pl-16 lg:pl-[10%] xl:pl-[15%] py-4 lg:py-6'>
+      <div className='w-full  bg-dark-900 text-light-900  pl-[8vw] sm:pl-16 lg:pl-[10%] xl:pl-[15%] py-4 lg:py-6'>
               <p className={`font-light ${styles.p4}`}>
                 <span className=' text-dark-100'>&copy; </span>
-                2023 Graysol. All Rights Reserved
+                2024 Graysol. All Rights Reserved
               </p>
       </div>
     </div>

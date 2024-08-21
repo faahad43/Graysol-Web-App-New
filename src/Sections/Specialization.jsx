@@ -6,34 +6,8 @@ import useWindowSize from '../hooks/windowSize';
 import { Link } from 'react-router-dom';
 import {scroller} from 'react-scroll';
 
-const Specialization = () => {
-
-  const technologies = [
-    {
-        name:'Web',
-        description:'Creating dynamic and responsive websites tailored to your needs.'
-    },
-    {
-        name:'Hosting',
-        description:'Reliable and secure hosting solutions for all your web applications.'
-    },
-    {
-        name:'Ruby',
-        description:'Expertise in Ruby development for robust and scalable applications.'
-    },
-    {
-        name:'PHP',
-        description:'Delivering efficient and secure PHP solutions for web projects.'
-    },
-    {
-        name:'Python',
-        description:'Building powerful applications with Python\'s versatile capabilities.'
-    },
-    {
-        name:'Cross-Platform',
-        description:'Developing apps that work seamlessly across multiple platforms.'
-    },
-  ]
+const Specialization = ({pageType=''}) => {
+  const technologies = pageType.technologies;
 
   const [visibility,setVisibility] = useState(Array(technologies.length).fill(false));
   const [arrowFillColor,setArrowFillColor] = useState(Array(technologies.length).fill(false));
@@ -85,7 +59,7 @@ const Specialization = () => {
         <h1 className={`${styles.h1} text-center`}>We specialize in</h1>
         <div className='bg-dark-700 mx-auto max-w-[1267px] rounded-2xl flex flex-col w-[85%] gap-y-12 md:gap-y-16 lg:gap-y-24 pb-10 md:pt-5 md:pb-20 lg:pt-8'>
             <div className=' grid place-items-center  grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3 md:gap-y-10 lg:gap-y-16'>
-                {technologies.map((item,index)=>(
+                {pageType.technologies.map((item,index)=>(
                     <div key={index} className='relative flex items-center justify-center py-5 border-b-2 border-primary-default w-44 xl:w-72 h-24'>
                         <h4 className={`${styles.h4} text-center `}>{item.name}</h4>
                         <div
