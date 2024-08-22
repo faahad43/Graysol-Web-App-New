@@ -59,7 +59,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/1')
+                      navigate('/services/web-app')
                     }}
                   >
                     <div
@@ -80,7 +80,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/mobile-app')
                     }}
                   >
                     <div
@@ -101,7 +101,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/web&app-design')
                     }}
                   >
                     <div
@@ -122,7 +122,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/graphic-design')
                     }}
                   >
                     <div
@@ -143,7 +143,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/personal-branding')
                     }}
                   >
                     <div
@@ -164,7 +164,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/2')
+                      navigate('/services/data-science')
                     }}
                   >
                     <div
@@ -186,7 +186,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/3')
+                      navigate('/services/software-development')
                     }}
                   >
                     <div
@@ -206,7 +206,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/cloud-solution')
                     }}
                   >
                     <div
@@ -227,7 +227,7 @@ const Services = () => {
                     className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
                     onClick={() => {
                       console.log('clicked')
-                      navigate('/servicesDescription/4')
+                      navigate('/services/wordpress')
                     }}
                   >
                     <div

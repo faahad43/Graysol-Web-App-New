@@ -133,10 +133,14 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to='/services'
-                className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left  after:transition-transform after:ease-in-out after:duration-300`}
               > 
                 <div className='relative group'>
-                  <span className='flex gap-1 items-center w-[115%] lg:w-[120%]'>Services<IoIosArrowDown /></span>
+                  <span className='flex gap-1 items-center w-[115%] lg:w-[120%]'
+                      
+                  >
+                    Services<IoIosArrowDown />
+                  </span>
                   <ul className={`hidden group-hover:block text-light-900 absolute w-[135%] lg:w-[155%] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)] space-y-[2px] z-50 bg-dark-200 text-[11px] lg:text-[14px] pb-3 pl-2 lg:pl-3 space-y-0  font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-dark-200 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
                     <li
                      className='relative  after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px] after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0 ' 
@@ -235,19 +239,19 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to='/about'
-                className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
               >
                 About
               </NavLink>
               <NavLink
                 to='/blog'
-                className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
               >
                 Blog
               </NavLink>
               <NavLink
                 to='/contact'
-                className={({isActive})=>` ${isActive ? 'text-primary-default' : 'text-light-500'}`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
               >
                 Contact
               </NavLink>

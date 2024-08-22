@@ -59,7 +59,7 @@ const data = [
 
   return (
     <div className='bg-dark-900 py-16 text-center space-y-8'>
-        <h1 className={styles.h1}>Software Development Features</h1>
+        <h1 className={styles.h1}>{pageType.developmentFeatureHeading}</h1>
         <div 
             className='bg-dark-700 max-w-[1267px] w-[90%] rounded-3xl mx-auto md:place-items-center grid grid-cols-1 md:grid-cols-3 gap-y-5 md:gap-x-4 lg:gap-x-12 p-7 sm:px-12 md:px-5 lg:p-12'
         >

@@ -14,13 +14,13 @@ const Services = () => {
       {!isNestedRoute && (
         <>
           <Banner page='service' pageType={serviceMainPage}/>
-          <DevelopmentFeatures/>
+          <DevelopmentFeatures pageType={serviceMainPage}/>
           <ServiceFeatures pageType={serviceMainPage}/>
-          <Specialization/>
+          <Specialization pageType={serviceMainPage}/>
           <ServiceDetails pageType={serviceMainPage}/>
           <ServiceWorking pageType={serviceMainPage}/>
           <Help page="Service" pageType={serviceMainPage}/>
-          <ServiceBenefits/>
+          <ServiceBenefits pageType={serviceMainPage}/>
           <Faq faqs={serviceMainPage.faqs}/>
           <Question/>
         </>

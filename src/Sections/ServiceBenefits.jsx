@@ -45,7 +45,7 @@ const data = [
   return (
     <div className='bg-dark-900 text-center py-12 space-y-16'>
           <h1 className={`${styles.h1} w-4/5 lg:w-3/4 2xl:w-3/5 mx-auto`}>
-              Benefits of Software Development Outsourcing
+              {pageType.serviceBenefitHeading}
           </h1>
           <div className='flex'>
             <div className='w-[80%] xl:w-[75%]  mx-auto text-light-900 grid grid-cols-6 md:grid-cols-12 border-primary-default'>

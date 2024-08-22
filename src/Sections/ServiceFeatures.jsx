@@ -11,7 +11,7 @@ const ServiceFeatures = ({pageType=''}) => {
 
   return (
     <div className='w-screen bg-dark-900 pb-12 space-y-8'>
-        <h1 className={`${styles.h1} text-center`}>WordPress Services</h1>
+        <h1 className={`${styles.h1} text-center`}>{pageType.serviceFeaturesHeading}</h1>
         <div 
             className='w-[95%] sm:w-full  mx-auto bg-light-900 grid grid-cols-1 md:grid-cols-2 rounded-2xl sm:rounded-none py-12 sm:py-16 lg:py-[10%] xl:py-[8%] px-[8%] sm:px-[15%] md:px-[5%] lg:px-[10%] xl:px-[15%] md:gap-x-10 xl:gap-x-20 gap-y-10 sm:gap-y-12 lg:gap-y-20 '
         >
