@@ -127,7 +127,7 @@ const Header = () => {
               {/*  */}
               <NavLink
                 to=''
-                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
+                className={({isActive})=>` ${isActive ? `text-light-900 ${styles.p2Heavy} after:scale-x-100` : 'text-light-500'} relative  after:absolute after:bg-light-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 hover:after:origin-bottom-left hover:after:scale-x-100 after:transition-transform after:ease-in-out after:duration-300`}
               >
                 Home
               </NavLink>

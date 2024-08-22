@@ -73,7 +73,7 @@ const Banner = ({page="service",pageType=""}) => {
               to='/contact'
               onClick={() => scrollToSection('phone-no')}
             >
-              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[8rem] py-3 uppercase rounded-lg `}>{data.button}</button>
+              <button  className={`px-4 text-[15px] md:text-[17px] lg:text-[19px] xl:text-[20px] bg-light-900 text-primary-default font-normal w-fit min-w-[9rem] lg:min-w-[10rem] py-3 uppercase rounded-lg `}>{data.button}</button>
               </Link>
             }
             
