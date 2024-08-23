@@ -1,26 +1,28 @@
 import BlogImage1 from '../assets/img/BlogCoverPic1.png'
 import BlogImage2 from '../assets/img/GraysolBlog2.webp'
+import ChatgbtImage from '../assets/blog/chatgbt.jpeg'
+import AwsImage from '../assets/blog/AwsImage.webp' 
 
 const data = [
     {
       id: 1,
-      time: '1min',
-      title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
+      time: '2min',
+      title:'Will Chat-GPT replace programmers?',
       feature: true,
       press: true,
       insight: false,
-      graynews: true,
-      image:BlogImage1,
+      graynews: false,
+      image:ChatgbtImage,
     },
     {
       id: 2,
-      time: '1min',
-      title:'Walker Mattox, CEO of Gray Solutions, on Building a Dynamic Team of Solutioneers',
+      time: '4min',
+      title:'How to Host a Python Script on AWS EC2 Server and Run it Automatically.',
       feature: true,
       press: true,
       insight: true,
       graynews: false,
-      image:BlogImage2,
+      image:AwsImage,
     },
     {
       id: 3,

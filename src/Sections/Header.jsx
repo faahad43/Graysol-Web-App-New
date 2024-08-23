@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../assets/img/Logo.png'
 import BigLogo from '../assets/img/BigLogo.png'
 import cross from "../assets/icons/cross.svg"
@@ -13,6 +13,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileDropDown, setMobileDropDown] = useState(false);
   const windowSize = useWindowSize();
+
+  useEffect(()=>{
+    if(!isOpen){
+      setMobileDropDown(false);
+    }
+  },[isOpen])
+
   return (
     <div className={`w-screen relative bg-secondary-500 md:bg-dark-900 h-16 sm:h-20 lg:h-28 flex justify-between items-center px-3 sm:px-5 md:px-[10vw]`}>
         <div className='sm:flex-1 xl:flex-[3_3_0%]'>
@@ -31,7 +38,7 @@ const Header = () => {
                 <div className='w-6 h-0.5 bg-light-500'></div>
               </div>
           ) : (
-              <div className='fixed px-4 inset-0 bg-secondary-500 text-light-900 z-50'>
+              <div className='fixed  px-4 inset-0 bg-secondary-500 text-light-900 z-50'>
                 <div className='flex  py-5 justify-between'>
                   <Link to='' onClick={()=>setIsOpen(!isOpen)}>
                   <div className='flex gap-2 items-center group '>
@@ -41,7 +48,7 @@ const Header = () => {
                   </Link>
                   <img className='w-[34px] h-[34px] cursor-pointer' src={cross} alt="cross icon" onClick={()=>setIsOpen(!isOpen)} />
                 </div>
-                <div className=' pt-6'>
+                <div className=' pt-4'>
                   <div className=' flex flex-col gap-y-4 font-medium text-[35px] tracking-wide'>
                     <NavLink 
                       to='' 
@@ -114,7 +121,7 @@ const Header = () => {
                     </NavLink>
                   </div>
                 </div>
-                <div className={`${styles.h4} pt-10 flex gap-14`}>
+                <div className={`${styles.h4} pt-6 flex gap-14`}>
                   <p>Careers</p>
                   <p>Linkedin</p>
                 </div>

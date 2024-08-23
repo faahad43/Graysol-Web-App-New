@@ -25,5 +25,7 @@ import {AboutCompanyVision} from "./AboutCompanyVision.jsx";
 import {ContactForm2} from "./ContactForm2.jsx";
 import {BlogBanner} from "./BlogBanner.jsx";
 import {BlogSection} from "./BlogSection.jsx";
+import { PortfolioBanner } from "./PortfolioBanner.jsx";
+import { PortfolioSection } from "./PortfolioSection.jsx";
 
-export {Header,Footer,HomeBanner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner,DevelopmentFeatures,ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,ServiceBenefits,ContactForm, AboutPageBanner, AboutTeamLead,AboutCompanyStats,AboutCompanyVision,ContactForm2,BlogBanner,BlogSection}
+export {Header,Footer,HomeBanner, Sponsers,ChooseUs,Services,Certifications,Promise,Testimonials,Help,Question,Faq,Banner,DevelopmentFeatures,ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,ServiceBenefits,ContactForm, AboutPageBanner, AboutTeamLead,AboutCompanyStats,AboutCompanyVision,ContactForm2,BlogBanner,BlogSection,PortfolioBanner, PortfolioSection}

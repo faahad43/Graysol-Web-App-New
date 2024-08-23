@@ -16,11 +16,13 @@ const styles ={
 
     h3:'font-normal md:font-medium text-[21px] md:text-[25px] lg:text-[30px] xl:text-[35px] text-light-900',
 
+    h3Dark:'font-normal md:font-medium text-[21px] md:text-[25px] lg:text-[30px] xl:text-[35px] text-dark-900',
+
     h3Heavy:'font-normal md:font-medium text-[21px] md:text-[25px] lg:text-[30px] xl:text-[35px] text-light-900 ',
 
     h4:'text-[20px] sm:text-[21px] md:text-[22px] lg:text-[25px] xl:text-[32px] font-light text-light-900  md:font-normal',
 
-    h4Dark:'text-[20px] sm:text-[21px] md:text-[22px] lg:text-[25px] xl:text-[32px] font-light text-light-900  md:font-normal',
+    h4Dark:'text-[20px] sm:text-[21px] md:text-[22px] lg:text-[25px] xl:text-[32px] font-light text-dark-900  md:font-normal',
 
     h4Heavy:'text-[20px] sm:text-[21px] md:text-[22px] lg:text-[25px] xl:text-[32px] font-normal md:font-medium text-light-900',
 

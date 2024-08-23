@@ -1,9 +1,19 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Outlet, useLocation } from 'react-router-dom';
 import {Banner,DevelopmentFeatures, ServiceFeatures,Specialization,ServiceDetails,ServiceWorking,Help, ServiceBenefits,Faq,Question} from '../Sections/index.js'
 import { serviceMainPage } from '../Sections/servicesData.js';
 
 const Services = () => {
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  };
+
   const location = useLocation(); // Get the current location
 
   // Determine if the current location is a nested route
@@ -11,6 +21,7 @@ const Services = () => {
 
   return (
     <div>
+      <ScrollToTop/>
       {!isNestedRoute && (
         <>
           <Banner page='service' pageType={serviceMainPage}/>
