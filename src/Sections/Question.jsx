@@ -13,6 +13,7 @@ const Question = () => {
     const [email,setEmail]=useState("");
     const [name,setName]= useState("");
     const [message,setMessage]= useState("");
+    const [phoneNumber,setPhoneNumber]= useState("");   
 
     const form = useRef();
 
@@ -100,14 +101,22 @@ const Question = () => {
                     onChange={(e)=>setName(e.target.value)}
                 />
                 <Input 
-                    name='user-email' 
+                    name='user-phoneNo' 
                     className='w-11/12 md:w-5/12' 
-                    placeholder='Your Email' 
+                    placeholder='Phone Number' 
+                    section='question'
+                    value={phoneNumber}
+                    onChange={(e)=>setPhoneNumber(e.target.value)}
+                />
+            </div>
+            <Input
+                    name='user-email' 
+                    className='w-11/12 ' 
+                    placeholder='Email'
                     section='question'
                     value={email}
                     onChange={(e)=>setEmail(e.target.value)}
-                />
-            </div>
+            />
             <textarea 
                 name='message'
                 className='w-11/12 h-32 lg:h-40  text-dark-900 rounded px-2 py-[6px] lg:py-[12px] placeholder-dark-500 placeholder:opacity-80 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal tracking-wide'

@@ -5,9 +5,12 @@ import { Paragraph } from 'react-bootstrap-icons';
 import { wordpressPage } from './servicesData';
 import { Link } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import  useWindowSize  from '../hooks/windowSize';
 
 
 const Banner = ({page="service",pageType=""}) => {
+  const windowSize = useWindowSize();
+
   const serviceData = {
     heading: pageType.bannerTitle,
     paragraph: pageType.bannerDescription,
@@ -53,7 +56,7 @@ const Banner = ({page="service",pageType=""}) => {
               <p className={styles.p2}>{data.paragraph}</p>
               <p className={styles.p2}>{data.paragraph2}</p>
             </div>
-            <div className='space-x-6'>
+            <div className={`space-x-6 ${windowSize < 390 ?'flex flex-col gap-2 items-center justify-center':''}`}>
             <Link 
               to='/contact'
               onClick={() => scrollToSection('contact-form')}

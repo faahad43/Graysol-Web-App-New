@@ -22,10 +22,6 @@ const ContactForm = () => {
             toast.error('First Name is required');
             return false;
         }
-        if (!lastName.trim()) {
-            toast.error('Last Name is required');
-            return false;
-        }
         if (!email.trim()) {
             toast.error('Email is required');
             return false;
@@ -35,22 +31,11 @@ const ContactForm = () => {
             toast.error('Please enter a valid email address');
             return false;
         }
-        if (!phoneNo.trim()) {
-            toast.error('Phone Number is required');
-            return false;
-        }
-        if (!companyName.trim()) {
-            toast.error('Company Name is required');
-            return false;
-        }
         if (!message.trim()) {
             toast.error('Message is required');
             return false;
         }
-        if (!checkbox1) {
-            toast.error('You must agree to the Privacy Policy');
-            return false;
-        }
+
         return true;
     };
 
@@ -80,8 +65,6 @@ const ContactForm = () => {
             () => {
                 setEmail('');
                 setFirstName('');
-                setLastName('');
-                setCompanyName('');
                 setPhoneNo('');
                 setMessage('');
                 setCheckbox1(false);
@@ -103,25 +86,9 @@ const ContactForm = () => {
                     <Input 
                     name='user-name'
                     className='w-11/12 md:w-5/12 py-[9px]'
-                    placeholder='First Name'
+                    placeholder='Name'
                     value={firstName}
                     onChange={(e)=>setFirstName(e.target.value)}
-                    />
-                    <Input 
-                    name='user-lastName'
-                    className='w-11/12 md:w-5/12' 
-                    placeholder='Last Name'
-                    value={lastName}
-                    onChange={(e)=>setLastName(e.target.value)}
-                    />
-            </div>
-            <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-4 md:gap-0 '>
-                    <Input
-                    name='user-email' 
-                    className='w-11/12 md:w-5/12' 
-                    placeholder='Email'
-                    value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
                     />
                     <Input 
                     name='user-phoneNo'
@@ -131,12 +98,13 @@ const ContactForm = () => {
                     onChange={(e)=>setPhoneNo(e.target.value)}
                     />
             </div>
+            
             <Input
-                name='company-name' 
+                name='user-email' 
                 className='w-11/12 ' 
-                placeholder='Company Name'
-                value={companyName}
-                onChange={(e)=>setCompanyName(e.target.value)}
+                placeholder='Email'
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
             />
             <textarea 
                 className='w-11/12 h-32 h-32 lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal  tracking-wide' placeholder='What You are working on?' 

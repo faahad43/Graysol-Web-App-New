@@ -3,30 +3,12 @@ export const serviceMainPage = {
     "bannerDescription": "Discover a range of expert solutions tailored to help your business grow. From software development to personal branding, our comprehensive services are designed to meet your unique needs and drive your success.",
     "developmentFeatureHeading": "Services Features",
     "developmentFeature": [
-        {
-            "title": "Software Development",
-            "description": "Custom software solutions that drive efficiency, automate processes, and solve complex business challenges, ensuring your business stays ahead."
-        },
-        {
-            "title": "Website and Application Design",
-            "description": "Create visually appealing and user-friendly websites and apps with designs that engage your audience and align with your brand identity."
-        },
-        {
-            "title": "Mobile Application Development",
-            "description": "Build high-performance mobile apps that deliver seamless user experiences across iOS and Android, helping you reach your audience anywhere, anytime."
-        },
-        {
-            "title": "Data Science, Machine Learning, and AI",
-            "description": "Leverage data-driven insights and advanced AI solutions to predict trends, automate decisions, and unlock new opportunities for growth."
-        },
-        {
-            "title": "Personal Branding",
-            "description": "Craft a compelling personal brand that amplifies your influence, builds credibility, and sets you apart in your industry."
-        },
-        {
-            "title": "Graphic Design",
-            "description": "Bring your brand to life with impactful visuals, from logos and marketing materials to digital graphics that make a lasting impression."
-        }
+        { "title": "Software Development", "description": "Custom software for efficiency, automation, and complex business challenges." },
+        { "title": "Web & App Design", "description": "Visually appealing and user-friendly websites and apps." },
+        { "title": "Mobile App Development", "description": "High-performance mobile apps for iOS and Android." },
+        { "title": "Data Science, ML, & AI", "description": "Data-driven insights and advanced AI solutions." },
+        { "title": "Personal Branding", "description": "Craft a compelling personal brand." },
+        { "title": "Graphic Design", "description": "Impactful visuals for your brand." }
     ],
     "serviceFeaturesHeading": "Services We Offer",
     "serviceFeatures": [

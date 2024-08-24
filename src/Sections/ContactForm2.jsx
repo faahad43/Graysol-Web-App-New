@@ -9,7 +9,7 @@ import { toast } from 'react-hot-toast';
 const ContactForm2 = () => {
     const [email,setEmail]=useState("");
     const [firstName,setFirstName]= useState("");
-    const [lastName,setLastName]= useState("");
+    const [phoneNumber,setPhoneNumber]= useState("");
     const [message,setMessage]= useState("");
     const [checkbox1,setCheckbox1]= useState(false);
     const [checkbox2,setCheckbox2]= useState(false);
@@ -19,10 +19,6 @@ const ContactForm2 = () => {
     const validateForm = () => {
         if (!firstName.trim()) {
             toast.error('First Name is required');
-            return false;
-        }
-        if (!lastName.trim()) {
-            toast.error('Last Name is required');
             return false;
         }
         if (!email.trim()) {
@@ -38,10 +34,7 @@ const ContactForm2 = () => {
             toast.error('Message is required');
             return false;
         }
-        if (!checkbox1) {
-            toast.error('You must agree to the Privacy Policy');
-            return false;
-        }
+       
         return true;
     };
 
@@ -73,7 +66,7 @@ const ContactForm2 = () => {
             () => {
                 setEmail('');
                 setFirstName('');
-                setLastName('');
+                setPhoneNumber('');
                 setMessage('');
                 setCheckbox1(false);
                 setCheckbox2(false);
@@ -105,16 +98,16 @@ const ContactForm2 = () => {
                         <Input
                             name='user-name'
                             className='w-11/12 md:w-5/12 py-[9px]'
-                            placeholder='First Name'
+                            placeholder='Name'
                             value={firstName}
                             onChange={(e)=>setFirstName(e.target.value)}
                         />
                         <Input
-                            name='user-lastName'
+                            name='user-phoneNo'
                             className='w-11/12 md:w-5/12'
-                            placeholder='Last Name'
-                            value={lastName}
-                            onChange={(e)=>setLastName(e.target.value)}
+                            placeholder='Phone Number'
+                            value={phoneNumber}
+                            onChange={(e)=>setPhoneNumber(e.target.value)}
                         />
                 </div>
                 <Input
