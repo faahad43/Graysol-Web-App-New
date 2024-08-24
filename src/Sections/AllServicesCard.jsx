@@ -39,7 +39,7 @@ export const AllServicesCard = () => {
       "description": "Leverage data-driven insights and AI solutions to automate processes and drive growth.",
       "link": "/services/data-science",
       "image": Ai,
-      "className": 'flex-row-reverse'
+      "className": 'flex-row-reverse '
     },
     {
       "title": "WordPress & Shopify Development",
@@ -74,7 +74,7 @@ export const AllServicesCard = () => {
       "description": "Professional design services to craft beautiful and functional web and mobile applications.",
       "link": "/services/web&app-design",
       "image": Ui,
-      "className": ''
+      "className": 'col-span-2 w-1/2'
     }
   ]
 
