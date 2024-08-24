@@ -11,7 +11,7 @@ import Feature6 from '../assets/icons/feature6.svg'
 const DevelopmentFeatures = ({pageType=''}) => {
 
 const cardStyles = {
-    cardStyling :'text-light-900 bg-dark-900 h-52 md:h-80 lg:h-96 p-8 sm:gap-8 md:gap-4 lg:gap-8 sm:px-[12%] md:px-3 md:flex-col lg:p-12',
+    cardStyling :'text-light-900 bg-dark-900 h-52 md:h-80 lg:h-96 p-3 sm:gap-8 md:gap-4 lg:gap-8 sm:px-[12%] md:px-3 md:flex-col lg:p-12',
     headingStyle :`'${styles.p2Heavy} leading-snug'`,
     descriptionStyle :`${styles.p3} leading-snug`,
     footerStyle :`${styles.p4} underline decoration-dashed underline-offset-4 leading-snug`,
