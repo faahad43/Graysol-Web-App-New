@@ -148,96 +148,114 @@ const Header = () => {
                   >
                     Services<IoIosArrowDown />
                   </span>
-                  <ul className={`hidden group-hover:block text-light-900 absolute w-[135%] lg:w-[155%] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)] space-y-[2px] z-50 bg-dark-200 text-[11px] lg:text-[14px] pb-3 pl-2 lg:pl-3 space-y-0  font-light tracking-wider rounded-b  before:absolute before:w-full before:h-1 before:bg-dark-200 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
-                    <li
-                     className='relative  after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px] after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0 ' 
-                     >
-                      <NavLink to='services/wordpress'>
-                        <span className='inline-block flex items-end w-full h-5 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
+                  <ul className={`collapse group-hover:visible text-light-900 absolute w-[25.5rem] lg:w-[28rem] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)]  z-50 bg-dark-200 text-[13px] lg:text-[14px] pt-2 pb-6 px-2 lg:px-3 gap-y-3 gap-x-3  font-light tracking-wider rounded grid grid-cols-2  before:absolute before:opacity-0 before:w-[43%] before:h-1 before:bg-dark-200 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/wordpress'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Wordpress
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Build and manage your site
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'
-                    >
-                      <NavLink to='services/mobile-app'>
-                        <span className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:scale-110 hover:pl-1'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/mobile-app'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Mobile Apps
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Create apps for iOS & Android
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/web-app'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
-                          Web Apps
-                        </span>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/web-app'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
+                          Website Apps
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Develop scalable web applications
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/software-development'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/software-development'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Software Dev
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Custom software tailored for you
+                        </p>
                       </NavLink>
                     </li>
 
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/data-science'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/data-science'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Data Science
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Unlock insights with data analysis
+                        </p>
                       </NavLink>
                     </li>
 
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/cloud-solution'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
-                          Cloud Solutions
-                        </span>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/cloud-solution'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
+                          Cloud Solution
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Scalable cloud infrastructure
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/personal-branding'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/personal-branding'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Personal Branding
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Elevate your online presence
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/web&app-design'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/web&app-design'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           UI Designing
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Design intuitive user interfaces
+                        </p>
                       </NavLink>
                     </li>
 
-                    <li
-                     className='relative after:absolute after:bg-light-400 after:bg-opacity-30 after:h-[1px]  after:w-24 lg:after:w-28 after:-bottom-[1px] after:left-0'>
-                      <NavLink to='services/graphic-design'>
-                        <span
-                        className='inline-block flex items-end w-full h-6 lg:h-7 transition-transform duration-300 hover:pl-1 hover:scale-110'>
+                    <li className='border rounded-md border-dark-100'>
+                      <NavLink to='services/graphic-design'
+                      className={({isActive})=>` ${isActive?'bg-dark-100':''} inline-block flex flex-col items-start gap-y-1 w-full rounded h-16  transition-transform duration-300 p-2`}>
+                        <p className={`font-normal`}>
                           Graphic Design
-                        </span>
+                        </p>
+                        <p className='text-[11px] lg:text-[12px]'>
+                        Visual design for all your needs
+                        </p>
                       </NavLink>
                     </li>
 

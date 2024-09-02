@@ -38,31 +38,59 @@ export const serviceMainPage = {
         }
     ],
     "technologies": [
-        {
-            "name": "Software Dev",
-            "description": "Leverage advanced technologies like Python, Java, and .NET to build scalable software solutions."
-        },
-        {
-            "name": "Responsive Design",
-            "description": "Create designs that adapt seamlessly to any device, delivering consistent user experiences across platforms."
-        },
-        {
-            "name": "Mobile Apps",
-            "description": "Develop mobile apps using frameworks like Flutter and React Native for iOS and Android compatibility."
-        },
-        {
-            "name": "AI and ML",
-            "description": "Implement machine learning models and AI algorithms to automate processes and gain predictive insights."
-        },
-        {
-            "name": "CMS",
-            "description": "Use platforms like WordPress and Shopify to manage and optimize your online presence."
-        },
-        {
-            "name": "Graphic Design",
-            "description": "Design stunning visuals with industry-standard tools like Adobe Photoshop, Illustrator, and Figma."
-        }
-    ],
+    {
+      "name": "Software Dev",
+      "description": {
+        "languages": "Java, Python, C#",
+        "frameworks": "Spring Boot, Django, .NET Core",
+        "databases": "MySQL, PostgreSQL, SQL Server",
+        "development_tools": "IntelliJ IDEA, Visual Studio, Git"
+      }
+    },
+    {
+      "name": "Responsive Design",
+      "description": {
+        "frameworks": "Bootstrap, Foundation, Tailwind CSS",
+        "tools": "Figma, Adobe XD, Sketch",
+        "principles": "Mobile-First, Fluid Grids, Flexible Images"
+      }
+    },
+    {
+      "name": "Mobile Apps",
+      "description": {
+        "platforms": "iOS, Android",
+        "languages": "Swift, Kotlin, Dart",
+        "frameworks": "Flutter, React Native, Xamarin",
+        "tools": "Xcode, Android Studio, Visual Studio Code"
+      }
+    },
+    {
+      "name": "AI and ML",
+      "description": {
+        "languages": "Python, R, Java",
+        "frameworks": "TensorFlow, PyTorch, Scikit-learn",
+        "tools": "Jupyter, Google Colab, TensorBoard",
+        "platforms": "AWS SageMaker, Google AI Platform, Azure ML"
+      }
+    },
+    {
+      "name": "CMS",
+      "description": {
+        "platforms": "WordPress, Joomla, Drupal",
+        "tools": "Elementor, Divi, Gutenberg",
+        "eCommerce": "WooCommerce, Magento, Shopify",
+        "languages": "PHP, JavaScript"
+      }
+    },
+    {
+      "name": "Graphic Design",
+      "description": {
+        "tools": "Adobe Photoshop, Illustrator, CorelDRAW",
+        "platforms": "Canva, Figma, InDesign",
+        "design_types": "Logo Design, Print Design, Web Design"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why Choose Our Services?",
     "serviceDetailsDescriptionPara1": "In today’s fast-paced digital world, businesses need solutions that are not only innovative but also tailored to their unique needs. Our comprehensive range of services is designed to address your specific challenges, whether you’re looking to build software, enhance your brand, or improve user experience. By focusing on quality, scalability, and creativity, we help you stay ahead of the competition.",
     "serviceDetailsDescriptionPara2": "From development to design and beyond, we offer end-to-end services that drive real results. Our team of experts works closely with you to understand your goals and deliver solutions that align with your vision. Whether you’re a startup looking for growth or an established business aiming to innovate, we have the expertise and experience to make it happen.",
@@ -238,30 +266,60 @@ export const wordpressPage = {
     ],
     "technologies": [
         {
-            "name": "WordPress",
-            "description": "Build flexible and scalable websites with custom WordPress solutions."
+          "name": "WordPress",
+          "description": {
+            "plugins": "Elementor, Yoast SEO, WooCommerce",
+            "themes": "Astra, Divi, OceanWP",
+            "tools": "WordPress Customizer, Gutenberg Editor",
+            "languages": "PHP, JavaScript"
+          }
         },
         {
-            "name": "Shopify",
-            "description": "Create high-converting eCommerce stores with Shopify's robust platform."
+          "name": "Shopify",
+          "description": {
+            "apps": "Oberlo, Klaviyo, Bold",
+            "themes": "Debut, Brooklyn, Narrative",
+            "tools": "Shopify Liquid, Theme Editor",
+            "integrations": "Facebook, Instagram, Google Analytics"
+          }
         },
         {
-            "name": "WooCommerce",
-            "description": "Develop dynamic online stores with powerful WooCommerce extensions."
+          "name": "WooCommerce",
+          "description": {
+            "plugins": "WooCommerce Subscriptions, WooCommerce Payments, WooCommerce Bookings",
+            "themes": "Storefront, Flatsome, Shopkeeper",
+            "tools": "WooCommerce REST API, WP CLI",
+            "payment_gateways": "PayPal, Stripe, Square"
+          }
         },
         {
-            "name": "PHP",
-            "description": "Leverage PHP for custom functionalities and seamless backend integrations."
+          "name": "PHP",
+          "description": {
+            "frameworks": "Laravel, Symfony, CodeIgniter",
+            "tools": "Composer, PHPUnit",
+            "web_servers": "Apache, Nginx",
+            "databases": "MySQL, PostgreSQL, MariaDB"
+          }
         },
         {
-            "name": "JavaScript",
-            "description": "Enhance user interactions and performance with custom JavaScript solutions."
+          "name": "JavaScript",
+          "description": {
+            "frameworks": "React.js, Angular, Vue.js",
+            "tools": "Webpack, Babel, ESLint",
+            "runtime": "Node.js",
+            "libraries": "jQuery, D3.js, Lodash"
+          }
         },
         {
-            "name": "HTML/CSS",
-            "description": "Create visually appealing and responsive web layouts with HTML and CSS."
+          "name": "HTML/CSS",
+          "description": {
+            "markup": "HTML5, Pug",
+            "styling": "CSS3, Sass, Less",
+            "frameworks": "Bootstrap, Foundation, Tailwind CSS",
+            "tools": "VS Code, Sublime Text"
+          }
         }
-    ],
+      ],
     "serviceDetailsTitle": "Why is there a need for WordPress and Shopify Development?",
     "serviceDetailsDescriptionPara1": "As businesses increasingly shift online, having a professional and optimized website is critical. WordPress and Shopify provide versatile platforms that cater to different needs—whether you’re running a blog, a corporate site, or an eCommerce store. By leveraging these platforms, businesses can quickly establish a strong online presence with scalable solutions that grow with them.",
     "serviceDetailsDescriptionPara2": "Custom WordPress and Shopify development allows you to create unique, user-friendly, and fully functional websites tailored to your brand and objectives. From content-rich websites to high-performing online stores, our development services focus on delivering results that enhance user experience, improve SEO rankings, and drive conversions. We ensure your platform is set up for long-term success with continuous support and optimization.",
@@ -438,31 +496,61 @@ export const mobileAppPage = {
         }
     ],
     "technologies": [
-        {
-            "name": "Flutter",
-            "description": "Build cross-platform apps with Flutter’s powerful UI toolkit and single codebase."
-        },
-        {
-            "name": "React Native",
-            "description": "Create fast, native-like apps with React Native’s versatile development framework."
-        },
-        {
-            "name": "Swift",
-            "description": "Develop smooth, responsive iOS apps using native technologies."
-        },
-        {
-            "name": "Kotlin & Java",
-            "description": "Build feature-rich Android apps using Kotlin and Java."
-        },
-        {
-            "name": "API Integrations",
-            "description": "Seamlessly integrate third-party services and APIs to extend your app’s functionality."
-        },
-        {
-            "name": "UX/UI Design",
-            "description": "Design user-friendly and visually appealing interfaces that boost engagement."
-        }
-    ],
+    {
+      "name": "Flutter",
+      "description": {
+        "languages": "Dart",
+        "frameworks": "Flutter SDK",
+        "tools": "Flutter DevTools, Visual Studio Code, Android Studio",
+        "platforms": "iOS, Android, Web"
+      }
+    },
+    {
+      "name": "React Native",
+      "description": {
+        "languages": "JavaScript, TypeScript",
+        "frameworks": "React Native CLI, Expo",
+        "tools": "React Native Debugger, Redux DevTools, Visual Studio Code",
+        "platforms": "iOS, Android"
+      }
+    },
+    {
+      "name": "Swift",
+      "description": {
+        "languages": "Swift",
+        "frameworks": "SwiftUI, Combine",
+        "tools": "Xcode, Swift Playgrounds",
+        "platforms": "iOS, macOS"
+      }
+    },
+    {
+      "name": "Kotlin & Java",
+      "description": {
+        "languages": "Kotlin, Java",
+        "frameworks": "Android SDK, Spring Boot (for Java)",
+        "tools": "Android Studio, IntelliJ IDEA",
+        "platforms": "Android"
+      }
+    },
+    {
+      "name": "API Integrations",
+      "description": {
+        "types": "RESTful, GraphQL, SOAP",
+        "tools": "Postman, Swagger, Insomnia",
+        "authentication": "OAuth, JWT, API Keys",
+        "protocols": "HTTP, HTTPS"
+      }
+    },
+    {
+      "name": "UX/UI Design",
+      "description": {
+        "tools": "Adobe XD, Sketch, Figma, InVision",
+        "principles": "User-Centered Design, Wireframing, Prototyping",
+        "testing": "User Testing, A/B Testing, Heatmaps",
+        "platforms": "Web, Mobile, Desktop"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Mobile Application Development?",
     "serviceDetailsDescriptionPara1": "In a mobile-first world, businesses need custom mobile apps to engage users directly and deliver seamless experiences. Whether for B2B or B2C, mobile apps provide a personalized touchpoint that enhances user loyalty, drives sales, and extends your brand’s reach. A well-developed mobile app meets users where they are—on their devices—and provides the solutions they need, right at their fingertips.",
     "serviceDetailsDescriptionPara2": "Beyond user engagement, mobile apps streamline operations, improve productivity, and open new revenue channels. Investing in tailored mobile solutions ensures that your app is aligned with your business objectives, scales with your growth, and provides a secure, high-performing platform for years to come. Our development process focuses on delivering apps that are intuitive, secure, and built for both immediate impact and long-term success.",
@@ -639,31 +727,61 @@ export const webApplicationPage = {
         }
     ],
     "technologies": [
-        {
-            "name": "React",
-            "description": "Build dynamic and responsive user interfaces with React’s powerful component-based framework."
-        },
-        {
-            "name": "Angular",
-            "description": "Develop feature-rich SPAs and enterprise applications using Angular’s robust platform."
-        },
-        {
-            "name": "Node.js",
-            "description": "Create scalable and high-performance back-end solutions with Node.js."
-        },
-        {
-            "name": "Django",
-            "description": "Build secure and scalable applications with Django’s versatile framework."
-        },
-        {
-            "name": "APIs",
-            "description": "Implement seamless data exchange with custom RESTful and GraphQL APIs."
-        },
-        {
-            "name": "AWS & Azure",
-            "description": "Deploy and manage cloud-hosted web applications with AWS and Azure services."
-        }
-    ],
+    {
+      "name": "React",
+      "description": {
+        "libraries": "Redux, React Router, Styled Components",
+        "tools": "Create React App, Next.js, Webpack",
+        "testing": "Jest, Enzyme, React Testing Library",
+        "languages": "JavaScript, TypeScript"
+      }
+    },
+    {
+      "name": "Angular",
+      "description": {
+        "libraries": "RxJS, NgRx, Angular Material",
+        "tools": "Angular CLI, Webpack, Protractor",
+        "testing": "Karma, Jasmine, Angular Testing Library",
+        "languages": "TypeScript, JavaScript"
+      }
+    },
+    {
+      "name": "Node.js",
+      "description": {
+        "frameworks": "Express.js, Koa, NestJS",
+        "tools": "NPM, Yarn, PM2",
+        "databases": "MongoDB, MySQL, PostgreSQL",
+        "languages": "JavaScript, TypeScript"
+      }
+    },
+    {
+      "name": "Django",
+      "description": {
+        "libraries": "Django REST Framework, Celery, Channels",
+        "tools": "Django Admin, Django ORM, Pip",
+        "databases": "PostgreSQL, MySQL, SQLite",
+        "languages": "Python"
+      }
+    },
+    {
+      "name": "APIs",
+      "description": {
+        "types": "RESTful, GraphQL, SOAP",
+        "tools": "Postman, Swagger, Insomnia",
+        "authentication": "OAuth, JWT, API Keys",
+        "protocols": "HTTP, HTTPS"
+      }
+    },
+    {
+      "name": "AWS & Azure",
+      "description": {
+        "services": "EC2, S3, RDS, Lambda (AWS); Virtual Machines, Blob Storage, Azure SQL Database, Azure Functions (Azure)",
+        "tools": "AWS CLI, Azure CLI, Terraform",
+        "security": "IAM, VPC, Security Groups (AWS); Active Directory, Azure Key Vault (Azure)",
+        "deployment": "Elastic Beanstalk (AWS), Azure DevOps"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Web Application Development?",
     "serviceDetailsDescriptionPara1": "In today’s digital-first world, businesses require powerful, flexible, and scalable web applications to remain competitive. Custom web applications enable companies to address specific business needs, streamline operations, and provide enhanced services to customers. Whether you’re looking to automate processes, improve customer interactions, or expand your digital offerings, a tailored web solution is key to achieving your objectives.",
     "serviceDetailsDescriptionPara2": "Web applications offer the flexibility to support growing user bases, adapt to market demands, and integrate seamlessly with existing systems. Investing in custom web development allows you to create a unique solution aligned with your brand and business goals. Our expertise ensures that your web application is optimized for performance, security, and scalability, delivering lasting value to your organization.",
@@ -838,31 +956,64 @@ export const softwareDevelopmentPage ={
         }
     ],
     "technologies": [
-        {
-            "name": "Python",
-            "description": "Develop scalable, high-performance applications with Python’s robust frameworks."
-        },
-        {
-            "name": "Java",
-            "description": "Build enterprise-grade software solutions with Java for reliability and scalability."
-        },
-        {
-            "name": ".NET",
-            "description": "Create versatile and secure applications using Microsoft’s .NET framework."
-        },
-        {
-            "name": "React & Angular",
-            "description": "Develop dynamic, interactive front-end experiences with React and Angular."
-        },
-        {
-            "name": "SQL & NoSQL",
-            "description": "Efficiently manage data with both relational and non-relational database solutions."
-        },
-        {
-            "name": "DevOps & CI/CD",
-            "description": "Automate development processes with continuous integration and delivery pipelines."
-        }
-    ],
+    {
+      "name": "Python",
+      "description": {
+        "frameworks": "Django, Flask",
+        "databases": "PostgreSQL, MySQL, MongoDB",
+        "web_servers": "Nginx, Apache",
+        "development": "Docker, Kubernetes",
+        "tools": "PyCharm, Jupyter Notebook"
+      }
+    },
+    {
+      "name": "Java",
+      "description": {
+        "frameworks": "Spring Boot, Hibernate",
+        "databases": "Oracle, MySQL",
+        "web_servers": "Tomcat, Jetty",
+        "development": "Maven, Jenkins",
+        "tools": "Eclipse, IntelliJ IDEA"
+      }
+    },
+    {
+      "name": ".NET",
+      "description": {
+        "frameworks": "ASP.NET, Entity Framework",
+        "databases": "SQL Server, SQLite",
+        "web_servers": "IIS",
+        "development": "Docker, Kubernetes",
+        "tools": "Visual Studio, NuGet"
+      }
+    },
+    {
+      "name": "React & Angular",
+      "description": {
+        "frameworks": "React.js, Angular",
+        "libraries": "Redux, RxJS",
+        "tools": "Webpack, Babel",
+        "development": "Jenkins, Docker",
+        "testing": "Jest, Jasmine"
+      }
+    },
+    {
+      "name": "SQL & NoSQL",
+      "description": {
+        "databases": "MySQL, PostgreSQL, MongoDB, Cassandra, DynamoDB",
+        "tools": "pgAdmin, MongoDB Compass",
+        "development": "Liquibase, Flyway"
+      }
+    },
+    {
+      "name": "DevOps & CI/CD",
+      "description": {
+        "tools": "Jenkins, Docker, Kubernetes, Ansible, Terraform",
+        "version_control": "Git, GitHub, Bitbucket",
+        "ci_cd_pipelines": "GitLab CI, CircleCI",
+        "monitoring": "Prometheus, Grafana"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Software Development?",
     "serviceDetailsDescriptionPara1": "In an increasingly digital world, businesses rely on custom software to stay competitive, streamline operations, and deliver superior services. Off-the-shelf solutions often fall short when it comes to addressing specific needs or adapting to unique workflows. Custom software development allows you to build tools that perfectly align with your business processes, enhance productivity, and scale as your company grows.",
     "serviceDetailsDescriptionPara2": "From boosting operational efficiency to enabling data-driven decision-making, software development plays a critical role in modern business strategy. Our custom software solutions are designed to deliver long-term value by focusing on scalability, security, and usability. Whether you need to automate tasks, integrate systems, or develop a completely new platform, we ensure your software is built to solve real business problems and drive continuous improvement.",
@@ -1036,31 +1187,61 @@ export const dataSciencePage ={
         }
     ],
     "technologies": [
-        {
-            "name": "Python & R",
-            "description": "Leverage Python and R for data analysis, machine learning, and AI model development."
-        },
-        {
-            "name": "TensorFlow & PyTorch",
-            "description": "Build powerful deep learning models with TensorFlow and PyTorch frameworks."
-        },
-        {
-            "name": "Apache Spark",
-            "description": "Process large-scale data efficiently with Apache Spark’s distributed computing capabilities."
-        },
-        {
-            "name": "Scikit-Learn",
-            "description": "Implement classical machine learning models with the robust Scikit-Learn library."
-        },
-        {
-            "name": "Tableau & Power BI",
-            "description": "Visualize data and generate insights using advanced data visualization tools like Tableau and Power BI."
-        },
-        {
-            "name": "AWS & Google Cloud AI",
-            "description": "Deploy scalable AI models and machine learning solutions in cloud environments using AWS and Google Cloud."
-        }
-    ],
+    {
+      "name": "Python & R",
+      "description": {
+        "languages": "Python, R",
+        "libraries": "Pandas, NumPy, Matplotlib (Python); dplyr, ggplot2, tidyr (R)",
+        "tools": "Jupyter Notebook, RStudio",
+        "applications": "Data Analysis, Statistical Computing, Machine Learning"
+      }
+    },
+    {
+      "name": "TensorFlow & PyTorch",
+      "description": {
+        "frameworks": "TensorFlow, PyTorch",
+        "tools": "Keras, TensorBoard, PyTorch Lightning",
+        "applications": "Deep Learning, Neural Networks, Computer Vision",
+        "languages": "Python, C++"
+      }
+    },
+    {
+      "name": "Apache Spark",
+      "description": {
+        "frameworks": "Apache Spark",
+        "tools": "PySpark, Spark SQL, MLlib",
+        "applications": "Big Data Processing, Distributed Computing, Machine Learning",
+        "languages": "Scala, Python, Java"
+      }
+    },
+    {
+      "name": "Scikit-Learn",
+      "description": {
+        "frameworks": "Scikit-Learn",
+        "tools": "GridSearchCV, Pipeline, FeatureUnion",
+        "applications": "Machine Learning, Data Preprocessing, Model Evaluation",
+        "languages": "Python"
+      }
+    },
+    {
+      "name": "Tableau & Power BI",
+      "description": {
+        "tools": "Tableau, Power BI",
+        "applications": "Data Visualization, Business Intelligence, Dashboards",
+        "integrations": "SQL Server, Excel, Google Sheets",
+        "features": "Interactive Visualizations, Data Blending, Real-time Data"
+      }
+    },
+    {
+      "name": "AWS & Google Cloud AI",
+      "description": {
+        "services": "AWS SageMaker, AWS Rekognition, Google AI Platform, Google Vision AI",
+        "tools": "AWS CLI, Google Cloud SDK, Terraform",
+        "applications": "Machine Learning, AI Development, Cloud Computing",
+        "security": "IAM (AWS), Google IAM"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Data Science, Machine Learning, and AI?",
     "serviceDetailsDescriptionPara1": "In today’s data-driven world, businesses that effectively harness data science, machine learning, and AI gain a significant competitive advantage. These technologies allow organizations to make smarter decisions, automate complex tasks, and predict future outcomes with high accuracy. Whether it’s enhancing customer experiences, optimizing operations, or driving innovation, leveraging AI and machine learning is crucial for staying relevant and agile.",
     "serviceDetailsDescriptionPara2": "By integrating AI and data science into your business processes, you can uncover hidden patterns, forecast trends, and make informed decisions in real-time. Our solutions are designed to be scalable, secure, and aligned with your strategic goals. From building predictive models to automating decision-making, we provide tailored solutions that transform your data into actionable insights, driving growth and efficiency across your organization.",
@@ -1234,31 +1415,61 @@ export const cloudSolutionPage = {
         }
     ],
     "technologies": [
-        {
-            "name": "AWS",
-            "description": "Leverage Amazon Web Services for scalable and reliable cloud infrastructure."
-        },
-        {
-            "name": "Microsoft Azure",
-            "description": "Harness the power of Azure for enterprise-grade cloud solutions."
-        },
-        {
-            "name": "Google Cloud",
-            "description": "Utilize Google Cloud Platform for innovative cloud computing and AI capabilities."
-        },
-        {
-            "name": "Kubernetes",
-            "description": "Deploy, scale, and manage containerized applications with Kubernetes."
-        },
-        {
-            "name": "Docker",
-            "description": "Streamline application development and deployment using Docker containers."
-        },
-        {
-            "name": "CI/CD Pipelines",
-            "description": "Automate and accelerate your development processes with continuous integration and delivery pipelines."
-        }
-    ],
+    {
+      "name": "AWS",
+      "description": {
+        "services": "EC2, S3, RDS, Lambda",
+        "tools": "AWS CLI, AWS SDK, Terraform",
+        "security": "IAM, VPC, Security Groups",
+        "applications": "Cloud Computing, Serverless Applications, Data Storage"
+      }
+    },
+    {
+      "name": "Microsoft Azure",
+      "description": {
+        "services": "Azure Virtual Machines, Azure Blob Storage, Azure SQL Database, Azure Functions",
+        "tools": "Azure CLI, Azure DevOps, Terraform",
+        "security": "Azure Active Directory, Azure Key Vault, NSGs",
+        "applications": "Cloud Services, AI and Machine Learning, DevOps Solutions"
+      }
+    },
+    {
+      "name": "Google Cloud",
+      "description": {
+        "services": "Google Compute Engine, Google Cloud Storage, BigQuery, Cloud Functions",
+        "tools": "Google Cloud SDK, Terraform, Kubernetes Engine",
+        "security": "Google IAM, VPC, Cloud Armor",
+        "applications": "Data Analytics, Cloud-native Applications, Machine Learning"
+      }
+    },
+    {
+      "name": "Kubernetes",
+      "description": {
+        "services": "Kubernetes Cluster, Helm Charts, Kubernetes Dashboard",
+        "tools": "kubectl, Kustomize, Minikube",
+        "applications": "Container Orchestration, Microservices Management, Automated Deployments",
+        "platforms": "AWS EKS, Azure AKS, Google Kubernetes Engine"
+      }
+    },
+    {
+      "name": "Docker",
+      "description": {
+        "services": "Docker Engine, Docker Compose, Docker Swarm",
+        "tools": "Docker CLI, Docker Hub, Portainer",
+        "applications": "Containerization, Continuous Integration, Microservices",
+        "platforms": "Linux, Windows, MacOS"
+      }
+    },
+    {
+      "name": "CI/CD Pipelines",
+      "description": {
+        "tools": "Jenkins, GitLab CI, CircleCI, Travis CI",
+        "applications": "Continuous Integration, Continuous Deployment, Automated Testing",
+        "version_control": "Git, GitHub, Bitbucket",
+        "security": "Secrets Management, Vulnerability Scanning"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Cloud Solutions?",
     "serviceDetailsDescriptionPara1": "In a rapidly evolving digital landscape, cloud solutions are essential for businesses seeking agility, scalability, and cost-efficiency. Whether you’re migrating legacy systems, managing hybrid environments, or building cloud-native applications, leveraging the cloud allows your business to remain competitive and responsive to market changes.",
     "serviceDetailsDescriptionPara2": "Cloud solutions enable businesses to optimize operations, enhance collaboration, and reduce infrastructure costs. From improved disaster recovery to flexible resource management, adopting cloud technology empowers your organization to innovate and scale without limitations. Our tailored cloud solutions ensure you get the most out of your cloud journey with a focus on security, performance, and long-term growth.",
@@ -1433,30 +1644,60 @@ export const personalBrandingPage ={
     ],
     "technologies": [
         {
-            "name": "CMS",
-            "description": "Leverage platforms like WordPress and Medium to manage and distribute your content effectively."
+          "name": "CMS",
+          "description": {
+            "platforms": "WordPress, Joomla, Drupal",
+            "tools": "Elementor, Divi, Gutenberg Editor",
+            "eCommerce": "WooCommerce, Magento, Shopify",
+            "languages": "PHP, JavaScript"
+          }
         },
         {
-            "name": "Social Media Tools",
-            "description": "Utilize tools like Hootsuite and Buffer for efficient social media scheduling and analytics."
+          "name": "Social Media Tools",
+          "description": {
+            "platforms": "Hootsuite, Buffer, Sprout Social",
+            "analytics": "Facebook Insights, Twitter Analytics, LinkedIn Analytics",
+            "scheduling": "Later, Planoly, SocialBee",
+            "engagement": "Sprinklr, AgoraPulse, Loomly"
+          }
         },
         {
-            "name": "SEO & Analytics",
-            "description": "Use tools like Google Analytics and SEMrush to track your brand’s online performance and optimize visibility."
+          "name": "SEO & Analytics",
+          "description": {
+            "tools": "Google Analytics, SEMrush, Ahrefs",
+            "keywords": "Google Keyword Planner, Moz, Ubersuggest",
+            "optimization": "Yoast SEO, Rank Math, Screaming Frog",
+            "tracking": "Google Search Console, Bing Webmaster Tools"
+          }
         },
         {
-            "name": "Graphic Design",
-            "description": "Create visually appealing brand assets using design tools like Adobe Photoshop and Canva."
+          "name": "Graphic Design",
+          "description": {
+            "tools": "Adobe Photoshop, Illustrator, CorelDRAW",
+            "platforms": "Canva, Figma, InDesign",
+            "design_types": "Logo Design, Print Design, Web Design",
+            "prototyping": "Adobe XD, Sketch, InVision"
+          }
         },
         {
-            "name": "Email Marketing",
-            "description": "Build and engage your audience with personalized email campaigns using tools like Mailchimp and ConvertKit."
+          "name": "Email Marketing",
+          "description": {
+            "platforms": "Mailchimp, ConvertKit, Constant Contact",
+            "automation": "ActiveCampaign, HubSpot, Drip",
+            "analytics": "Litmus, Mailchimp Reports, Google Analytics",
+            "tools": "SendGrid, Mailgun, Amazon SES"
+          }
         },
         {
-            "name": "Public Relations",
-            "description": "Manage media outreach and build relationships with PR tools like HARO and PRWeb."
+          "name": "Public Relations",
+          "description": {
+            "tools": "Cision, Meltwater, PR Newswire",
+            "media_monitoring": "Mention, Brand24, Google Alerts",
+            "distribution": "PRWeb, Business Wire, Newswire",
+            "reporting": "CoverageBook, TrendKite, BuzzSumo"
+          }
         }
-    ],
+      ],
     
     "serviceDetailsTitle": "Why is there a need for Personal Branding?",
     "serviceDetailsDescriptionPara1": "In an increasingly digital world, your personal brand is often the first impression people have of you. Whether you’re an entrepreneur, a professional looking to advance your career, or an influencer, having a clear and consistent personal brand is essential for standing out in a crowded market. A well-defined personal brand communicates your values, expertise, and unique story, helping you build trust and authority with your target audience.",
@@ -1633,30 +1874,60 @@ export const webAndAppPage = {
     ],
     "technologies": [
         {
-            "name": "Figma",
-            "description": "Collaborative design tool used for creating wireframes, prototypes, and high-fidelity designs."
+          "name": "Figma",
+          "description": {
+            "tools": "Figma, FigJam",
+            "collaboration": "Real-time Collaboration, Commenting, Prototyping",
+            "features": "Vector Networks, Auto Layout, Interactive Components",
+            "platforms": "Web, Windows, macOS"
+          }
         },
         {
-            "name": "Adobe XD",
-            "description": "Design and prototype interfaces seamlessly with Adobe XD’s versatile toolkit."
+          "name": "Adobe XD",
+          "description": {
+            "tools": "Adobe XD",
+            "collaboration": "Coediting, Commenting, Shareable Links",
+            "features": "Repeat Grid, Auto-Animate, Voice Prototyping",
+            "platforms": "Windows, macOS"
+          }
         },
         {
-            "name": "Sketch",
-            "description": "Create polished and responsive designs with Sketch’s powerful UI/UX features."
+          "name": "Sketch",
+          "description": {
+            "tools": "Sketch, Sketch Cloud",
+            "collaboration": "Libraries, Shared Components, Real-time Collaboration",
+            "features": "Vector Editing, Prototyping, Plugins",
+            "platforms": "macOS"
+          }
         },
         {
-            "name": "InVision",
-            "description": "Use InVision for advanced prototyping and collaborative design feedback."
+          "name": "InVision",
+          "description": {
+            "tools": "InVision, Freehand",
+            "collaboration": "Commenting, Feedback Collection, Design System Management",
+            "features": "Interactive Prototypes, Motion Design, Design Handoff",
+            "platforms": "Web, Windows, macOS"
+          }
         },
         {
-            "name": "HTML/CSS",
-            "description": "Transform your designs into responsive and interactive websites using HTML and CSS."
+          "name": "HTML/CSS",
+          "description": {
+            "markup": "HTML5, Pug",
+            "styling": "CSS3, Sass, Less",
+            "frameworks": "Bootstrap, Foundation, Tailwind CSS",
+            "tools": "VS Code, Sublime Text"
+          }
         },
         {
-            "name": "JS Frameworks",
-            "description": "Enhance interactivity and functionality with JavaScript and popular frameworks like React."
+          "name": "JS Frameworks",
+          "description": {
+            "frameworks": "React.js, Angular, Vue.js, Svelte",
+            "tools": "Webpack, Babel, ESLint",
+            "testing": "Jest, Mocha, Cypress",
+            "languages": "JavaScript, TypeScript"
+          }
         }
-    ],
+      ],
     "serviceDetailsTitle": "Why is there a need for Website and Application Design?",
     "serviceDetailsDescriptionPara1": "In today’s competitive digital landscape, your website and app’s design play a critical role in attracting and retaining users. A well-designed interface not only boosts engagement but also drives conversions and builds trust. Whether you’re launching a new product, rebranding, or optimizing user experience, investing in professional design is essential for making a lasting impression.",
     "serviceDetailsDescriptionPara2": "Beyond aesthetics, effective website and application design focuses on usability, performance, and scalability. A user-centric design approach ensures your digital platforms are intuitive, accessible, and aligned with your brand’s goals. Our design services are tailored to create compelling digital experiences that not only look great but also function seamlessly across all devices, ensuring your brand stands out and delivers consistent value to your users.",
@@ -1830,31 +2101,61 @@ export const graphicDesignPage = {
         }
     ],
     "technologies": [
-        {
-            "name": "Adobe Photoshop",
-            "description": "Industry-standard tool for creating detailed graphics, photo editing, and digital artwork."
-        },
-        {
-            "name": "Adobe Illustrator",
-            "description": "Powerful vector design software used for logo creation, illustrations, and scalable designs."
-        },
-        {
-            "name": "Canva",
-            "description": "Easy-to-use design tool for creating quick graphics and marketing materials."
-        },
-        {
-            "name": "InDesign",
-            "description": "Professional layout design software ideal for print and digital publication designs."
-        },
-        {
-            "name": "Figma",
-            "description": "Collaborative design platform used for creating interface designs and visual prototypes."
-        },
-        {
-            "name": "CorelDRAW",
-            "description": "Versatile graphic design software used for vector illustration and layout design."
-        }
-    ],
+    {
+      "name": "Adobe Photoshop",
+      "description": {
+        "tools": "Adobe Photoshop",
+        "features": "Photo Editing, Digital Painting, Image Retouching",
+        "formats": "PSD, PNG, JPEG, TIFF",
+        "platforms": "Windows, macOS"
+      }
+    },
+    {
+      "name": "Adobe Illustrator",
+      "description": {
+        "tools": "Adobe Illustrator",
+        "features": "Vector Graphics, Logo Design, Typography",
+        "formats": "AI, EPS, SVG, PDF",
+        "platforms": "Windows, macOS"
+      }
+    },
+    {
+      "name": "Canva",
+      "description": {
+        "tools": "Canva",
+        "features": "Template Design, Social Media Graphics, Drag-and-Drop Editing",
+        "formats": "PNG, JPEG, PDF",
+        "platforms": "Web, iOS, Android"
+      }
+    },
+    {
+      "name": "InDesign",
+      "description": {
+        "tools": "Adobe InDesign",
+        "features": "Page Layout, Print Design, eBooks",
+        "formats": "INDD, PDF, EPUB",
+        "platforms": "Windows, macOS"
+      }
+    },
+    {
+      "name": "Figma",
+      "description": {
+        "tools": "Figma",
+        "features": "UI/UX Design, Prototyping, Collaboration",
+        "formats": "Figma, SVG, PNG",
+        "platforms": "Web, Windows, macOS"
+      }
+    },
+    {
+      "name": "CorelDRAW",
+      "description": {
+        "tools": "CorelDRAW",
+        "features": "Vector Illustration, Layout Design, Photo Editing",
+        "formats": "CDR, AI, PDF, EPS",
+        "platforms": "Windows, macOS"
+      }
+    }
+  ],
     "serviceDetailsTitle": "Why is there a need for Graphic Design?",
     "serviceDetailsDescriptionPara1": "Graphic design plays a critical role in defining your brand identity and conveying your message effectively. From first impressions to consistent branding, well-crafted visuals help you stand out in a crowded market and communicate your values with clarity. Whether it’s a logo, marketing material, or digital graphic, professional design can make all the difference in how your brand is perceived.",
     "serviceDetailsDescriptionPara2": "Beyond aesthetics, effective graphic design enhances user experience, builds trust, and drives engagement across all channels. By investing in high-quality visuals, you ensure your brand’s message resonates with your audience and strengthens your market presence. Our graphic design services are tailored to your needs, delivering creative solutions that not only look great but also align with your business goals and connect with your target audience.",

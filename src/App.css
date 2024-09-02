@@ -207,6 +207,18 @@ margin: auto auto;
 position: relative;
 }
 
+.animate-scroll {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  white-space: nowrap;
+}
+
+
+.custom-list li::marker{
+  font-size: 1.5rem;
+}
+
+
 @media screen and (min-width: 1280px) {
   .testimonial-buttons .prev,
   .testimonial-buttons .next {
@@ -335,6 +347,9 @@ Media Queries for tabs and mobile devices
 .scroll-progress-bar{
     top: 28px;
 }
+.custom-list li::marker{
+  font-size: 1rem;
+}
 }
 
 
@@ -364,11 +379,5 @@ width: 100%;
 }
 
 
-
-.animate-scroll {
-  display: flex;
-  animation: scroll 25s linear infinite;
-  white-space: nowrap;
-}
 
 
