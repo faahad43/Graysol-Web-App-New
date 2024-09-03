@@ -71,7 +71,7 @@ const Specialization = ({pageType=''}) => {
                         >
                             <IoIosArrowDown className={`${arrowFillColor[index] ? 'max-md:fill-primary-default scale-150': 'scale-100'} md:hover:fill-primary-default md:hover:scale-150 duration-150 cursor-pointer`} size={22} color='#686767' onClick={()=>handleArrowColor(index)} />
                         </div>
-                        <div className={`${styles.p4} ${visibility[index] ? 'block':'hidden'} absolute h-fit w-fit  bg-dark-200 top-[105%] z-50 p-3 rounded-b-md tracking-wide`} style={{fontWeight:300}}>
+                        <div className={`${styles.p4} ${visibility[index] ? 'visible':'collapse'} duration-1000 transition-all absolute h-fit w-fit  bg-dark-200 top-[105%] z-50 p-3 rounded-b-md tracking-wide`} style={{fontWeight:300}}>
                         <ul className='space-y-2 lg:space-y-3 list-disc custom-list pl-4'>
                           {Object.keys(item.description).map((key)=>(
                             <li>

@@ -318,6 +318,55 @@ Media Queries for tabs and mobile devices
 
 }
 
+.custom-quill-editor .ql-container {
+  height: 400px; /* Set the fixed height of the editor */
+  border: 1px solid #ddd;
+}
+
+.custom-quill-editor .ql-editor {
+  height: 300px; /* Define the height of the scrollable content area */
+  overflow-y: auto; /* Makes the content area scrollable */
+  padding: 12px; /* Adds padding to the content area */
+}
+
+/* increase the default size of text in editor */
+/* Editor.css */
+.custom-quill-editor .ql-editor {
+  font-size: 16px; /* Set the default font size here, adjust as needed */
+  height: 390px;   /* Keep height fixed to make it scrollable */
+  overflow-y: auto; /* Ensures only the content area is scrollable */
+  padding: 12px ;   /* Adds padding to the content area */
+  
+}
+
+/* Optional: Override default font size dropdown options if needed */
+.custom-quill-editor .ql-size .ql-picker-item[data-value="small"]::before {
+  content: "Small";
+  font-size: 12px; /* Adjust size for "small" */
+}
+.custom-quill-editor .ql-size .ql-picker-item[data-value="large"]::before {
+  content: "Large";
+  font-size: 18px; /* Adjust size for "large" */
+}
+.custom-quill-editor .ql-size .ql-picker-item[data-value="huge"]::before {
+  content: "Huge";
+  font-size: 24px; /* Adjust size for "huge" */
+}
+/* .ql-syntax is class for code block */
+.custom-quill-editor .ql-editor .ql-syntax {
+  background-color: rgb(228, 229, 232) !important;
+  color: #151515 !important;
+  padding: 30px 25px; /* Optional: Add padding to the code block */
+  border-radius: 5px; /* Optional: Rounded corners */
+  font-family: 'Courier New', Courier, monospace; /* Optional: Set font for code */
+  font-size: 17px; /* Optional: Set font size for code */
+  overflow-x: scroll !important; /* Make code block horizontally scrollable */
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+  white-space: pre;
+  overflow-x: hidden;
+}
+
 
 @media (max-width: 1000px) {
 

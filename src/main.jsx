@@ -10,6 +10,7 @@ import {
 import {Home,Services,Contact,AboutUs, Blog,Portfolio,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound} from "./Pages/index.js";
 
 import './index.css'
+import AdminDashboard from './Pages/Admin/AdminDashboard.jsx';
 
 
 
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
         </Route>
         <Route path='portfolio' element={<Portfolio/>}/>
         <Route path="*" element={<NotFound />}/>
+        <Route path='/admin-dashboard' element={<AdminDashboard/>} />
     </Route>
   )
 )
