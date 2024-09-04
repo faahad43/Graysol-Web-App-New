@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Import the styles for React Quill
-const Editor = ({ onSave }) => {
+import  useBlog  from '../../hooks/useBlog.js'
+
+
+const Editor = () => {
   const [type, setType] = useState('blog');
   const [category, setCategory] = useState('');
   const [content, setContent] = useState('');
+  const {blog} = useBlog();
 
   // option for quill editor
   const modules = {
@@ -36,20 +40,11 @@ const Editor = ({ onSave }) => {
       title: e.target.title.value,
       time: e.target.time.value,
       category: category,
-      image: e.target.image.files[0], // You may need to handle file upload separately
       content: content, // Rich text content
     };
-
-    // Assuming you have a backend API to handle this request
-    const response = await fetch('/api/save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      alert(`${type.charAt(0).toUpperCase() + type.slice(1)} saved successfully!`);
-    }
+    
+    const success = await blog(formData);
+    
   };
 
   return (
@@ -73,7 +68,7 @@ const Editor = ({ onSave }) => {
             type="number"
             name="time"
             className="block w-full mt-1 h-10 px-4 border-gray-300 rounded-md"
-            required
+            
           />
         </div>
       </div>
@@ -85,7 +80,7 @@ const Editor = ({ onSave }) => {
           type="text"
           name="title"
           className="block w-full mt-1 h-10 px-4 border-gray-300 rounded-md"
-          required
+         
         />
       </div>
 
@@ -97,15 +92,15 @@ const Editor = ({ onSave }) => {
             className="block w-full mt-1 h-10 px-4 border-gray-300 rounded-md"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            required
+            
           >
             <option value="">Select a category</option>
             {type === 'blog' && (
               <>
                 <option value="press">Press</option>
                 <option value="feature">Feature</option>
-                <option value="graysol_news">Graysol News</option>
-                <option value="insights">Insights</option>
+                <option value="graynews">Graysol News</option>
+                <option value="insight">Insights</option>
               </>
             )}
             {type === 'project' && (

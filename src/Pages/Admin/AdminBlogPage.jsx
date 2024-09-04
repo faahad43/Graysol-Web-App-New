@@ -1,5 +1,10 @@
+import useGetBlogs from "../../hooks/useGetBlogs";
 
 const BlogPage = () => {
+
+  const {blogs} = useGetBlogs();
+  
+
   return (
   <div>
     {/* Blog Cards */}
