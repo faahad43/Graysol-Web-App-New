@@ -1,23 +1,21 @@
 import React,{useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import { data } from '../Sections/blogdata.js';
-import { BlogPost1, BlogPost2,BlogPost3 } from '../Blogs/index.js';
+
 import { NotFound } from './NotFound.jsx';
+import styles from '../styles.js';
+
+import useGetBlogs from '../hooks/useGetBlogs.js';
 
 export const BlogPost = () => {
 
-  const { id } = useParams(); // Get the blog ID from the URL
-  const blog = data.find((post) => post.id === parseInt(id)); //get the blog from the data in the blogdata.js file
+  const { title } = useParams(); // Get the blog ID from the URL
+  const formatedTitle = title.replace(/-/g,' ');
 
-  // Map the id to the corresponding blog post component
-  const components = {
-    1: BlogPost1,
-    2: BlogPost2,
-    3: BlogPost3,
-    // Add more mappings as needed
-  }
+  const {blogs} = useGetBlogs();
+  
+  const blog = blogs.find((item) => item.title.toLowerCase() === formatedTitle) //get the blog from the data in of blogs in backend
+  console.log(blog,'heheh');
 
-  const SelectedComponent = components[id];
 
   // Scroll to the top when the component mounts
   useEffect(() => {
@@ -27,7 +25,22 @@ export const BlogPost = () => {
 
   return (
     <div>
-      {SelectedComponent ? <SelectedComponent title={blog.title} time={blog.time} coverPic={blog.image} /> : <NotFound/>}
+      {
+        !blog ? <NotFound/>:
+     
+      <div key={blog._id} className="blogPost bg-light-900 py-12 px-[7%] md:px-[10%] lg:px-[12%] xl:px-[15%] space-y-5 lg:space-y-8">
+          <h1 className={styles.h3Dark}>{blog.title}</h1>
+          <p className={`${styles.p2HeavyDark} text-[#807c7c]`}>{blog.timeToRead}min Read</p>
+          <img 
+          src={blog.image}
+          alt="Blog cover photo"
+          className={`md:h-[25rem] xl:h-[30rem] object-cover`}
+        />
+          <div dangerouslySetInnerHTML={{ __html: blog.content }} />    
+      </div>
+     
+    
+     }
     </div>
   )
 }

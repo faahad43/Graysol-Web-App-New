@@ -1,9 +1,11 @@
 import React from 'react'
 import { Outlet, useLocation } from 'react-router-dom';
 import { BlogBanner, BlogSection, ContactForm2 } from '../Sections'
+import useGetBlogs from '../hooks/useGetBlogs';
 
 
 const Blog = () => {
+  const {blogs} = useGetBlogs();
   const location = useLocation(); // Get the current location
 
   // Determine if the current location is a nested route
@@ -14,7 +16,7 @@ const Blog = () => {
       {!isNestedRoute && (
         <>
             <BlogBanner/>
-            <BlogSection/>
+            <BlogSection data={blogs}/>
             <ContactForm2/>
         </>
         )}

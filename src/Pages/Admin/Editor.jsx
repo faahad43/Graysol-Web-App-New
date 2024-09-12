@@ -41,6 +41,7 @@ const Editor = () => {
       time: e.target.time.value,
       category: category,
       content: content, // Rich text content
+      image: e.target.image.files[0]
     };
     
     const success = await blog(formData);

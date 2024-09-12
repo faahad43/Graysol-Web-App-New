@@ -9,13 +9,13 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import {BlogCard} from '../Components/BlogCard';
 import useWindowSize from '../hooks/windowSize';
-import {data} from './blogdata.js';
-import { useParams,Link } from 'react-router-dom';
+// import {data} from './blogdata.js';
+import { useParams,Link,useLocation } from 'react-router-dom';
 
 
 
 
-const BlogSection = () => {
+const BlogSection = ({data=''}) => {
     /**
      * Data is an array of objects, each representing a blog post and is imported from blogdata.js
      * Groups and filters an array of data based on the provided group size and filter criteria.
@@ -44,6 +44,8 @@ const BlogSection = () => {
         return groups;
     };
     const {type = ''} = useParams();
+    const location =  useLocation();
+    const admin = location.pathname === '/admin-dashboard' && true;
     
     let groupSize;
     const windowSize = useWindowSize(); //to change the number of blogs displayed on different screen sizes
@@ -58,7 +60,7 @@ const BlogSection = () => {
       setGroupedData(groupArray(data, groupSize, filterButton));
       sliderRef.slickGoTo(0);
       
-  }, [filterButton,windowSize]);
+  }, [data,filterButton,windowSize]);
 
   useEffect(() => {
     setFilterButton(type);
@@ -134,39 +136,79 @@ const BlogSection = () => {
                     filter contents
                 </p>
                 <div className='md:w-[95%] lg:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 place-items-center gap-x-8 md:gap-x-0 gap-y-3'>
-                  <Link to='/blog/category/press'>
+                  {admin ? (
+                    <>
+                    
                     <button 
-                    className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('press')}
                     >
                         Press
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/blog/category/insight'>
+                    
                     <button 
-                    className={`${filterButton == 'insight' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'insight' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('insight')}
                     >
                         Insights
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/blog/category/graynews'>
+                    
                     <button 
-                    className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('graynews')}
         
                     >
                         Gray news
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/blog/category/feature'>
+                    
                     <button 
-                    className={`${filterButton == 'feature' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'feature' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('feature')}
                     
                     >
                         Featured
                     </button>
-                    </Link>
+                    
+                  </>
+                  ): (
+                    <>
+                      <Link to='/blog/category/press'>
+                      <button 
+                      className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      >
+                          Press
+                      </button>
+                      </Link>
+
+                      <Link to='/blog/category/insight'>
+                      <button 
+                      className={`${filterButton == 'insight' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      >
+                          Insights
+                      </button>
+                      </Link>
+
+                      <Link to='/blog/category/graynews'>
+                      <button 
+                      className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+          
+                      >
+                          Gray news
+                      </button>
+                      </Link>
+
+                      <Link to='/blog/category/feature'>
+                      <button 
+                      className={`${filterButton == 'feature' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      
+                      >
+                          Featured
+                      </button>
+                      </Link>
+                    </>
+                  )}
                 </div>
             </div>
             {/* The Blogs Grids */}
@@ -186,7 +228,7 @@ const BlogSection = () => {
                             <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
                               {/* this map function is to show specific number of blog card on each page */}
                                 {group.map(item => (
-                                    <BlogCard key={item.id} data ={item}/>
+                                    <BlogCard key={item._id} data ={item}/>
                                   
                                 ))}
                             </div>

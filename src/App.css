@@ -226,6 +226,24 @@ position: relative;
 }
 }
 
+/* The Spinner styling of Admin Blog Page */
+.spinner {
+  animation: spin 2s linear infinite;  /* Make the icon spin */
+  font-size: 24px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 /*
 
 Media Queries for tabs and mobile devices
@@ -353,19 +371,130 @@ Media Queries for tabs and mobile devices
   font-size: 24px; /* Adjust size for "huge" */
 }
 /* .ql-syntax is class for code block */
-.custom-quill-editor .ql-editor .ql-syntax {
-  background-color: rgb(228, 229, 232) !important;
-  color: #151515 !important;
+.custom-quill-editor .ql-editor .ql-syntax,.blogPost .ql-syntax {
+  background-color: rgb(229, 231, 235) !important;
+  color: #000000 !important;
   padding: 30px 25px; /* Optional: Add padding to the code block */
   border-radius: 5px; /* Optional: Rounded corners */
   font-family: 'Courier New', Courier, monospace; /* Optional: Set font for code */
-  font-size: 17px; /* Optional: Set font size for code */
+  font-size: 15px; /* Optional: Set font size for code */
   overflow-x: scroll !important; /* Make code block horizontally scrollable */
-  font-weight: 600 !important;
+  font-weight: 300 !important;
   letter-spacing: 0.5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   white-space: pre;
   overflow-x: hidden;
 }
+
+
+/* BLOG POST STYLING */
+.blogPost .ql-syntax {
+  margin: 15px 0px;
+}
+
+.blogPost ul{
+  list-style:disc;
+  list-style-position: inside;
+  padding-left: 20px; /* Add padding to make it more readable */
+
+}
+.blogPost ol{
+  list-style:decimal;
+  list-style-position: inside;
+  padding-left: 20px; /* Add padding to make it more readable */
+
+}
+.blogPost ul[data-checked="false"] {
+  list-style: none; /* Remove bullet points if needed */
+  padding-left: 20px; /* Add padding to make it more readable */
+}
+
+
+/* Targeting the list items and adding a hollow square */
+.blogPost ul[data-checked="false"] li::before {
+  border: 2px solid rgb(150, 152, 154);
+  content: "";
+  color: rgb(150, 152, 154); /* Color of the square */
+  display: inline-block;
+  width: .7em;
+  height: .7em;
+  margin-right: 10px; /* Space between square and text */
+}
+
+.blogPost ul[data-checked="true"] {
+  list-style: none; /* Remove bullet points if needed */
+  padding-left: 20px; /* Add padding to make it more readable */
+}
+
+
+.blogPost ul[data-checked="true"] li::before {
+  border: 2px solid rgb(150, 152, 154); /* Bordered square */
+  content: "\2713"; /* Tick mark symbol */
+  color: rgb(150, 152, 154); /* Color of the tick mark */
+  display: inline-block;
+  width: .7em; /* Adjust box size */
+  height: .7em; /* Adjust box size */
+  margin-right: 10px; /* Space between box and text */
+  text-align: center; /* Center tick mark horizontally */
+  line-height: .8em; /* Center tick mark vertically */
+  font-size: 1em; /* Adjust tick mark size to fit within the box */
+}
+
+.blogPost .ql-size-huge{
+  font-size: 40px
+}
+
+.blogPost .ql-size-large{
+  font-size: 24px
+}
+
+.blogPost .ql-size-small{
+  font-size: 12px;
+}
+.blogPost h1 {
+  font-size: 30px;
+}
+.blogPost h2{
+  font-size: 24px;
+}
+.blogPost h3{
+  font-size: 18.72px;
+}
+.blogPost h4{
+  font-size: 16px;
+}
+.blogPost h5{
+  font-size: 13.28px;
+}
+.blogPost h6{
+  font-size: 10.72px
+}
+.blogPost p{
+  font-size: 16px;
+}
+.blogPost strong {
+  font-weight: 500;
+}
+.blogPost blockquote{
+  font-family: Helvetica, Arial, sans-serif;
+  border-left: 4px solid #ccc;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  unicode-bidi: isolate;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.72px;
+  margin: 15px 0px;
+  padding-left: 16px;
+}
+
+.ql-editor {
+  @apply !important; /* Force Quill to take priority */
+}
+
 
 
 @media (max-width: 1000px) {
