@@ -339,6 +339,7 @@ Media Queries for tabs and mobile devices
 .custom-quill-editor .ql-container {
   height: 400px; /* Set the fixed height of the editor */
   border: 1px solid #ddd;
+  background-color: #fff;
 }
 
 .custom-quill-editor .ql-editor {
@@ -354,7 +355,11 @@ Media Queries for tabs and mobile devices
   height: 390px;   /* Keep height fixed to make it scrollable */
   overflow-y: auto; /* Ensures only the content area is scrollable */
   padding: 12px ;   /* Adds padding to the content area */
+  background-color: #fff;
   
+}
+.custom-quill-editor .ql-toolbar{
+  background-color: #ecebeb;
 }
 
 /* Optional: Override default font size dropdown options if needed */
@@ -371,7 +376,7 @@ Media Queries for tabs and mobile devices
   font-size: 24px; /* Adjust size for "huge" */
 }
 /* .ql-syntax is class for code block */
-.custom-quill-editor .ql-editor .ql-syntax,.blogPost .ql-syntax {
+.custom-quill-editor .ql-editor .ql-syntax,.blogPost .ql-syntax, .projectPost .ql-syntax {
   background-color: rgb(229, 231, 235) !important;
   color: #000000 !important;
   padding: 30px 25px; /* Optional: Add padding to the code block */
@@ -388,30 +393,35 @@ Media Queries for tabs and mobile devices
 
 
 /* BLOG POST STYLING */
-.blogPost .ql-syntax {
+.blogPost .ql-syntax, .projectPost .ql-syntax {
   margin: 15px 0px;
 }
 
-.blogPost ul{
+.blogPost a, .projectPost a{
+  color: rgb(42, 116, 168);
+  text-decoration: underline;
+}
+
+.blogPost ul, .projectPost ul{
   list-style:disc;
   list-style-position: inside;
   padding-left: 20px; /* Add padding to make it more readable */
 
 }
-.blogPost ol{
+.blogPost ol, .projectPost ol{
   list-style:decimal;
   list-style-position: inside;
   padding-left: 20px; /* Add padding to make it more readable */
 
 }
-.blogPost ul[data-checked="false"] {
+.blogPost ul[data-checked="false"], .projectPost ul[data-checked="false"] {
   list-style: none; /* Remove bullet points if needed */
   padding-left: 20px; /* Add padding to make it more readable */
 }
 
 
 /* Targeting the list items and adding a hollow square */
-.blogPost ul[data-checked="false"] li::before {
+.blogPost ul[data-checked="false"] li::before, .projectPost ul[data-checked="false"] li::before {
   border: 2px solid rgb(150, 152, 154);
   content: "";
   color: rgb(150, 152, 154); /* Color of the square */
@@ -421,13 +431,13 @@ Media Queries for tabs and mobile devices
   margin-right: 10px; /* Space between square and text */
 }
 
-.blogPost ul[data-checked="true"] {
+.blogPost ul[data-checked="true"], .projectPost ul[data-checked="true"] {
   list-style: none; /* Remove bullet points if needed */
   padding-left: 20px; /* Add padding to make it more readable */
 }
 
 
-.blogPost ul[data-checked="true"] li::before {
+.blogPost ul[data-checked="true"] li::before, .projectPost ul[data-checked="true"] li::before {
   border: 2px solid rgb(150, 152, 154); /* Bordered square */
   content: "\2713"; /* Tick mark symbol */
   color: rgb(150, 152, 154); /* Color of the tick mark */
@@ -440,42 +450,42 @@ Media Queries for tabs and mobile devices
   font-size: 1em; /* Adjust tick mark size to fit within the box */
 }
 
-.blogPost .ql-size-huge{
+.blogPost .ql-size-huge, .projectPost .ql-size-huge{
   font-size: 40px
 }
 
-.blogPost .ql-size-large{
+.blogPost .ql-size-large, .projectPost .ql-size-large{
   font-size: 24px
 }
 
-.blogPost .ql-size-small{
+.blogPost .ql-size-small, .projectPost .ql-size-small{
   font-size: 12px;
 }
-.blogPost h1 {
+.blogPost h1, .projectPost h1 {
   font-size: 30px;
 }
-.blogPost h2{
+.blogPost h2, .projectPost h2{
   font-size: 24px;
 }
-.blogPost h3{
+.blogPost h3, .projectPost h3{
   font-size: 18.72px;
 }
-.blogPost h4{
+.blogPost h4, .projectPost h4{
   font-size: 16px;
 }
-.blogPost h5{
+.blogPost h5, .projectPost h5{
   font-size: 13.28px;
 }
-.blogPost h6{
+.blogPost h6, .projectPost h6{
   font-size: 10.72px
 }
-.blogPost p{
+.blogPost p, .projectPost p{
   font-size: 16px;
 }
-.blogPost strong {
+.blogPost strong, .projectPost strong {
   font-weight: 500;
 }
-.blogPost blockquote{
+.blogPost blockquote, .projectPost blockquote{
   font-family: Helvetica, Arial, sans-serif;
   border-left: 4px solid #ccc;
   display: block;

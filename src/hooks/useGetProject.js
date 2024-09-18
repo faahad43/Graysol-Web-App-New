@@ -1,30 +1,30 @@
 import { useState,useEffect } from "react";
 
-const useGetBlogs = () => {
-    const [blogs, setBlogs] = useState([]);
+const useGetProjects = () => {
+    const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         
-        const fetchBlogs = async () => {
+        const fetchProjects = async () => {
             try {
-                const response = await fetch('/api/Blog/getBlogs',{
+                const response = await fetch('/api/Project/getProjects',{
                     method:"POST",
                     headers:{
                         'Content-Type':'application/json'
                     },
                 });
                 const data = await response.json();
-                setBlogs(data.Blogs);
+                setProjects(data.Projects);
                 setLoading(false);
             } catch (error) {
                 console.error(error);
             }
         };
-        fetchBlogs();
+        fetchProjects();
        
     }, []);
 
-    return { blogs,loading };
+    return { projects,loading };
 }
 
-export default useGetBlogs;
+export default useGetProjects;

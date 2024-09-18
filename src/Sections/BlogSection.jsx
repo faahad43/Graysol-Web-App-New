@@ -30,8 +30,8 @@ const BlogSection = ({data=''}) => {
      * @returns {Array} An array of grouped data arrays, each containing up to `groupSize` items.
      * 
      * @example
-     * const groupedData = groupArray(data, 3, 'press');
-     * // Returns an array where each sub-array contains up to 3 items, all filtered by the 'press' criteria.
+     * const groupedData = groupArray(data, 3, 'news');
+     * // Returns an array where each sub-array contains up to 3 items, all filtered by the 'news' criteria.
      */
 
     const groupArray = (data, groupSize,filterButton) => {
@@ -53,6 +53,10 @@ const BlogSection = ({data=''}) => {
     const [filterButton,setFilterButton] = useState(type);
     const [groupedData, setGroupedData] = useState(groupArray(data, groupSize, filterButton));
     let sliderRef = useRef(null);
+
+    const reloadBlogSection = ()=>{
+      console.log("I am working fine")
+    }
 
 
     useEffect(() => {
@@ -116,13 +120,13 @@ const BlogSection = ({data=''}) => {
     };
 
   return (
-    <div className='bg-dark-900 py-10'>
+    <div className={`bg-dark-900 py-10'`}>
         <Element name='blog-section'>
         <div className='bg-dark-700 relative mx-auto w-[90%] max-w-[1200px] rounded-3xl pb-[7rem] py-8 px-6 space-y-12'>
             {/* The main heading  */}
             <div className='space-y-4'>
                 <h1 className={`${styles.h1} flex items-center justify-center gap-2`}>
-                    Press 
+                    News 
                     <FaPlus className={`w-5 fill-primary-default`}/>
                     Insight
                 </h1>
@@ -140,9 +144,9 @@ const BlogSection = ({data=''}) => {
                     <>
                     
                     <button 
-                    className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('press')}
+                    className={`${filterButton == 'news' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('news')}
                     >
-                        Press
+                        news
                     </button>
                    
 
@@ -156,10 +160,10 @@ const BlogSection = ({data=''}) => {
 
                     
                     <button 
-                    className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('graynews')}
+                    className={`${filterButton == 'help' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('help')}
         
                     >
-                        Gray news
+                        Help
                     </button>
                    
 
@@ -174,11 +178,11 @@ const BlogSection = ({data=''}) => {
                   </>
                   ): (
                     <>
-                      <Link to='/blog/category/press'>
+                      <Link to='/blog/category/news'>
                       <button 
-                      className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      className={`${filterButton == 'news' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
                       >
-                          Press
+                          news
                       </button>
                       </Link>
 
@@ -190,12 +194,12 @@ const BlogSection = ({data=''}) => {
                       </button>
                       </Link>
 
-                      <Link to='/blog/category/graynews'>
+                      <Link to='/blog/category/help'>
                       <button 
-                      className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      className={`${filterButton == 'help' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
           
                       >
-                          Gray news
+                          Help
                       </button>
                       </Link>
 
@@ -228,7 +232,7 @@ const BlogSection = ({data=''}) => {
                             <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
                               {/* this map function is to show specific number of blog card on each page */}
                                 {group.map(item => (
-                                    <BlogCard key={item._id} data ={item}/>
+                                    <BlogCard key={item._id} data ={item} realod={reloadBlogSection} />
                                   
                                 ))}
                             </div>
@@ -242,7 +246,7 @@ const BlogSection = ({data=''}) => {
                           <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
                             {/* this map function is to show specific number of blog card on each page */}
                               {group.map(item => (
-                                  <BlogCard key={item.id} data ={item}/>
+                                  <BlogCard key={item.id} data ={item} reload={reloadBlogSection}/>
                                 
                               ))}
                           </div>

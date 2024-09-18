@@ -7,11 +7,11 @@ import {
   createRoutesFromElements,
   Route
 } from "react-router-dom";
-import {Home,Services,Contact,AboutUs, Blog,Portfolio,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound} from "./Pages/index.js";
+import {Home,Services,Contact,AboutUs, Blog,Portfolio,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound, ProjectPost,Login} from "./Pages/index.js";
 
 import './index.css'
 import AdminDashboard from './Pages/Admin/AdminDashboard.jsx';
-
+import { AuthContextProvider } from './Context/authContext.jsx';
 
 
 const router = createBrowserRouter(
@@ -35,15 +35,21 @@ const router = createBrowserRouter(
           <Route path='category/:type' element=''/>
           <Route path='path/:title' element={<BlogPost/>}/>
         </Route>
-        <Route path='portfolio' element={<Portfolio/>}/>
-        <Route path="*" element={<NotFound />}/>
+        <Route path='portfolio' element={<Portfolio/>}>
+          <Route path='category/:type' element=''/>
+          <Route path='path/:title' element={<ProjectPost/>}/>
+        </Route>
         <Route path='/admin-dashboard' element={<AdminDashboard/>} />
+        <Route path='/admin' element={<Login/>}/>
+        <Route path="*" element={<NotFound />}/>
     </Route>
   )
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
+  <AuthContextProvider>
     <RouterProvider router={router}/>
+  </AuthContextProvider>
   // </React.StrictMode>,
 )

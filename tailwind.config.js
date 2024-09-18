@@ -24,6 +24,7 @@ export default {
             default:"#1969C7",
             500:'#060223',
             600:'#0C71C3',
+            700:'#1E9DFF',
             900:"#172554",
           },
           tertiary:{

@@ -1,21 +1,21 @@
 import React,{useEffect, useRef,useState} from 'react'
 import styles from '../styles'
-import { FaPlus } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Element } from 'react-scroll'
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
-import {BlogCard} from '../Components/BlogCard';
 import useWindowSize from '../hooks/windowSize';
-import {data} from './blogdata.js';
-import { useParams,Link } from 'react-router-dom';
+// import {data} from './blogdata.js';
+import { useParams,Link,useLocation } from 'react-router-dom';
+import { ProjectCard } from '../Components/PorjectCard';
 
 
 
 
-const PortfolioSection = () => {
+const PortfolioSection = ({data=''}) => {
+
     /**
      * Data is an array of objects, each representing a blog post and is imported from blogdata.js
      * Groups and filters an array of data based on the provided group size and filter criteria.
@@ -37,6 +37,7 @@ const PortfolioSection = () => {
     const groupArray = (data, groupSize,filterButton) => {
         const groups = [];
         const filterData = filterButton === ''?  data : data.filter((item) => item[filterButton]===true);
+
         for (let i = 0; i < filterData.length; i += groupSize) {
           groups.push(filterData.slice(i, i + groupSize));
         }
@@ -44,6 +45,8 @@ const PortfolioSection = () => {
         return groups;
     };
     const {type = ''} = useParams();
+    const location =  useLocation();
+    const admin = location.pathname === '/admin-dashboard' && true;
     
     let groupSize;
     const windowSize = useWindowSize(); //to change the number of blogs displayed on different screen sizes
@@ -58,7 +61,7 @@ const PortfolioSection = () => {
       setGroupedData(groupArray(data, groupSize, filterButton));
       sliderRef.slickGoTo(0);
       
-  }, [filterButton,windowSize]);
+  }, [data,filterButton,windowSize]);
 
   useEffect(() => {
     setFilterButton(type);
@@ -114,7 +117,7 @@ const PortfolioSection = () => {
     };
 
   return (
-    <div className='bg-dark-900 py-10'>
+    <div className={`bg-dark-900 py-10'`}>
         <Element name='blog-section'>
         <div className='bg-dark-700 relative mx-auto w-[90%] max-w-[1200px] rounded-3xl pb-[7rem] py-8 px-6 space-y-12'>
             {/* The main heading  */}
@@ -123,7 +126,7 @@ const PortfolioSection = () => {
                     Portfolio
                 </h1>
                 <p className={`${styles.p2} text-center`}>
-                    A glimpse into the creative solutions we've crafted for our clients.
+                A glimpse into the creative solutions we've crafted for our clients.
                 </p>
             </div>
             {/* The Filter Buttons Section */}
@@ -132,39 +135,79 @@ const PortfolioSection = () => {
                     filter contents
                 </p>
                 <div className='md:w-[95%] lg:w-4/5 mx-auto grid grid-cols-2 md:grid-cols-4 place-items-center gap-x-8 md:gap-x-0 gap-y-3'>
-                  <Link to='/portfolio'>
+                  {admin ? (
+                    <>
+                    
                     <button 
-                    className={`${filterButton == 'press' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'websites' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('websites')}
                     >
-                        Press
+                       Website
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/portfolio'>
+                    
                     <button 
-                    className={`${filterButton == 'insight' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'webApps' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('webApps')}
                     >
-                        Insights
+                        Web Apps
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/portfolio'>
+                    
                     <button 
-                    className={`${filterButton == 'graynews' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'mobileApps' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('mobileApps')}
         
                     >
-                        Gray news
+                        Mobile Apps
                     </button>
-                    </Link>
+                   
 
-                    <Link to='/portfolio'>
+                    
                     <button 
-                    className={`${filterButton == 'feature' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                    className={`${filterButton == 'dataScienceAndAi' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`} onClick={()=>setFilterButton('dataScienceAndAi')}
                     
                     >
-                        Featured
+                        Data & Ai
                     </button>
-                    </Link>
+                    
+                  </>
+                  ): (
+                    <>
+                      <Link to='/portfolio/category/websites'>
+                      <button 
+                      className={`${filterButton == 'websites' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      >
+                          Websites
+                      </button>
+                      </Link>
+
+                      <Link to='/portfolio/category/webApps'>
+                      <button 
+                      className={`${filterButton == 'webApps' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      >
+                          Web Apps
+                      </button>
+                      </Link>
+
+                      <Link to='/portfolio/category/mobileApps'>
+                      <button 
+                      className={`${filterButton == 'mobileApps' ? 'bg-primary-default': 'bg-transparent'} justify-self-end md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+          
+                      >
+                          Mobile Apps
+                      </button>
+                      </Link>
+
+                      <Link to='/portfolio/category/dataScienceAndAi'>
+                      <button 
+                      className={`${filterButton == 'dataScienceAndAi' ? 'bg-primary-default': 'bg-transparent'} justify-self-start md:justify-self-center border-primary-default border-solid border-2 capitalize text-light-900 font-light md:font-normal w-36 py-2 tracking-widest rounded-md`}
+                      
+                      >
+                          Data & Ai
+                      </button>
+                      </Link>
+                    </>
+                  )}
                 </div>
             </div>
             {/* The Blogs Grids */}
@@ -184,7 +227,7 @@ const PortfolioSection = () => {
                             <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
                               {/* this map function is to show specific number of blog card on each page */}
                                 {group.map(item => (
-                                    <BlogCard key={item.id} data ={item}/>
+                                    <ProjectCard key={item._id} data ={item}/>
                                   
                                 ))}
                             </div>
@@ -198,7 +241,7 @@ const PortfolioSection = () => {
                           <div className='px-2 md:px-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-9 sm:gap-x-5'>
                             {/* this map function is to show specific number of blog card on each page */}
                               {group.map(item => (
-                                  <BlogCard key={item.id} data ={item}/>
+                                  <ProjectCard key={item.id} data ={item}/>
                                 
                               ))}
                           </div>

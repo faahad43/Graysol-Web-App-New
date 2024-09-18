@@ -16,17 +16,7 @@ const BlogPage = () => {
                   Loading...
               </div>
           ) : (
-            
-              <div className="blogPost">
-                {blogs.map((blog) => (
-                  <div key={blog._id}>
-                    <h2>{blog.title}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-                  </div>
-                ))}
-                {console.log(blogs)}
-                <BlogSection data={blogs} />
-              </div>
+                <BlogSection data={blogs}  />
           )}
       </div>
   );
