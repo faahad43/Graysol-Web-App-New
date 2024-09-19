@@ -9,7 +9,7 @@ const useDeleteProject = () => {
         try{
             // Use toast.promise to show a loading toast while the deletion is in progress
             await toast.promise(
-                fetch('/api/Project/delete', {
+                fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Project/delete`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'

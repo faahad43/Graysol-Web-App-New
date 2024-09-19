@@ -29,7 +29,7 @@ const useBlog = () => {
 
          await toast.promise(
             new Promise(async (resolve, reject) => {
-                const response = await fetch('/api/Blog/createBlog', {
+                const response = await fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Blog/createBlog'`, {
                     method: 'POST',
                     body: formData,
                 });

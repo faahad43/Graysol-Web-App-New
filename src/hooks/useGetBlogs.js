@@ -7,7 +7,7 @@ const useGetBlogs = () => {
         
         const fetchBlogs = async () => {
             try {
-                const response = await fetch('/api/Blog/getBlogs',{
+                const response = await fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Blog/getBlogs`,{
                     method:"POST",
                     headers:{
                         'Content-Type':'application/json'

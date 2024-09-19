@@ -28,7 +28,7 @@ const useProject = () => {
        // Using toast.promise with manual error checking
         await toast.promise(
         new Promise(async (resolve, reject) => {
-            const response = await fetch('/api/Project/createProject', {
+            const response = await fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Project/createProject`, {
                 method: 'POST',
                 body: formData,
             });

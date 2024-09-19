@@ -7,7 +7,7 @@ const useGetProjects = () => {
         
         const fetchProjects = async () => {
             try {
-                const response = await fetch('/api/Project/getProjects',{
+                const response = await fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Project/getProjects`,{
                     method:"POST",
                     headers:{
                         'Content-Type':'application/json'

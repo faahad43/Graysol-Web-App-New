@@ -12,7 +12,6 @@ export const BlogPost = () => {
   const formattedTitle = title.replace(/-/g, ' ').toLowerCase();
   
   const { blogs } = useGetBlogs(); // Fetch all blogs from your custom hook
-  console.log("blogs",blogs)
 
   // Fetch the blog when the component mounts
   useEffect(() => {

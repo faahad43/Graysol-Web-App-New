@@ -16,7 +16,7 @@ const useLogin = () =>{
     const login =async ({email,password}) => {
 
         try{
-            const response =await fetch('/api/login/admin',{
+            const response =await fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/login/admin`,{
                 method:'POST',
                 headers: {
                     'Content-Type': 'application/json', // Ensure content type is set to JSON

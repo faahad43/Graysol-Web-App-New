@@ -10,7 +10,7 @@ const useDeleteBlog = () => {
         try{
             // Use toast.promise to show a loading toast while the deletion is in progress
             await toast.promise(
-                fetch('/api/Blog/delete', {
+                fetch(`${process.env.VITE_BACKEND_BASE_URL}/api/Blog/delete`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'
