@@ -14,7 +14,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/api":{
-        target:"https://backend-check-gules.vercel.app",
+        target:"",
         changeOrigin: true,  // Adds necessary headers to the request
         rewrite: (path) => path.replace(/^\/api/, ''),  // Removes /api from the forwarded request  
       }
