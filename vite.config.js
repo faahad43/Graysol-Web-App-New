@@ -14,7 +14,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/api":{
-        target:"",
+        target:"https://graysol-backend.vercel.app",
         changeOrigin: true,  // Adds necessary headers to the request
         rewrite: (path) => path.replace(/^\/api/, ''),  // Removes /api from the forwarded request  
       }
