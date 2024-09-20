@@ -482,6 +482,9 @@ Media Queries for tabs and mobile devices
 .blogPost p, .projectPost p{
   font-size: 16px;
 }
+.blogPost , .projectPost{
+  font-size:17px 
+}
 .blogPost strong, .projectPost strong {
   font-weight: 500;
 }

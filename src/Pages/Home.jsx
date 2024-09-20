@@ -44,8 +44,8 @@ const Home = () => {
       "question": "How do I get started with Graysol’s services?",
       "answer": "Simply reach out to us through our website or email. We’ll schedule a consultation to understand your needs and discuss how we can help bring your project to life."
     }
-  ]
-      
+  ]   
+  
   return (
     <>
       <HomeBanner/>
