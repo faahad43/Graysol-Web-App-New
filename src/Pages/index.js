@@ -18,4 +18,5 @@ import { NotFound } from "./NotFound";
 import { Portfolio } from "./Portfolio";
 import { Login } from "./Login";
 
+
 export { Home,Services,Contact,AboutUs,Blog,WordpressService,MobileApp,WebApp,SoftwareDevelopment,CloudSolution,GraphicDesign,PersonalBranding,DataScience,WebAndAppDesign,BlogPost,NotFound,Portfolio,ProjectPost,Login };

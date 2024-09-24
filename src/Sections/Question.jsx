@@ -2,7 +2,8 @@ import React,{useRef,useState} from 'react'
 import {Button} from '../Components/Button'
 import styles from '../styles'
 import {Input} from '../Components/Input'
-import TrustPilot from '../assets/img/Trustpilot.png'
+// import TrustPilot from '../assets/img/trustpilot.jpg'
+import TrustPilot from '../assets/icons/Trustpilot.svg'
 import GoogleLogo from '../assets/img/GoogleLogo.png'
 import Star from '../assets/icons/Star.svg'
 import { Element } from 'react-scroll'
@@ -128,8 +129,9 @@ const Question = () => {
             <Button name='Submit' type='submit' vlaue='Send'  className='px-10 rounded-lg mt-5 text-sm'/>
         </form>
         <div className='w-[calc(100%-3vw)] bg-light-900 py-4 lg:py-6 xl:py-9 gap-4 md:gap-10 lg:gap-20 flex flex-col md:flex-row md:justify-center  items-center'>
-            <div className='flex'>
-                <img className='w-[105px] lg:w-[140px] xl:w-[195px]' src={TrustPilot} alt="" />
+            <a href="https://www.trustpilot.com/review/graysol.co?utm_medium=trustbox&utm_source=TrustBoxReviewCollector" target='_blank' rel="noopener noreferrer">
+            <div className='flex items-center'>
+                <img className='w-[105px] mr-1.5 lg:w-[140px] xl:w-[195px]' src={TrustPilot} alt="" />
                 <div className='flex items-end gap-[2px]'>
                     <div className='flex'>
                         {Array.from({length: 5},(_,index)=>(
@@ -137,10 +139,11 @@ const Question = () => {
                         ))}
                     </div>
                     <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px]`}>
-                        <span className='font-semibold'>4.7</span>/5 based on <span className='underline'>363 Reviews</span>
+                        <span className='font-semibold'>4.5</span>/5 based on <span className='underline'>281 Reviews</span>
                     </p>
                 </div>
             </div>
+            </a>
             <div className='flex'>
                 <img className='w-[105px] lg:w-[140px] xl:w-[136px]' src={GoogleLogo} alt="" />
                 <div className='flex items-center gap-[2px]'>
@@ -151,7 +154,7 @@ const Question = () => {
                         ))}
                     </div>
                     <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px]`}>
-                        <span className='font-semibold'>4.7</span>/5 based on <span className='underline'>363 Reviews</span>
+                        <span className='font-semibold'>4.7</span>/5 based on <span className='underline'>412 Reviews</span>
                     </p>
                 </div>
             </div>

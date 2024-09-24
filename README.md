@@ -55,6 +55,51 @@ The project is built with React using Vite and Tailwind CSS for styling. The str
 - **Data Management:** Service page data is managed in `servicedata.js` within the `components` folder.
 - **Deployment:** The website is deployed on Vercel, allowing for continuous deployment and easy management of production environments.
 
+
+## Homepage Sponsors Section
+
+The Sponsors section showcases the brands and companies that have collaborated with or sponsored Graysol. This section is designed to scroll seamlessly across the screen, highlighting logos of sponsors in a continuous loop.
+
+### Code Breakdown
+
+```jsx
+<div className="w-full">
+  <div className="h-[120px] m-auto overflow-hidden relative w-auto">
+    <ul className="flex h-full items-center w-[calc(150px*50)] animate-scroll ">
+      {allImages.map((image, index) => (
+        <li className="w-[150px] h-[100px] flex items-center" key={index}>
+          <img src={image} className="w-20 h-full lg:w-24 lg:h-12 xl:w-28 xl:h-16 object-contain" alt={`Sponsor ${index + 1}`} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+```
+
+### How It Works
+
+Container (div.w-full): The outermost container spans the full width of the page, ensuring the scrolling sponsor logos take up the entire section width.
+
+Overflow Hidden (overflow-hidden): This ensures that only the visible logos are shown, while the rest of the scrolling list remains hidden, creating a smooth scrolling effect.
+
+Scrolling List (ul):
+
+The ul has a flex layout that arranges all logos horizontally in a single row.
+The width is calculated dynamically using w-[calc(150px * 50)], where each logo occupies 150px, and there are 50 logos (25 sponsors duplicated twice to create a seamless scrolling effect).
+Animation (animate-scroll): The ul uses a custom scroll animation (defined in the Tailwind CSS configuration) to move the list of sponsor logos continuously from right to left, providing the impression of an infinite scroll.
+
+Responsive Design
+Each li contains a sponsor logo wrapped in an img tag. The size of the images is set using responsive classes like w-20, lg:w-24, and xl:w-28, which adjust based on screen size, ensuring that the layout remains responsive across different devices.
+Animation Explanation
+The scrolling animation moves the entire ul leftward, making the sponsor logos scroll in a continuous loop. The trick to achieving seamless scrolling is duplicating the set of logos. Once the first set of logos scrolls off-screen, the second set (which is a duplicate) immediately follows, ensuring there’s no break or jump in the scroll.
+Key Points
+Flexbox Layout: The flex layout ensures that all logos are aligned horizontally and centered vertically within the container.
+Seamless Scrolling: By duplicating the list of logos, the scrolling effect appears continuous and seamless, providing a smooth visual experience for users.
+Dynamic Width: The total width of the ul is dynamically calculated based on the number of logos, ensuring there is enough space for the scrolling effect.
+This section adds a dynamic and visually engaging element to the homepage, showcasing Graysol's partners and sponsors in an interactive and professional manner.
+
+
+
 ## Acknowledgments
 
 Special thanks to the developers and contributors of the libraries and tools used in this project, including React, Vite, and Tailwind CSS.

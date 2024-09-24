@@ -127,19 +127,7 @@ const ContactForm2 = () => {
                     onChange={(e)=>setMessage(e.target.value)}
                 >
                 </textarea>
-                <div className='w-11/12 flex items-start space-x-3'>
-                    <input type="checkbox" id='checkbox1' checked={checkbox1} onChange={(e)=>setCheckbox1(e.target.checked)} className='mt-[3px]'  />
-                    <label htmlFor="checkbox1" className={`${styles.p4} tracking-wider`}>
-                        I understand the information i provide in this form will be handled in accordance with gray solutions privacy policy, and I agree to its terms.
-                    </label>
-                </div>
-                <div className='w-11/12 flex items-start space-x-3'>
-                    <input type="checkbox" id='checkbox2' name='marketing-communication' checked={checkbox2} onChange={(e)=>setCheckbox2(e.target.checked)}  className='mt-[3px]'  />
-                    <label htmlFor="checkbox2" className={`${styles.p4}`}>
-                        I would like to receive marketing communications from gray solutions.
-                    </label>
-                </div>
-
+                
                 <Button name='Submit' className='px-10 rounded-lg mt-5 lg:mt-10 text-sm'/>
                 
             </form>

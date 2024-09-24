@@ -207,29 +207,7 @@ margin: auto auto;
 position: relative;
 }
 
-/* ########################################   Compnay Logo Slider Section    ############################################ */
 
-/* Company Sponsorship  */
-@keyframes scroll {
-  0% {
-    transform: translateX(0); /* Start at the original position */
-  }
-  100% {
-    transform: translateX(-100%); /* Scroll by 100% since we are duplicating the images */
-  }
-}
-
-
-.animate-scroll {
-  display: flex;
-  animation: scroll 25s linear infinite;
-  white-space: nowrap;
-}
-
-
-
-
-/* ########################################   Compnay Logo Slider Section END   ############################################ */
 
 .custom-list li::marker{
   font-size: 1.5rem;
