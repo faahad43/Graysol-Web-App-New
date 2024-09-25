@@ -139,7 +139,7 @@ const Header = () => {
                   >
                     Services<IoIosArrowDown />
                   </span>
-                  <ul className={`collapse group-hover:visible text-light-900 absolute w-[25.5rem] lg:w-[28rem] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)]  z-50 bg-[#13102d] text-[13px] lg:text-[14px] pt-3 pb-6 px-2 pr-2.5 lg:px-3 gap-y-3 gap-x-3  font-light tracking-wider rounded grid grid-cols-2  before:absolute before:opacity-0 before:w-[43%] before:h-1 before:bg-dark-900 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
+                  <ul className={`collapse group-hover:visible text-light-900 absolute w-[25.5rem] lg:w-[28rem] top-[calc(100%+0.2rem)] -left-[calc(50%-1.8rem)]  lg:-left-[calc(50%-1.5rem)]  z-50 bg-[#13102d] text-[13px] lg:text-[15px] pt-3 pb-6 px-2 pr-2.5 lg:px-3 gap-y-3 gap-x-3  font-light tracking-wider rounded grid grid-cols-2  before:absolute before:opacity-0 before:w-[43%] before:h-1 before:bg-dark-900 before:-top-[0.3rem] before:left-0 before:rounded-full`}>
                     <li className='bg-secondary-500  rounded-lg'>
                       <NavLink to='services/wordpress'
                       className={({isActive})=>` ${isActive?'bg-light-900 text-secondary-500 font-normal':''} p-4 inline-block flex flex-col items-start gap-y-1 w-full h-full rounded h-16  transition-transform duration-300 `}>

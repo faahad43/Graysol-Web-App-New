@@ -3,7 +3,7 @@ import {Button} from '../Components/Button'
 import styles from '../styles'
 import {Input} from '../Components/Input'
 import TrustPilot from '../assets/icons/Trustpilot.svg'
-import GoogleLogo from '../assets/img/GoogleLogo.png'
+import GoogleLogo from '../assets/icons/Google-Logo.svg'
 import Star from '../assets/icons/Star.svg'
 import { Element } from 'react-scroll'
 import emailjs from '@emailjs/browser';
@@ -138,7 +138,7 @@ const Question = () => {
                         ))}
                     </div>
                     <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px]`}>
-                        <span className='font-semibold'>4.5</span>/5 based on <span className='underline'>281 Reviews</span>
+                        <span className='font-semibold'>4.5</span>/5 based on <span className='underline'>326 Reviews</span>
                     </p>
                 </div>
             </div>

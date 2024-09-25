@@ -46,9 +46,9 @@ const ChooseUs = () => {
     >
       <div className="w-[90%] lg:w-[85%]  max-w-[1124px] flex md:flex-row-reverse items-center justify-center md:justify-between">
         <div className="flex flex-col gap-6 xl:gap-16 md:w-[50%] lg:w-[50%] xl:w-[45%]">
-          <h1 className={`${styles.h1Large} text-center md:text-start`}>Why Graysol.</h1>
+          <h1 className={`${styles.h1} text-center md:text-start`}>Why Graysol.</h1>
           <ul
-            className={`${styles.h5} md:leading-sung xl:leading-[32.5px] text-[20px] flex flex-col gap-3`}
+            className={`${styles.h6} md:leading-sung xl:leading-[32.5px] text-[20px] flex flex-col gap-3`}
           >
             <li className="">
               <FaCircleArrowRight className=" fill-primary-default inline mr-6" />

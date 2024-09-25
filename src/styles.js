@@ -34,7 +34,7 @@ const styles ={
 
     h5Heavy:'text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px] font-normal text-light-900  lg:font-medium',
 
-    h5HeavyDark:'text-[15px] md:text-[20px] lg:text-[25px] xl:text-[30px] font-normal text-dark-900  lg:font-medium',
+    h5HeavyDark:'text-[17px] md:text-[20px] lg:text-[25px] xl:text-[30px]  text-dark-900 font-medium',
 
     h6:'text-[17px] md:text-[19px] lg:text-[21px] xl:text-[23px]  font-light text-light-900  lg:font-normal md:leading-sung lg:leading-[27px] xl:leading-[32.5px] tracking-wide',
 
