@@ -91,10 +91,10 @@ const Question = () => {
                 <h1 className={`${styles.h1}`}>Got questions?</h1>
                 <h6 className={`${styles.h6} w-11/12 mx-auto text-center my-3`}>We'll be happy to answer. A solutions specialist will get back to you within 12 hours.</h6>
            </div>
-            <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-2 md:gap-0 '>
+            <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-2 md:gap-0 '>
                 <Input 
                     name='user-name'
-                    className='w-11/12 md:w-5/12 '
+                    className='w-11/12 md:w-[47%] '
                     placeholder='Your Name'
                     section='question'
                     value={name}
@@ -102,7 +102,7 @@ const Question = () => {
                 />
                 <Input 
                     name='user-phoneNo' 
-                    className='w-11/12 md:w-5/12' 
+                    className='w-11/12 md:w-[47%]' 
                     placeholder='Phone Number' 
                     section='question'
                     value={phoneNumber}

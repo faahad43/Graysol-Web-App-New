@@ -89,22 +89,23 @@ const ContactForm2 = () => {
                     We eat tough problems for lunch.<br/>Feed us yours.
                 </p>
             </div>
-            <Element name='contact-form2'>
+            <div className='w-[90%]'>
+            <Element name='contact-form2 '>
             <form 
-                className={` w-[90%] flex flex-col items-center mx-auto rounded-2xl gap-4`}
+                className={`w-full flex flex-col items-center mx-auto rounded-2xl gap-4`}
                 ref={form} onSubmit={sendEmail}
             >
-                <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-4 md:gap-0 '>
+                <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-4 md:gap-0 '>
                         <Input
                             name='user-name'
-                            className='w-11/12 md:w-5/12 py-[9px]'
+                            className='w-11/12 md:w-[48%] py-[9px]'
                             placeholder='Name'
                             value={firstName}
                             onChange={(e)=>setFirstName(e.target.value)}
                         />
                         <Input
                             name='user-phoneNo'
-                            className='w-11/12 md:w-5/12'
+                            className='w-11/12 md:w-[48%]'
                             placeholder='Phone Number'
                             value={phoneNumber}
                             onChange={(e)=>setPhoneNumber(e.target.value)}
@@ -132,6 +133,7 @@ const ContactForm2 = () => {
                 
             </form>
             </Element>
+            </div>
         </div>
         
         <div className='bg-dark-900 h-4'></div>

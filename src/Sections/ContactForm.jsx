@@ -82,17 +82,17 @@ const ContactForm = () => {
         <form 
             ref={form} onSubmit={sendEmail}
             className={`bg-dark-300 w-[90%] sm:w-[80%] max-w-[1200px] flex flex-col items-center mx-auto rounded-2xl py-10 md:py-14 gap-4`}>
-            <div className='flex flex-col md:flex-row md:justify-around items-center w-full gap-4 md:gap-0 '>
+            <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-4 md:gap-0 '>
                     <Input 
                     name='user-name'
-                    className='w-11/12 md:w-5/12 py-[9px]'
+                    className='w-11/12 md:w-[47%] py-[9px]'
                     placeholder='Name'
                     value={firstName}
                     onChange={(e)=>setFirstName(e.target.value)}
                     />
                     <Input 
                     name='user-phoneNo'
-                    className='w-11/12 md:w-5/12' 
+                    className='w-11/12 md:w-[47%]' 
                     placeholder='Phone Number'
                     value={phoneNo}
                     onChange={(e)=>setPhoneNo(e.target.value)}

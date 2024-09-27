@@ -37,10 +37,10 @@ const Promise = () => {
   return (
     <div className='w-screen bg-dark-900 flex flex-col items-center justify-center gap-12 xl:gap-24 md:gap-16 py-10 xl:py-24'>
         <h1 className={styles.h1}>Our Promise</h1>
-        <div className='w-[80%] py-8 lg:py-16 xl:py-32 px-6 md:px-10 xl:px-16 bg-light-900 rounded-2xl lg:rounded-3xl xl:rounded-[40px] flex flex-col lg:flex-row  items-center justify-evenly gap-5 xl:gap-10'>
-            <PromiseCard icon={Like} detail={promiseCard1} iconStyling='w-[45px] h-[43px]' cardStyling='h-[13rem]'/>
-            <PromiseCard icon={Heart} detail={promiseCard2} iconStyling='w-[45px] h-[42px]' cardStyling='h-[13rem]'/>
-            <PromiseCard icon={Shield} detail={promiseCard3} iconStyling='w-[35px] h-[47px]' cardStyling='h-[13rem]'/>
+        <div className='w-[80%] py-8 lg:py-16 xl:py-32 px-6 md:px-10 xl:px-16 bg-light-900 rounded-2xl lg:rounded-3xl xl:rounded-[40px] flex flex-col lg:flex-row  items-center justify-evenly gap-5 xl:gap-5 2xl:gap-10'>
+            <PromiseCard icon={Like} detail={promiseCard1} iconStyling='w-[45px] h-[43px]' cardStyling='h-[13rem] xl:h-[16rem] '/>
+            <PromiseCard icon={Heart} detail={promiseCard2} iconStyling='w-[45px] h-[42px]' cardStyling='h-[13rem] xl:h-[16rem]'/>
+            <PromiseCard icon={Shield} detail={promiseCard3} iconStyling='w-[35px] h-[47px]' cardStyling='h-[13rem] xl:h-[16rem]'/>
         </div>
         <div className='flex w-[80%] gap-10 lg:gap-16 justify-center md:mt-10'>
             <img className={`${windowSize < 768 ? 'hidden': 'visible'} w-[50%] lg:w-[45%] h-64 lg:h-72 xl:w-[38rem] xl:h-[25rem] object-cover mt-8`} src={Office} alt="" />
