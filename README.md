@@ -1,123 +1,4 @@
 
-# Graysol Company Website
-![Graysol Website Cover Picture](src/assets/img/Graysol.png)
-
-## Project Overview
-Gray Solutions is a leading software agency that provides web app development, custom software development, cloud solutions, and IT consultation. This repository contains the frontend codebase for the Graysol website, built with React, Vite, and Tailwind CSS. The project is designed to offer seamless scalability, reusability, and maintainability for a wide range of services provided by Gray Solutions.
-
-## Table of Contents
-- [Installation](#installation)
-- [Folder Structure](#folder-structure)
-- [Styling and Configuration](#styling-and-configuration)
-- [Hooks and Context Management](#hooks-and-context-management)
-- [Utilities and Animations](#utilities-and-animations)
-- [Routing and Pages](#routing-and-pages)
-- [Components and Props Usage](#components-and-props-usage)
-- [Services Data Management](#services-data-management)
-- [Deployment](#deployment)
-- [Future Improvements](#future-improvements)
-- [Acknowledgements](#acknowledgements)
-
-### Prerequisites
-- Node.js (v14 or higher)
-- NPM or Yarn
-- Git
-
-### Cloning the Repository
-```bash
-git clone https://github.com/your-username/graysol-frontend.git
-cd graysol-frontend
-
-## Installation
-
-### Prerequisites
-
-- Node.js
-- Git
-
-### Steps
-
-1. **Fork the Repository:**
-
-   ```bash
-   git clone <repository-url>
-   cd graysol-web-app-new
-   ```
-
-2. **Install Dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-3. **Run the Development Server:**
-
-   ```bash
-   npm run dev
-   ```
-
-   The website should now be running locally on `http://localhost:5173`.
-
-## Technical Summary
-
-- **Styling:** Tailwind CSS is used, with custom styles defined in `styles.js` and custom classes configured in `tailwind.config.js`.
-- **Data Management:** Service page data is managed in `servicedata.js` within the `components` folder.
-- **Deployment:** The website is deployed on Vercel, allowing for continuous deployment and easy management of production environments.
-
-
-## Homepage Sponsors Section
-
-The Sponsors section showcases the brands and companies that have collaborated with or sponsored Graysol. This section is designed to scroll seamlessly across the screen, highlighting logos of sponsors in a continuous loop.
-
-### Code Breakdown
-
-```jsx
-<div className="w-full">
-  <div className="h-[120px] m-auto overflow-hidden relative w-auto">
-    <ul className="flex h-full items-center w-[calc(150px*50)] animate-scroll ">
-      {allImages.map((image, index) => (
-        <li className="w-[150px] h-[100px] flex items-center" key={index}>
-          <img src={image} className="w-20 h-full lg:w-24 lg:h-12 xl:w-28 xl:h-16 object-contain" alt={`Sponsor ${index + 1}`} />
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-```
-
-### How It Works
-
-Container (div.w-full): The outermost container spans the full width of the page, ensuring the scrolling sponsor logos take up the entire section width.
-
-Overflow Hidden (overflow-hidden): This ensures that only the visible logos are shown, while the rest of the scrolling list remains hidden, creating a smooth scrolling effect.
-
-Scrolling List (ul):
-
-The ul has a flex layout that arranges all logos horizontally in a single row.
-The width is calculated dynamically using w-[calc(150px * 50)], where each logo occupies 150px, and there are 50 logos (25 sponsors duplicated twice to create a seamless scrolling effect).
-Animation (animate-scroll): The ul uses a custom scroll animation (defined in the Tailwind CSS configuration) to move the list of sponsor logos continuously from right to left, providing the impression of an infinite scroll.
-
-Responsive Design
-Each li contains a sponsor logo wrapped in an img tag. The size of the images is set using responsive classes like w-20, lg:w-24, and xl:w-28, which adjust based on screen size, ensuring that the layout remains responsive across different devices.
-Animation Explanation
-The scrolling animation moves the entire ul leftward, making the sponsor logos scroll in a continuous loop. The trick to achieving seamless scrolling is duplicating the set of logos. Once the first set of logos scrolls off-screen, the second set (which is a duplicate) immediately follows, ensuring there’s no break or jump in the scroll.
-Key Points
-Flexbox Layout: The flex layout ensures that all logos are aligned horizontally and centered vertically within the container.
-Seamless Scrolling: By duplicating the list of logos, the scrolling effect appears continuous and seamless, providing a smooth visual experience for users.
-Dynamic Width: The total width of the ul is dynamically calculated based on the number of logos, ensuring there is enough space for the scrolling effect.
-This section adds a dynamic and visually engaging element to the homepage, showcasing Graysol's partners and sponsors in an interactive and professional manner.
-
-
-
-## Acknowledgments
-
-Special thanks to the developers and contributors of the libraries and tools used in this project, including React, Vite, and Tailwind CSS.
-
-
-
----
-
-
 # Graysol Website
 
 ![Graysol Website Cover Picture](src/assets/img/Graysol.png)
@@ -187,7 +68,7 @@ Graysol-Frontend
 │   ├── App.jsx        # Main application component
 │   ├── index.css      # Tailwind CSS imports
 │   ├── main.jsx       # Main entry point and router configuration
-│   └── styles.js      # Additional style configurations
+│   └── styles.js      # this files have all the font size used in website in hierarchy. All the heading h1, h2, h3 etc have specific size if you wish to change the size of H1 heading everywhere on webiste you can d so by changing just   chaning the size of H1 heading from this file. All font size, weights & colors can be changed from style.js
 │
 ├── .env               # Environment variables
 ├── .gitignore         # Git ignore file
@@ -225,6 +106,9 @@ The main routing of the project is handled in `main.jsx`. Each page is defined i
 ### Page Structure
 - **Home Page:** Contains sections such as `HomeBanner`, `ChooseUs`, `Sponsers`, `Services`, and `Testimonials`.
 - **Services Pages:** Each service is represented by a separate JSX file in the `Pages/Services` folder, e.g., `CloudSolution.jsx`, `DataScience.jsx`.
+- **About Page:** About Page contain the details about the company stats and have a conatct form that uses  `Email.js` service.
+- **Blogs:** This is taking the contents of the blogs from the backend.
+-  **Cotanct:** Contain the contact form for user to reach out to company.
 
 ### Reusability
 All pages are designed to be reusable with props, making it easy to add or update content without modifying the base structure.
@@ -269,6 +153,17 @@ export const CloudSolution = () => {
 };
 ```
 
+Here is the revised version with corrected grammatical errors:
+
+## Email Service
+In the Graysol website, there are three contact forms, and the service used for receiving user emails is email.js. It requires three things to send an email: `public key`, `template id`, and `service id`.
+
+## Toast
+React-toast is a lightweight and open-source notification library for React. Like other React libraries, this library is designed to pop up messages that provide feedback to users for their different actions. It can display success messages, warning messages, or custom messages based on the action or event that occurred.
+
+## Environmental Variables
+While working with Vite, it's necessary that all environmental variable names start with `VITE_` (e.g., `VITE_API_KEY`); otherwise, they will not be accessible.
+
 ## Deployment
 This project is deployed using **Vercel**. The `vercel.json` file defines entry point routes and ensures that routing works correctly on the deployment platform.
 
@@ -276,6 +171,7 @@ This project is deployed using **Vercel**. The `vercel.json` file defines entry 
 1. Install the Vercel CLI: `npm i -g vercel`.
 2. Run `vercel` in the project root directory.
 3. Follow the on-screen instructions to complete deployment.
+4. There is also a simple method to connect your github with vercel and by importing project on vercel website from github you can deploy project with just one click
 
 ## Future Improvements
 - **Accessibility:** Ensure the website is fully accessible and follows WAI-ARIA guidelines.
@@ -285,8 +181,6 @@ This project is deployed using **Vercel**. The `vercel.json` file defines entry 
 ## Acknowledgements
 - This project was developed using **React** and **Vite**.
 - Thanks to the Graysol team for providing the design and content guidelines.
-- Icons and images are sourced from [source links if any].
 
-For any questions or support, please contact [Your Contact Information].
 ```
 
