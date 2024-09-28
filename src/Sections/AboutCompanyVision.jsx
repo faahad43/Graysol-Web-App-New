@@ -42,16 +42,16 @@ const AboutCompanyVision = () => {
         </h3>
       </div>
 
-      <div className='grid grid-cols-3 w-[90%] max-w-[1250px] mx-auto'>
-        <div className='grid grid-cols-subgrid col-span-3 border-b-[3px]  border-primary-default'>
-          <h3 className={`${styles.h3} col-span-1 tracking-wide mt-auto pb-7 lg:pb-9  mx-auto`}>
+      <div className='grid grid-cols-3 w-[90%] max-w-[1250px] mx-auto '>
+        <div className='grid grid-cols-subgrid col-span-3 border-y-[3px] place-items-center  border-primary-default'>
+          <h3 className={`${styles.h3} col-span-1 tracking-wide `}>
             Our Values
           </h3>
-          <div className='col-span-2 border-l-[3px] border-primary-default pl-5 md:pl-10 lg:pl-16 lg:pr-2 pb-3 md:pb-5 lg:pb-7 lg:pt-5 space-y-4'>
+          <div className='col-span-2 border-l-[3px] border-primary-default pl-6 md:pl-10 lg:pl-16 lg:pr-2 pb-3 md:pb-5 lg:pb-7 pt-5 space-y-4'>
             <p className={styles.p2}>
               As a company within the Gray family, we share and live by these values each day.
             </p>
-            <ul className={`${styles.p2} list-disc`}>
+            <ul className={`${styles.p2} list-disc space-y-2 md:space-y-4`}>
               <li>
                 We put safety and quality of life first.
               </li>
@@ -65,22 +65,22 @@ const AboutCompanyVision = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-subgrid col-span-3 border-b-[3px] border-primary-default '>
-          <h3 className={`${styles.h3} col-span-1 text-center tracking-wide mt-auto pb-7 md:pb-12  mx-auto`}>
+        <div className='grid grid-cols-subgrid col-span-3 border-b-[3px] border-primary-default'>
+          <h3 className={`${styles.h3} col-span-1 text-center my-auto tracking-wide `}>
             Our Vision
           </h3>
-          <div className='col-span-2 border-l-[3px] border-primary-default pl-5 md:pl-10 lg:pl-16 lg:pr-2 py-5 md:py-10 lg:py-14'>
+          <div className='col-span-2 border-l-[3px] border-primary-default pl-6 md:pl-10 lg:pl-16 lg:pr-2 py-5 md:py-10 lg:py-14'>
             <p className={styles.p2}>
               The trusted leader in process innovation where the best want to belong.
             </p>
           </div>
         </div>
 
-        <div className='grid grid-cols-subgrid col-span-3 border-b-[3px] border-primary-default '>
-          <h3 className={`${styles.h3} col-span-1 text-center tracking-wide mt-auto pb-7 lg:pb-12 mx-auto'`}>
+        <div className='grid grid-cols-subgrid col-span-3 border-b-[3px] border-primary-default place-items-center'>
+          <h3 className={`${styles.h3} col-span-1 text-center tracking-wide `}>
             Our Vision
           </h3>
-          <div className='col-span-2 border-l-[3px] border-primary-default pl-5 md:pl-10 lg:pl-16 lg:pr-2 py-5 md:pt-10 lg:pt-12 lg:pb-8'>
+          <div className='col-span-2 border-l-[3px] border-primary-default pl-6 md:pl-10 lg:pl-16 lg:pr-2 py-5 md:pt-10 lg:pt-12 lg:pb-8'>
             <p className={styles.p2}>
               Trusted advisors delivering outcome based solutions through deep collaboration and lasting partnerships, while providing fulfilling team experiences.
             </p>

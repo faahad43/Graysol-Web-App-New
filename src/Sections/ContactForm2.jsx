@@ -89,7 +89,7 @@ const ContactForm2 = () => {
                     We eat tough problems for lunch.<br/>Feed us yours.
                 </p>
             </div>
-            <div className='w-[90%]'>
+            <div className='w-[90%] mx-auto'>
             <Element name='contact-form2 '>
             <form 
                 className={`w-full flex flex-col items-center mx-auto rounded-2xl gap-4`}
@@ -98,7 +98,7 @@ const ContactForm2 = () => {
                 <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-4 md:gap-0 '>
                         <Input
                             name='user-name'
-                            className='w-11/12 md:w-[48%] py-[9px]'
+                            className='w-11/12 md:w-[48%] '
                             placeholder='Name'
                             value={firstName}
                             onChange={(e)=>setFirstName(e.target.value)}
@@ -119,7 +119,7 @@ const ContactForm2 = () => {
                     onChange={(e)=>setEmail(e.target.value)}
                 />
                 <textarea 
-                    className='w-11/12 h-32  lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal tracking-wide' 
+                    className='w-11/12 h-32 sm:h-36 md:h-40  lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[13px] md:text-[14px] lg:text-[15px] resize-none font-light md:font-normal tracking-wide' 
                     placeholder='What You are working on?' 
                     resize 
                     name='message' 

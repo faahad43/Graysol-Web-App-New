@@ -43,12 +43,11 @@ const Question = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         // Validate form before sending
         if (!validateForm()) {
             return;
         }
-
+        
         const promise = emailjs.sendForm(
             process.env.VITE_SERVICE_ID,
             process.env.VITE_TEMPLATE_ID, 
@@ -72,6 +71,7 @@ const Question = () => {
                     setEmail('');
                     setName('');
                     setMessage('');
+                    setPhoneNumber('');
                 },
                 (error) => {
                     console.error('Failed...', error.text);
@@ -86,12 +86,12 @@ const Question = () => {
     <div className='bg-dark-900 w-screen flex flex-col items-center justify-center py-8 lg:py-20 gap-10 lg:gap-20'>
         <form
             ref={form} onSubmit={sendEmail} 
-            className='w-[90%] sm:w-[80%] max-w-[1138px] bg-primary-700 rounded flex flex-col items-center justify-center py-5 lg:py-8 px-5 text-center text-light-900 gap-3 rounded-xl'>
+            className='w-[90%] sm:w-[80%] max-w-[1138px] bg-primary-700 rounded flex flex-col items-center justify-center py-5 lg:py-8 px-5 text-center text-light-900 gap-4 rounded-xl'>
            <div>
                 <h1 className={`${styles.h1}`}>Got questions?</h1>
                 <h6 className={`${styles.h6} w-11/12 mx-auto text-center my-3`}>We'll be happy to answer. A solutions specialist will get back to you within 12 hours.</h6>
            </div>
-            <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-2 md:gap-0 '>
+            <div className='flex flex-col md:flex-row md:justify-between items-center w-full md:w-11/12 gap-4 md:gap-0 '>
                 <Input 
                     name='user-name'
                     className='w-11/12 md:w-[47%] '
@@ -119,7 +119,7 @@ const Question = () => {
             />
             <textarea 
                 name='message'
-                className='w-11/12 h-32 lg:h-40  text-dark-900 rounded px-2 py-[6px] lg:py-[12px] placeholder-dark-500 placeholder:opacity-80 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal tracking-wide'
+                className='w-11/12 h-32 lg:h-40  text-dark-900 rounded px-2 py-[6px] lg:py-[12px] placeholder-dark-500 placeholder:opacity-80 focus:placeholder-opacity-50 text-[13px] md:text-[14px] lg:text-[15px] resize-none font-light md:font-normal tracking-wide'
                 placeholder='How can we help you?' 
                 resize id=""
                 value={message} 
@@ -131,13 +131,13 @@ const Question = () => {
             <a href="https://www.trustpilot.com/review/graysol.co?utm_medium=trustbox&utm_source=TrustBoxReviewCollector" target='_blank' rel="noopener noreferrer">
             <div className='flex items-center'>
                 <img className='w-[105px] mr-1.5 lg:w-[140px] xl:w-[195px]' src={TrustPilot} alt="" />
-                <div className='flex items-end gap-[2px]'>
+                <div className='flex items-center gap-[2px]'>
                     <div className='flex'>
                         {Array.from({length: 5},(_,index)=>(
                             <img key={index} className='w-[18px] lg:w-[25px] xl:w-[33px]' src={Star} alt="" />
                         ))}
                     </div>
-                    <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px]`}>
+                    <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px] text-center`}>
                         <span className='font-semibold'>4.5</span>/5 based on <span className='underline'>326 Reviews</span>
                     </p>
                 </div>
@@ -152,7 +152,7 @@ const Question = () => {
                             <img key={index} className='w-[18px] lg:w-[25px] xl:w-[33px]' src={Star} alt="" />
                         ))}
                     </div>
-                    <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px]`}>
+                    <p className={` ${styles.p4HeavyDark} pt-[5px] xl:pt-[10px] text-center`}>
                         <span className='font-semibold'>4.7</span>/5 based on <span className='underline'>412 Reviews</span>
                     </p>
                 </div>

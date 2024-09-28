@@ -5,6 +5,9 @@ import styles from '../styles'
 import { NavLink,Link } from 'react-router-dom'
 import { IoIosArrowDown } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
 import useWindowSize from '../hooks/windowSize'
 import { useLocation } from 'react-router-dom'
 
@@ -114,9 +117,19 @@ const Header = () => {
                     </NavLink>
                   </div>
                 </div>
-                <div className={`${styles.h4} pt-6 flex gap-14`}>
-                  <p>Careers</p>
-                  <p>Linkedin</p>
+                <div className={`${styles.h4} pt-6 flex items-center gap-6`}>
+                  <a href="https://www.linkedin.com/company/graysol-llc/" target='_blank'>
+                    <ImLinkedin 
+                        size={35} 
+                        onClick={()=>{
+                        setIsOpen(!isOpen);
+                        }}
+                    />
+                  </a>
+                  <a href="" target='_blank'><FaFacebook  size={35} /></a>
+                  <a href="" target='_blank'><FaInstagram size={35} /></a>
+                  
+                  
                 </div>
               </div>
           )

@@ -107,7 +107,7 @@ const ContactForm = () => {
                 onChange={(e)=>setEmail(e.target.value)}
             />
             <textarea 
-                className='w-11/12 h-32 h-32 lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[12px] resize-none font-light md:font-normal  tracking-wide' placeholder='What You are working on?' 
+                className='w-11/12 h-32 h-32 sm:h-36 md:h-40 lg:h-40 bg-light-300 text-dark-700 rounded px-2 py-[8px] lg:py-[16px] placeholder-dark-900 placeholder:opacity-70 focus:placeholder-opacity-50 text-[13px] md:text-[14px] lg:text-[15px] resize-none font-light md:font-normal  tracking-wide' placeholder='What You are working on?' 
                 resize 
                 name='message'
                 id=""
