@@ -5,7 +5,8 @@ import useGetBlogs from '../hooks/useGetBlogs';
 
 
 const Blog = () => {
-  // const {blogs} = useGetBlogs();
+  // const {blogs} = useGetBlogs(); // uncomment this after working on backend.
+  const blogs =[] // have to remove this line when you have to show the blogs from backend
   const location = useLocation(); // Get the current location
 
   // Determine if the current location is a nested route
