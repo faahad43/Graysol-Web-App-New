@@ -7,7 +7,7 @@ import useGetProjects from '../hooks/useGetProject';
 const Portfolio = () => {
   const location = useLocation(); // Get the current location
 
-  const {projects} = useGetProjects();
+  // const {projects} = useGetProjects();
 
   // Determine if the current location is a nested route
   const isNestedRoute = location.pathname.includes('portfolio/path') && location.pathname !== '/portfolio';
